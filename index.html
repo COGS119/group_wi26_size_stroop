@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My experiment</title>
+  <script src="https://unpkg.com/jspsych@8.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
+  <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body></body>
+<script>
+
+  /* initialize jsPsych */
+  var jsPsych = initJsPsych({
+  on_finish: function() {
+    jsPsych.data.displayData();
+  }
+});
+
+  /* create timeline */
+  var timeline = [];
+
+  /* create stimulus list */
+  // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
+  // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
+
+  //create an example stimulus
+  // we're using z and m as respons keys here because they are clear left-right response keys that are far apart on the keyboard
+  stimulus_item = {
+    image_name: "stimuli/1-Congruent.jpg",
+    correct_response: "left",
+    correct_response_key: "z",
+    trial_type: "congruent"
+  }
+
+  // here's how we can construct a simple size stroop judgment trial
+  // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
+  // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
+  var trial = {
+        type: jsPsychImageKeyboardResponse,
+        prompt: "<p>Press z if the images are the same, m if the images are different.<\p>",
+        choices: ["z", "m"],
+        data: { trial_type: stimulus_item['trial_type'],correct_response: stimulus_item['correct_response'],correct_response_key: stimulus_item['correct_response_key']},
+        stimulus: stimulus_item['image_name']
+      }
+
+  timeline.push(trial);
+
+
+  /* start the experiment */
+  jsPsych.run(timeline);
+
+</script>
+
+</html>
