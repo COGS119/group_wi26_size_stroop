@@ -28,7 +28,7 @@
   var welcome = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "<p>Welcome to the experiment. Press any key to begin.</p>"
-  }
+  };
 
   timeline.push(welcome);
 
@@ -37,11 +37,11 @@
     type: jsPsychSurveyHtmlForm,
     preamble: "<p>Please enter your student ID number:</p>",
     html: '<input name="participant_id" type="text" required></input>',
-    button_label: "Submit"
-  }
+    button_label: "Submit",
+    data: {trial_type: "participant_id"}
+  };
 
   timeline.push(participant_id);
-
 
 
   /* create stimulus list */
