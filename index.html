@@ -4,6 +4,7 @@
 <head>
   <title>My experiment</title>
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
   <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
 </head>
@@ -21,6 +22,14 @@
 
   /* create timeline */
   var timeline = [];
+
+  /* create welcome message trial */
+  var welcome = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: "<p>Welcome to the experiment. Press any key to begin.</p>"
+  }
+
+  timeline.push(welcome);
 
   /* create stimulus list */
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
