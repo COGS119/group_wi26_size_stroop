@@ -33,16 +33,32 @@
   timeline.push(welcome);
 
   //take participant's student ID number
-  var participant_id = {
-    type: jsPsychSurveyHtmlForm,
-    preamble: "<p>Please enter your student ID number:</p>",
-    html: '<input name="participant_id" type="text" required></input>',
-    button_label: "Submit",
-    data: {trial_type: "participant_id"}
+ var participant_id_entry = {
+   type: jsPsychSurveyText,
+   questions: [
+     { prompt: "Please enter your student ID number:", name: "participant_id" }
+   ],
+   on_finish: function (data) {
+    console.log(data.responses);
+    jsPsych.data.addProperties({
+        participant: data.response.participant_id
+    });
+   }
+ }; 
+ 
+  timeline.push(participant_id_entry);
+
+  //creates instruction page
+  var instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+    In this experiment, you will be shown two images on each trial. 
+    Your task is to determine which image on the screen is larger, regardless of the real size of the objects shown.
+    You would press <strong>z</strong> if the left image is larger, and <strong>m</strong> if the right image is larger.
+    <br>Press any key to begin.`
   };
-
-  timeline.push(participant_id);
-
+  
+  timeline.push(instructions);
 
   /* create stimulus list */
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
