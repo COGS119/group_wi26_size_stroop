@@ -6,6 +6,7 @@
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.0.0"></script>
   <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -30,6 +31,18 @@
   }
 
   timeline.push(welcome);
+
+  //take participant's student ID number
+  var participant_id = {
+    type: jsPsychSurveyHtmlForm,
+    preamble: "<p>Please enter your student ID number:</p>",
+    html: '<input name="participant_id" type="text" required></input>',
+    button_label: "Submit"
+  }
+
+  timeline.push(participant_id);
+
+
 
   /* create stimulus list */
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
