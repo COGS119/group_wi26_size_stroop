@@ -70,7 +70,11 @@
 
   timeline.push(trial);
 
-
+ var goodbye = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: "<p> Thank you for your participant!</p>"
+ }
+ timeline.push(goodbye);
   /* start the experiment */
   jsPsych.run(timeline);
 
