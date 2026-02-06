@@ -28,7 +28,10 @@
   /* create welcome message trial */
   var welcome = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "<p>Welcome to the experiment. Press any key to begin.</p>"
+    stimulus:`
+    <h1>Welcome to the experiment.</h1>
+    <p>Press any key to begin.</p>
+    `
   };
 
   timeline.push(welcome);
@@ -54,9 +57,10 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
     In this experiment, you will be shown two images on each trial. 
-    Your task is to determine which image on the screen is larger, regardless of the real size of the objects shown.
-    You would press <strong>z</strong> if the left image is larger, and <strong>m</strong> if the right image is larger.
-    <br>Press any key to begin.`
+    <br>Your task is to determine which image on the screen is larger, regardless of the real size of the objects shown.
+    <br>You would press <strong>z</strong> if the left image is larger, and <strong>m</strong> if the right image is larger.
+    <br>Press any key to begin.
+    `
   };
   
   timeline.push(instructions);
@@ -90,7 +94,7 @@
   /*goodbye*/
  var goodbye = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "<p> Thank you for your participant! </p>"
+  stimulus: "<p> Thank you for your participation! </p>"
  }
  timeline.push(goodbye);
   /* start the experiment */
