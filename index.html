@@ -6,6 +6,7 @@
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-fullscreen@2.1.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-preload@2.0.0"></script>
@@ -79,6 +80,19 @@
 
   timeline.push(welcome);
 
+  // full screen mode ENTER
+var enter_fullscreen = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: true
+}
+
+var trial_in_fullscreen = {
+  type: jsPsychHtmlButtonResponse,
+  stimulus: 'This trial will be in fullscreen mode.',
+  choices: ['Continue']
+}
+
+
   //take participant's student ID number
  var participant_id_entry = {
    type: jsPsychSurveyText,
@@ -139,6 +153,14 @@
   stimulus: "<p> Thank you for your participant! </p>"
  }
  timeline.push(goodbye);
+
+ // full screen mode EXIT
+ var exit_fullscreen = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: false,
+  delay_after: 0
+}
+
   /* start the experiment */
   jsPsych.run(timeline);
 
