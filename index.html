@@ -134,6 +134,46 @@ var trial_in_fullscreen = {
     trial_type: "congruent"
   }
 
+  // Fixation Cross for practice trials
+  var fixation = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<div style="font-size:60px;">+</div>',
+    choices: "NO_KEYS",
+    trial_duration: 700,
+};
+
+  // 2 Practice trials
+  //big congruent practice trial
+  var big_cong_prac_trial = {
+    type: jsPsychImageKeyboardResponse,
+    prompt: "<p>Which is visually <strong>bigger</strong> on the screen?</p>",
+    choices: ["z", "m"],
+    stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
+    data: {trial_type: stimulus_item['trial_type'],
+          correct_response: stimulus_item['correct_response'],
+          correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
+    post_trial_gap: 900,
+  };
+
+  //small incongruent practice trial
+  var small_incong_prac_trial = {
+    type: jsPsychImageKeyboardResponse,
+    prompt: "<p>Which is visually <strong>smaller</strong> on the screen?</p>",
+    choices: ["z", "m"],
+    stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
+    data: {trial_type: stimulus_item['trial_type'],
+          correct_response: stimulus_item['correct_response'],
+          correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
+    post_trial_gap: 900,
+  };
+
+  //randomize prac trial orders for different participants
+  var prac_trial_array = [big_cong_prac_trial, small_incong_prac_trial];
+  var shuffled_prac_trials = jsPsych.randomization.repeat(prac_trial_array, 1);
+  
+  //push fixation first, then shuffled ordered practice trials
+  timeline.push(fixation, shuffled_prac_trials);
+
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
