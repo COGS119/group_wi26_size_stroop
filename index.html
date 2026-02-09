@@ -170,13 +170,12 @@ var trial_in_fullscreen = {
   
   //create timeline, where fixation before every shuffled trial
   var prac_trial = {
-    timeline: [
-      fixation,
-      {
-        timeline: [big_cong_prac_trial, small_incong_prac_trial],
-        randomize_order: true         //randomize prac trial orders for different participants
-      }
-    ]
+    timeline: [fixation, jsPsych.timelineVariable('prac_trialS')],    //placeholder for timeline_variables
+    timeline_variables: [
+        {prac_trialS: small_incong_prac_trial},
+        {prac_trialS: big_cong_prac_trial}
+    ],
+    ramdomize_order: true
   };
 
   //push to main timeline
