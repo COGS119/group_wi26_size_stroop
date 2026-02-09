@@ -167,13 +167,20 @@ var trial_in_fullscreen = {
           correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
     post_trial_gap: 900,
   };
-
-  //randomize prac trial orders for different participants
-  var prac_trial_array = [big_cong_prac_trial, small_incong_prac_trial];
-  var shuffled_prac_trials = jsPsych.randomization.repeat(prac_trial_array, 1);
   
-  //push fixation first, then shuffled ordered practice trials
-  timeline.push(fixation, shuffled_prac_trials);
+  //create timeline, where fixation before every shuffled trial
+  var prac_trial = {
+    timeline: [
+      fixation,
+      {
+        timeline: [big_cong_prac_trial, small_incong_prac_trial],
+        randomize_order: true         //randomize prac trial orders for different participants
+      }
+    ]
+  };
+
+  //push to main timeline
+  timeline.push(prac_trial);
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
