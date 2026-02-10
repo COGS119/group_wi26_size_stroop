@@ -7,8 +7,7 @@
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-fullscreen@2.1.0"></script>
-  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.2.0"></script>
-  <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>  <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-preload@2.0.0"></script>
   <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
@@ -163,6 +162,29 @@ var trial_in_fullscreen = {
   timeline.push(instructions);
 
   /* create stimulus list */
+  // Congruent stimuli
+var congruent_stimuli = congruent_images.map(function(img) {
+    return {
+        image_name: img,
+        correct_response: "left",   
+        correct_response_key: "z",
+        trial_type: "congruent"
+    };
+});
+
+// Incongruent stimuli
+var incongruent_stimuli = incongruent_images.map(function(img) {
+    return {
+        image_name: img,
+        correct_response: "right",  
+        correct_response_key: "m",
+        trial_type: "incongruent"
+    };
+});
+
+// Combine both lists
+var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
+
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
   // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
 
