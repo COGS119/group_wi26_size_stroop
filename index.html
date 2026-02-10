@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>My experiment</title>
+  <title>Stroop Size Task</title>
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
@@ -29,7 +29,7 @@
 
   /*preload*/
   var congruent_images = [
-    'stimuli/1-Congruent.jpg',
+  'stimuli/1-Congruent.jpg',
   'stimuli/2-Congruent.jpg',
   'stimuli/3-Congruent.jpg',
   'stimuli/4-Congruent.jpg',
@@ -68,7 +68,7 @@
   ];
 
   var incongruent_images = [
-    'stimuli/1-Incongruent.jpg',
+  'stimuli/1-Incongruent.jpg',
   'stimuli/2-Incongruent.jpg',
   'stimuli/3-Incongruent.jpg',
   'stimuli/4-Incongruent.jpg',
@@ -168,7 +168,7 @@ var trial_in_fullscreen = {
 
   //create an example stimulus
   // we're using z and m as respons keys here because they are clear left-right response keys that are far apart on the keyboard
-  stimulus_item = {
+  var stimulus_item = {
     image_name: "stimuli/1-Congruent.jpg",
     correct_response: "left",
     correct_response_key: "z",
@@ -215,7 +215,7 @@ var trial_in_fullscreen = {
         {prac_trialS: small_incong_prac_trial},
         {prac_trialS: big_cong_prac_trial}
     ],
-    ramdomize_order: true
+    randomize_order: true
   };
 
   //push to main timeline
@@ -226,7 +226,7 @@ var trial_in_fullscreen = {
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
   var trial = {
         type: jsPsychImageKeyboardResponse,
-        prompt: "<p>Press z if the images are the same, m if the images are different.<\p>",
+        prompt: "<p>Press z if the images are the same, m if the images are different.</p>",
         choices: ["z", "m"],
         data: { trial_type: stimulus_item['trial_type'],correct_response: stimulus_item['correct_response'],correct_response_key: stimulus_item['correct_response_key']},
         stimulus: stimulus_item['image_name']
