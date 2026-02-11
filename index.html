@@ -184,15 +184,6 @@ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
   // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
 
-  //create an example stimulus
-  // we're using z and m as respons keys here because they are clear left-right response keys that are far apart on the keyboard
-  var stimulus_item = {
-    image_name: "stimuli/1-Congruent.jpg",
-    correct_response: "left",
-    correct_response_key: "z",
-    trial_type: "congruent"
-  }
-
   // Fixation Cross for practice trials
   var fixation = {
     type: jsPsychHtmlKeyboardResponse,
@@ -201,31 +192,6 @@ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
     trial_duration: 700,
 };
 
-  // // 2 Practice trials
-  // //big congruent practice trial
-  // var big_cong_prac_trial = {
-  //   type: jsPsychImageKeyboardResponse,
-  //   prompt: "<p>Which is visually <strong>bigger</strong> on the screen?</p>",
-  //   choices: ["z", "m"],
-  //   stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
-  //   data: {trial_type: stimulus_item['trial_type'],
-  //         correct_response: stimulus_item['correct_response'],
-  //         correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
-  //   post_trial_gap: 900,
-  // };
-
-  // //small incongruent practice trial
-  // var small_incong_prac_trial = {
-  //   type: jsPsychImageKeyboardResponse,
-  //   prompt: "<p>Which is visually <strong>smaller</strong> on the screen?</p>",
-  //   choices: ["z", "m"],
-  //   stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
-  //   data: {trial_type: stimulus_item['trial_type'],
-  //         correct_response: stimulus_item['correct_response'],
-  //         correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
-  //   post_trial_gap: 900,
-  // };
-  
   //2 practice trials, counterbalanced, shuffled order
   var two_practice_trials = {
     type: jsPsychImageKeyboardResponse,
