@@ -11,6 +11,17 @@
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-preload@2.0.0"></script>
   <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    /* the #jspych...stimulus means that all stimulus for the plugin will be affeced by this
+    .cb means that only stuff in the stimulus with the cb class would be affected 
+    prevents the normal stimulus from being flipped since it wont have the cb class
+    */
+   .cb #jspsych-image-keyboard-response-stimulus {
+      transform: scaleX(-1);
+    }
+
+  </style>
 </head>
 
 <body></body>
@@ -18,10 +29,14 @@
 <script>
 
   /* initialize jsPsych */
-  var jsPsych = initJsPsych({
-    on_finish: function() {
-    jsPsych.data.displayData();
+  var jsPsych = initJsPsych(
+    {
+      on_finish: function() {
+        jsPsych.data.displayData();
+      }
     }
+  );  
+
   });
   /* create timeline */
   var timeline = [];
@@ -115,7 +130,10 @@ timeline.push(preload);
   /* create welcome message trial */
   var welcome = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "<p>Welcome to the experiment. Press any key to begin.</p>"
+    stimulus:`
+    <h1>Welcome to the experiment.</h1>
+    <p>Press any key to begin.</p>
+    `
   };
 
   timeline.push(welcome);
@@ -138,7 +156,7 @@ timeline.push(enter_fullscreen);
    on_finish: function (data) {
     console.log(data.responses);
     jsPsych.data.addProperties({
-        participant: data.response.participant_id
+      participant: data.response.participant_id
     });
    }
  }; 
@@ -148,15 +166,49 @@ timeline.push(enter_fullscreen);
   //creates instruction page
   var instructions = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: `
+    stimulus: ` 
     In this experiment, you will be shown two images on each trial. 
-    Your task is to determine which image on the screen is larger, regardless of the real size of the objects shown.
-    You would press <strong>z</strong> if the left image is larger, and <strong>m</strong> if the right image is larger.
-    <br>Press any key to begin.`
+    <br>Your task is to determine which image on the screen is larger, regardless of the real size of the objects shown.
+    <br>You would press <strong>z</strong> if the left image is larger, and <strong>m</strong> if the right image is larger.
+    <br>You would first do x practice trials to familiarize yourself with the task, and then you continue to the experimental trials.
+    <br>Press any key to begin.
+    `
+    //change the x to the number of practice trials that we are gonna be using
   };
   
   timeline.push(instructions);
 
+  // create stimulus list, this would hold all the information for each stimulus
+  stimulus_list = [
+    {
+      image_name: "stimuli/1-Congruent.jpg",
+      correct_response: "left",
+      correct_response_key: "z",
+      trial_type: "congruent"
+    },
+    {
+      image_name: "stimuli/1-Inongruent.jpg", 
+      correct_response: "right",
+      correct_response_key: "m",
+      trial_type: "incongruent"
+    }
+  ]
+  
+  // this is where the stimulus from the list earlier can get flipped
+  // cb means counterbalanced
+  cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
+      {
+       ...flipped, /*...flipped means it copies everything from stimulus list and then 
+       adds the suff after it*/
+       trial_type: flipped.trial_type + "_flipped", /* this is just to keep track of of what is counterbalanced */
+       correct_response: flipped.correct_response === "left" ? "right" : "left",
+       correct_response_key: flipped.correct_response_key === "z" ? "m" : "z",
+       flipped: true,
+      }
+    )
+  );   
+
+  console.log(cb_stimulus_list);
   /* create stimulus list */
   // Congruent stimuli
 var congruent_stimuli = congruent_images.map(function(img) {
@@ -220,6 +272,42 @@ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
+  var trial_example = {
+    type: jsPsychImageKeyboardResponse,
+    prompt: "<p>Press z if the left image is larger, m if the right image is larger.</p>",
+    choices: ["z", "m"],
+    stimulus: jsPsych.timelineVariable('image_name'),
+    data: { 
+      trial_type: jsPsych.timelineVariable('trial_type'),
+      correct_response: jsPsych.timelineVariable('correct_response'),
+      correct_response_key: jsPsych.timelineVariable('correct_response_key')
+    },
+    /* this is where we can add the class to flip the image,
+    the plan is to make it be able to check if the trial is using a flipped imaged or not
+    if it uses a flip stimulus, it will be the 'cb' class and the image will be flipped
+    otherwise it will be normal and not flipped
+    it is not working right now, probally something wrong with the first two lines
+    or maybe the name isnt being updated in cb_stimulus_list 
+    */
+    css_classes: function() {
+      if (jsPsych.timelineVariable('flipped')) {
+        return "cb";
+      } else {
+        return "normal";
+      }
+    },
+    // check to see of the response is correct or not
+    // adds it into the data
+    on_finish: function(data) {
+      console.log(data.trial_type);
+      console.log(data.response);
+      console.log(data.correct_response_key);
+      // Sees if the choice made was correct or incorrect.
+      data.choices = data.response;
+      if (data.choices == data.correct_response_key) {
+        data.correct = true;
+      } else {
+        data.correct = false;
   var trial = {
         type: jsPsychImageKeyboardResponse,
         prompt: "<p>Press z if the images are the same, m if the images are different.</p>",
@@ -227,14 +315,25 @@ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
         data: { trial_type: stimulus_item['trial_type'],correct_response: stimulus_item['correct_response'],correct_response_key: stimulus_item['correct_response_key']},
         stimulus: stimulus_item['image_name']
       }
+      console.log(data.correct);
+    }
+  }
+
+  var trial = {
+    timeline: [trial_example],
+    timeline_variables: cb_stimulus_list,
+  }
 
   timeline.push(trial);
 
   /*goodbye*/
  var goodbye = {
   type: jsPsychHtmlKeyboardResponse,
+  stimulus: "<p> Thank you for your participation! </p>",
+  trial_duration: 2000, /* without the duration or input, the screen would not change */
   stimulus: "<p> Thank you for your participation! </p>"
  }
+
  timeline.push(goodbye);
 
  // full screen mode EXIT
