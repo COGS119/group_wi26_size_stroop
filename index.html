@@ -201,37 +201,50 @@ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
     trial_duration: 700,
 };
 
-  // 2 Practice trials
-  //big congruent practice trial
-  var big_cong_prac_trial = {
+  // // 2 Practice trials
+  // //big congruent practice trial
+  // var big_cong_prac_trial = {
+  //   type: jsPsychImageKeyboardResponse,
+  //   prompt: "<p>Which is visually <strong>bigger</strong> on the screen?</p>",
+  //   choices: ["z", "m"],
+  //   stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
+  //   data: {trial_type: stimulus_item['trial_type'],
+  //         correct_response: stimulus_item['correct_response'],
+  //         correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
+  //   post_trial_gap: 900,
+  // };
+
+  // //small incongruent practice trial
+  // var small_incong_prac_trial = {
+  //   type: jsPsychImageKeyboardResponse,
+  //   prompt: "<p>Which is visually <strong>smaller</strong> on the screen?</p>",
+  //   choices: ["z", "m"],
+  //   stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
+  //   data: {trial_type: stimulus_item['trial_type'],
+  //         correct_response: stimulus_item['correct_response'],
+  //         correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
+  //   post_trial_gap: 900,
+  // };
+  
+  //2 practice trials, counterbalanced, shuffled order
+  var two_practice_trials = {
     type: jsPsychImageKeyboardResponse,
-    prompt: "<p>Which is visually <strong>bigger</strong> on the screen?</p>",
+    prompt: jsPsych.timelineVariable('prompt'),
     choices: ["z", "m"],
-    stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
+    stimulus: jsPsych.timelineVariable('stimulus'),
     data: {trial_type: stimulus_item['trial_type'],
           correct_response: stimulus_item['correct_response'],
-          correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
+          correct_response_key: stimulus_item['correct_response_key']},
     post_trial_gap: 900,
   };
 
-  //small incongruent practice trial
-  var small_incong_prac_trial = {
-    type: jsPsychImageKeyboardResponse,
-    prompt: "<p>Which is visually <strong>smaller</strong> on the screen?</p>",
-    choices: ["z", "m"],
-    stimulus: stimulus_item['image_name'],      //change names for "stimulus_item" and 'image_name' if there's name change in stimulus trial
-    data: {trial_type: stimulus_item['trial_type'],
-          correct_response: stimulus_item['correct_response'],
-          correct_response_key: stimulus_item['correct_response_key']},     //again might need to change names later
-    post_trial_gap: 900,
-  };
-  
+
   //create timeline, where fixation before every shuffled trial
   var prac_trial = {
-    timeline: [fixation, jsPsych.timelineVariable('prac_trialS')],    //placeholder for timeline_variables
+    timeline: [fixation, two_practice_trials],    //placeholder for timeline_variables
     timeline_variables: [
-        {prac_trialS: small_incong_prac_trial},
-        {prac_trialS: big_cong_prac_trial}
+        {prompt: "<p>Which is visually <strong>bigger</strong> on the screen?</p>", "<p>Which is visually <strong>smaller</strong> on the screen?</p>"},
+        {stimulus: stimulus_item['image_name'], stimulus_item['image_name']}
     ],
     randomize_order: true
   };
