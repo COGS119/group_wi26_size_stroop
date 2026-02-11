@@ -2,12 +2,14 @@
 <html>
 
 <head>
-  <title>My experiment</title>
+  <title>Stroop Size Task</title>
   <script src="https://unpkg.com/jspsych@8.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@2.0.0"></script>
-  <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-fullscreen@2.1.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-button-response@2.0.0"></script>  <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-preload@2.0.0"></script>
   <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
 
   <style>
@@ -35,8 +37,95 @@
     }
   );  
 
+  });
   /* create timeline */
   var timeline = [];
+
+  /*preload*/
+  var congruent_images = [
+  'stimuli/1-Congruent.jpg',
+  'stimuli/2-Congruent.jpg',
+  'stimuli/3-Congruent.jpg',
+  'stimuli/4-Congruent.jpg',
+  'stimuli/5-Congruent.jpg',
+  'stimuli/6-Congruent.jpg',
+  'stimuli/7-Congruent.jpg',
+  'stimuli/8-Congruent.jpg',
+  'stimuli/9-Congruent.jpg',
+  'stimuli/10-Congruent.jpg',
+  'stimuli/11-Congruent.jpg',
+  'stimuli/12-Congruent.jpg',
+  'stimuli/13-Congruent.jpg',
+  'stimuli/14-Congruent.jpg',
+  'stimuli/15-Congruent.jpg',
+  'stimuli/16-Congruent.jpg',
+  'stimuli/17-Congruent.jpg',
+  'stimuli/18-Congruent.jpg',
+  'stimuli/19-Congruent.jpg',
+  'stimuli/20-Congruent.jpg',
+  'stimuli/21-Congruent.jpg',
+  'stimuli/22-Congruent.jpg',
+  'stimuli/23-Congruent.jpg',
+  'stimuli/24-Congruent.jpg',
+  'stimuli/25-Congruent.jpg',
+  'stimuli/26-Congruent.jpg',
+  'stimuli/27-Congruent.jpg',
+  'stimuli/28-Congruent.jpg',
+  'stimuli/29-Congruent.jpg',
+  'stimuli/30-Congruent.jpg',
+  'stimuli/31-Congruent.jpg',
+  'stimuli/32-Congruent.jpg',
+  'stimuli/33-Congruent.jpg',
+  'stimuli/34-Congruent.jpg',
+  'stimuli/35-Congruent.jpg',
+  'stimuli/36-Congruent.jpg'
+  ];
+
+  var incongruent_images = [
+  'stimuli/1-Incongruent.jpg',
+  'stimuli/2-Incongruent.jpg',
+  'stimuli/3-Incongruent.jpg',
+  'stimuli/4-Incongruent.jpg',
+  'stimuli/5-Incongruent.jpg',
+  'stimuli/6-Incongruent.jpg',
+  'stimuli/7-Incongruent.jpg',
+  'stimuli/8-Incongruent.jpg',
+  'stimuli/9-Incongruent.jpg',
+  'stimuli/10-Incongruent.jpg',
+  'stimuli/11-Incongruent.jpg',
+  'stimuli/12-Incongruent.jpg',
+  'stimuli/13-Incongruent.jpg',
+  'stimuli/14-Incongruent.jpg',
+  'stimuli/15-Incongruent.jpg',
+  'stimuli/16-Incongruent.jpg',
+  'stimuli/17-Incongruent.jpg',
+  'stimuli/18-Incongruent.jpg',
+  'stimuli/19-Incongruent.jpg',
+  'stimuli/20-Incongruent.jpg',
+  'stimuli/21-Incongruent.jpg',
+  'stimuli/22-Incongruent.jpg',
+  'stimuli/23-Incongruent.jpg',
+  'stimuli/24-Incongruent.jpg',
+  'stimuli/25-Incongruent.jpg',
+  'stimuli/26-Incongruent.jpg',
+  'stimuli/27-Incongruent.jpg',
+  'stimuli/28-Incongruent.jpg',
+  'stimuli/29-Incongruent.jpg',
+  'stimuli/30-Incongruent.jpg',
+  'stimuli/31-Incongruent.jpg',
+  'stimuli/32-Incongruent.jpg',
+  'stimuli/33-Incongruent.jpg',
+  'stimuli/34-Incongruent.jpg',
+  'stimuli/35-Incongruent.jpg',
+  'stimuli/36-Incongruent.jpg'
+  ];
+
+  var preload = {
+    type: jsPsychPreload,
+  images: congruent_images.concat(incongruent_images)
+};
+
+timeline.push(preload);
 
   /* create welcome message trial */
   var welcome = {
@@ -48,6 +137,15 @@
   };
 
   timeline.push(welcome);
+
+  // full screen mode ENTER
+var enter_fullscreen = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: true
+};
+
+
+timeline.push(enter_fullscreen);
 
   //take participant's student ID number
  var participant_id_entry = {
@@ -111,6 +209,65 @@
   );   
 
   console.log(cb_stimulus_list);
+  /* create stimulus list */
+  // Congruent stimuli
+var congruent_stimuli = congruent_images.map(function(img) {
+    return {
+        image_name: img,
+        correct_response: "left",   
+        correct_response_key: "z",
+        trial_type: "congruent"
+    };
+});
+
+// Incongruent stimuli
+var incongruent_stimuli = incongruent_images.map(function(img) {
+    return {
+        image_name: img,
+        correct_response: "right",  
+        correct_response_key: "m",
+        trial_type: "incongruent"
+    };
+});
+
+// Combine both lists
+var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
+
+  // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
+  // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
+
+  // Fixation Cross for practice trials
+  var fixation = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<div style="font-size:60px;">+</div>',
+    choices: "NO_KEYS",
+    trial_duration: 700,
+};
+
+  //2 practice trials, counterbalanced, shuffled order
+  var two_practice_trials = {
+    type: jsPsychImageKeyboardResponse,
+    prompt: jsPsych.timelineVariable('prompt'),
+    choices: ["z", "m"],
+    stimulus: jsPsych.timelineVariable('stimulus'),
+    data: {trial_type: stimulus_item['trial_type'],
+          correct_response: stimulus_item['correct_response'],
+          correct_response_key: stimulus_item['correct_response_key']},
+    post_trial_gap: 900,
+  };
+
+
+  //create timeline, where fixation before every shuffled trial
+  var prac_trial = {
+    timeline: [fixation, two_practice_trials],    //placeholder for timeline_variables
+    timeline_variables: [
+      {prompt: "<p>Which is visually <strong>bigger</strong> on the screen?</p>", stimulus: stimulus_item['image_name']}, 
+      {promot: "<p>Which is visually <strong>smaller</strong> on the screen?</p>", stimulus: stimulus_item['image_name']},
+    ],
+  };
+
+  //push to main timeline
+  timeline.push(prac_trial);
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
@@ -151,6 +308,12 @@
         data.correct = true;
       } else {
         data.correct = false;
+  var trial = {
+        type: jsPsychImageKeyboardResponse,
+        prompt: "<p>Press z if the images are the same, m if the images are different.</p>",
+        choices: ["z", "m"],
+        data: { trial_type: stimulus_item['trial_type'],correct_response: stimulus_item['correct_response'],correct_response_key: stimulus_item['correct_response_key']},
+        stimulus: stimulus_item['image_name']
       }
       console.log(data.correct);
     }
@@ -168,9 +331,18 @@
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "<p> Thank you for your participation! </p>",
   trial_duration: 2000, /* without the duration or input, the screen would not change */
+  stimulus: "<p> Thank you for your participation! </p>"
  }
 
  timeline.push(goodbye);
+
+ // full screen mode EXIT
+ var exit_fullscreen = {
+  type: jsPsychFullscreen,
+  fullscreen_mode: false,
+  delay_after: 0
+}
+
   /* start the experiment */
   jsPsych.run(timeline);
 
