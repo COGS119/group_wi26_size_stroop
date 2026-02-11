@@ -28,7 +28,7 @@
 
 <script>
 
-  /* initialize jsPsych */
+ /* initialize jsPsych */
   var jsPsych = initJsPsych(
     {
       on_finish: function() {
@@ -120,12 +120,12 @@
   'stimuli/36-Incongruent.jpg'
   ];
 
-var preload = {
+  var preload = {
     type: jsPsychPreload,
-  images: congruent_images.concat(incongruent_images)
-};
+   images: congruent_images.concat(incongruent_images)
+  };
 
-timeline.push(preload);
+  timeline.push(preload);
 
   /* create welcome message trial */
   var welcome = {
@@ -139,10 +139,10 @@ timeline.push(preload);
   timeline.push(welcome);
 
   // full screen mode ENTER
-var enter_fullscreen = {
-  type: jsPsychFullscreen,
-  fullscreen_mode: true
-};
+  var enter_fullscreen = {
+    type: jsPsychFullscreen,
+    fullscreen_mode: true
+  };
 
 
 timeline.push(enter_fullscreen);
@@ -190,7 +190,7 @@ timeline.push(enter_fullscreen);
     };
   });
 
-// Incongruent stimuli
+ // Incongruent stimuli
  var incongruent_stimuli = incongruent_images.map(function(img) {
     return {
         image_name: img,
@@ -200,14 +200,15 @@ timeline.push(enter_fullscreen);
     };
   });
 
-// Combine both lists
-var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
+ // Combine both lists
+ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
+
  console.log(stimulus_list)
   
   // this is where the stimulus from the list earlier can get flipped
   // cb means counterbalanced
 
-var cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
+ var cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
       {
        ...flipped, /*...flipped means it copies everything from stimulus list and then 
        adds the suff after it*/
@@ -218,6 +219,7 @@ var cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
       }
     )
   );   
+
   console.log(cb_stimulus_list);
 
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
@@ -229,7 +231,7 @@ var cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
     stimulus: '<div style="font-size:60px;">+</div>',
     choices: "NO_KEYS",
     trial_duration: 700,
-};
+  };
 
   //2 practice trials, counterbalanced, shuffled order
   var two_practice_trials = {
