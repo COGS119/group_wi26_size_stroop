@@ -124,15 +124,10 @@ timeline.push(preload);
 var enter_fullscreen = {
   type: jsPsychFullscreen,
   fullscreen_mode: true
-}
+};
 
-var trial_in_fullscreen = {
-  type: jsPsychHtmlButtonResponse,
-  stimulus: 'This trial will be in fullscreen mode.',
-  choices: ['Continue']
-}
 
-timeline.push(trial_in_fullscreen, enter_fullscreen);
+timeline.push(enter_fullscreen);
 
   //take participant's student ID number
  var participant_id_entry = {
