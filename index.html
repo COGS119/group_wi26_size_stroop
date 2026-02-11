@@ -244,13 +244,12 @@ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
     timeline: [fixation, two_practice_trials],    //placeholder for timeline_variables
     timeline_variables: [
         {prompt: "<p>Which is visually <strong>bigger</strong> on the screen?</p>", "<p>Which is visually <strong>smaller</strong> on the screen?</p>"},
-        {stimulus: stimulus_item['image_name'], stimulus_item['image_name']}
+        {stimulus: stimulus_item['image_name']},
     ],
-    randomize_order: true
   };
 
   //push to main timeline
-  timeline.push(prac_trial);
+  timeline.push(two_practice_trials);
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
