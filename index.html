@@ -308,16 +308,9 @@ var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
         data.correct = true;
       } else {
         data.correct = false;
-  var trial = {
-        type: jsPsychImageKeyboardResponse,
-        prompt: "<p>Press z if the images are the same, m if the images are different.</p>",
-        choices: ["z", "m"],
-        data: { trial_type: stimulus_item['trial_type'],correct_response: stimulus_item['correct_response'],correct_response_key: stimulus_item['correct_response_key']},
-        stimulus: stimulus_item['image_name']
       }
-      console.log(data.correct);
     }
-  }
+  };
 
   var trial = {
     timeline: [trial_example],
