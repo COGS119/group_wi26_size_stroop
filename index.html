@@ -261,6 +261,7 @@ timeline.push(enter_fullscreen);
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
   var trial_example = {
+  var cb_trials = {
     type: jsPsychImageKeyboardResponse,
     prompt: "<p>Press z if the left image is larger, m if the right image is larger.</p>",
     choices: ["z", "m"],
@@ -302,6 +303,7 @@ timeline.push(enter_fullscreen);
 
   var trial = {
     timeline: [trial_example],
+    timeline: [cb_trials],
     timeline_variables: cb_stimulus_list,
   }
 
