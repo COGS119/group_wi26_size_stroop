@@ -105,9 +105,12 @@
        trial_type: flipped.trial_type + "_flipped", /* this is just to keep track of of what is counterbalanced */
        correct_response: flipped.correct_response === "left" ? "right" : "left",
        correct_response_key: flipped.correct_response_key === "z" ? "m" : "z",
+       flipped: true,
       }
     )
   );   
+
+  console.log(cb_stimulus_list);
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
@@ -129,9 +132,8 @@
     it is not working right now, probally something wrong with the first two lines
     or maybe the name isnt being updated in cb_stimulus_list 
     */
-    css_classes: function(){
-      let trial_type = jsPsych.timelineVariable('trial_type', true);
-      if (trial_type.includes("flipped")) {
+    css_classes: function() {
+      if (jsPsych.timelineVariable('flipped')) {
         return "cb";
       } else {
         return "normal";
@@ -156,7 +158,7 @@
 
   var trial = {
     timeline: [trial_example],
-    timeline_variables: cb_stimulus_list 
+    timeline_variables: cb_stimulus_list,
   }
 
   timeline.push(trial);
