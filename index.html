@@ -132,7 +132,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus:`
     <h1>Welcome to the experiment.</h1>
-    <p>Press any key to begin.</p>
+    <p>Press any key to begin</p>
     `
   };
 
@@ -169,7 +169,7 @@
     In this experiment, you will be shown two images on each trial. 
     <br>Your task is to determine which image on the screen is larger, regardless of the real size of the objects shown.
     <br>You would press <strong>z</strong> if the left image is larger, and <strong>m</strong> if the right image is larger.
-    <br>You would first do x practice trials to familiarize yourself with the task, and then you continue to the experimental trials.
+    <br>You would first do 2 practice trials to familiarize yourself with the task, and then you continue to the experimental trials.
     <br>Press any key to begin.
     `
     //change the x to the number of practice trials that we are gonna be using
@@ -278,6 +278,30 @@
     trial_duration: 1000,
   };
 
+  //instruction before fixation FOR BIGGER QUESTION
+  var big_instruction = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+    <h2>Which is visually <span style="color:blue;font-size:40px">bigger</span> on the screen?</h2>
+    <br> For the next part,
+    <br>Press <strong>z</strong> if the left image is larger, <strong>m</strong> if the right image is larger.
+    <br>
+    <br>When you are ready, press any key to continue.
+    `
+  };
+
+   //instruction before fixation FOR SMALLER QUESTION
+  var small_instruction = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+    <h2>Which is visually <span style="color:blue;font-size:40px">smaller</span> on the screen?</h2>
+    <br> For the next part,
+    <br>Press <strong>z</strong> if the left image is larger, <strong>m</strong> if the right image is larger.
+    <br>
+    <br>When you are ready, press any key to continue.
+    `
+  };
+
   //2 practice trials, counterbalanced, shuffled order
   var two_practice_trials = {
     type: jsPsychImageKeyboardResponse,
@@ -300,7 +324,7 @@
   };
 
   //push to main timeline
-  timeline.push(prac_trial);
+  timeline.push(big_instruction, small_instruction);
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
