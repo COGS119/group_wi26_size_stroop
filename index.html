@@ -178,6 +178,37 @@
   timeline.push(instructions);
 
   // create stimulus list, this would hold all the information for each stimulus
+  stimulus_list = [
+    {
+      image_name: "stimuli/1-Congruent.jpg",
+      correct_response: "left",
+      correct_response_key: "z",
+      trial_type: "congruent"
+    },
+    {
+      image_name: "stimuli/1-Inongruent.jpg", 
+      correct_response: "right",
+      correct_response_key: "m",
+      trial_type: "incongruent"
+    }
+  ]
+  
+  // this is where the stimulus from the list earlier can get flipped
+  // cb means counterbalanced
+  cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
+      {
+       ...flipped, /*...flipped means it copies everything from stimulus list and then 
+       adds the suff after it*/
+       trial_type: flipped.trial_type + "_flipped", /* this is just to keep track of of what is counterbalanced */
+       correct_response: flipped.correct_response === "left" ? "right" : "left",
+       correct_response_key: flipped.correct_response_key === "z" ? "m" : "z",
+       flipped: true,
+      }
+    )
+  );   
+
+  console.log(cb_stimulus_list);
+  /* create stimulus list */
   // Congruent stimuli
  var congruent_stimuli = congruent_images.map(function(img) {
     return {
