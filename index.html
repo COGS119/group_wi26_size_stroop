@@ -271,10 +271,7 @@
     /* this is where we can add the class to flip the image,
     the plan is to make it be able to check if the trial is using a flipped imaged or not
     if it uses a flip stimulus, it will be the 'cb' class and the image will be flipped
-    otherwise it will be normal and not flipped
-    it is not working right now, probally something wrong with the first two lines
-    or maybe the name isnt being updated in cb_stimulus_list 
-    */
+    otherwise it will be normal and not flipped */
     css_classes: function() {
       if (jsPsych.timelineVariable('flipped')) {
         return "cb";
@@ -282,14 +279,13 @@
         return "normal";
       }
     },
-    // check to see of the response is correct or not
-    // adds it into the data
+    // check to see of the response is correct or not and adds it into the data
     on_finish: function(data) {
       console.log(data.trial_type);
       console.log(data.response);
       console.log(data.correct_response_key);
-      // Sees if the choice made was correct or incorrect.
-      data.choices = data.response;
+
+      data.choices = data.response;  // Sees if the choice made was correct or incorrect.
       if (data.choices == data.correct_response_key) {
         data.correct = true;
       } else {
@@ -310,7 +306,6 @@
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "<p> Thank you for your participation! </p>",
   trial_duration: 2000, /* without the duration or input, the screen would not change */
-  stimulus: "<p> Thank you for your participation! </p>"
  }
 
  timeline.push(goodbye);
