@@ -284,7 +284,7 @@
     stimulus: `
     <h2>Which is visually <span style="color:blue;font-size:40px">bigger</span> on the screen?</h2>
     <br> For the next part,
-    <br>Press <strong>z</strong> if the left image is larger, <strong>m</strong> if the right image is larger.
+    <br>Press <span style="color:red;font-size:25px;font-weight:bold">z</span> if the left image is <strong>larger</strong>, <span style="color:red;font-size:25px;font-weight:bold">m</span> if the right image is <strong>larger</strong>.
     <br>
     <br>When you are ready, press any key to continue.
     `
@@ -296,7 +296,7 @@
     stimulus: `
     <h2>Which is visually <span style="color:blue;font-size:40px">smaller</span> on the screen?</h2>
     <br> For the next part,
-    <br>Press <strong>z</strong> if the left image is larger, <strong>m</strong> if the right image is larger.
+    <br>Press <span style="color:red;font-size:25px;font-weight:bold">z</span> if the left image is <strong>smaller</strong>, <span style="color:red;font-size:25px;font-weight:bold">m</span> if the right image is <strong>smaller</strong>.
     <br>
     <br>When you are ready, press any key to continue.
     `
@@ -305,7 +305,6 @@
   //2 practice trials, counterbalanced, shuffled order
   var two_practice_trials = {
     type: jsPsychImageKeyboardResponse,
-    prompt: 'no', //change no to somehting else 
     choices: ["z", "m"],
     stimulus: jsPsych.timelineVariable('image_name'),
     data: {
