@@ -303,6 +303,18 @@
     `
   };
 
+  var practice_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+    <h1>This is the practice trial section.</h1>
+    <br>You will see complete two trials and receive feedback.
+    <br>The trials would tell you which image to pick on the bottom of the screen. 
+    <br>If you chose wrong, you would need to redo that trial until you get it right.
+    <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+    <br>Press any key to continue.
+    `
+  };
+
   //2 practice trials, counterbalanced, shuffled order
   var two_practice_trials = {
     type: jsPsychImageKeyboardResponse,
