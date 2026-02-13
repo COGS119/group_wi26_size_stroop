@@ -18,12 +18,12 @@
     prevents the normal stimulus from being flipped since it wont have the cb class
     */
    .cb #jspsych-image-keyboard-response-stimulus {
-      transform: scaleX(-1);
-      width: 75%;
+      transform: scaleX(-1); 
+      width: 80%;
     }
 
     .normal #jspsych-image-keyboard-response-stimulus {
-      width: 75%;
+      width: 80%;
     }
 
   </style>
@@ -239,9 +239,7 @@
 
   console.log(all_stimulus_list);
 
-  var test_stimulus_list = cb_stimulus_list.slice(0,3);
-  
-  // jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list, 3);
+  var test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list, 3);
 
   console.log(test_stimulus_list);
 
@@ -341,7 +339,7 @@
   };
 
   var trial = {
-    timeline: [test_trials],
+    timeline: [fixation, test_trials, feedback],
     timeline_variables: test_stimulus_list,
   }
 
@@ -350,7 +348,7 @@
   /*goodbye*/
  var goodbye = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "<p> Thank you for your participation! </p>",
+  stimulus: "<h1> Thank you for your participation! </h1>",
   trial_duration: 2000, /* without the duration or input, the screen would not change */
  }
 
