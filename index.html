@@ -301,7 +301,7 @@
       <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
       <br>Press any key to continue.
     `
-  };
+  }
 
   var actual_instructions = {
     type: jsPsychHtmlKeyboardResponse,
@@ -310,6 +310,38 @@
       <p>Press any key to continue.</p>
     `
   };
+
+  //Practice trial ONE (big, congruent)
+  var prac_trial_one = {
+    type: jsPsychImageKeyboardResponse,
+    choices: ["z", "m"],
+    stimulus: 'stimuli/1-Congruent.jpg',
+    data: {
+      trial_type: "congruent",
+      correct_response: "left",
+      correct_response_key: "z",
+    },
+    post_trial_gap: 900,
+  };
+
+  //push prac trial one to main timeline
+  timeline.push(big_instruction, fixation, prac_trial_one);
+
+  //Practice trial TWO (small, incongruent)
+  var prac_trial_two = {
+    type: jsPsychImageKeyboardResponse,
+    choices: ["z", "m"],
+    stimulus: 'stimuli/1-Incongruent.jpg',
+    data: {
+      trial_type: "incongruent",
+      correct_response: "right",
+      correct_response_key: "m",
+    },
+    post_trial_gap: 900,
+  };
+
+  //push prac trial two to main timeline
+  timeline.push(small_instruction, fixation, prac_trial_two);
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
