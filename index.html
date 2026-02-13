@@ -17,13 +17,12 @@
     .cb means that only stuff in the stimulus with the cb class would be affected 
     prevents the normal stimulus from being flipped since it wont have the cb class
     */
-   .flipped #jspsych-image-keyboard-response-stimulus {
+   .cb #jspsych-image-keyboard-response-stimulus {
       transform: scaleX(-1);
       width: 75%;
     }
 
     .normal #jspsych-image-keyboard-response-stimulus {
-      transform: scaleX(1);
       width: 75%;
     }
 
@@ -46,7 +45,7 @@
   /* create timeline */
   var timeline = [];
 
-  /*preload*/
+  /*create list of congruent and incongruent images */
   var congruent_images = [
   'stimuli/1-Congruent.jpg',
   'stimuli/2-Congruent.jpg',
@@ -125,6 +124,7 @@
   'stimuli/36-Incongruent.jpg'
   ];
 
+  /*preload*/
   var preload = {
     type: jsPsychPreload,
    images: congruent_images.concat(incongruent_images)
@@ -171,31 +171,31 @@
   var instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: ` 
-    In this experiment, you will be shown two images of real world objects. 
-    <br>Your task is to determine which image on the screen is larger or smaller, regardless of the real size of the objects shown.
-    <br>You would press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
-    <br>You would have to complete <strong>3</strong> blocks of trials:
-    <br>1. Practice trials so you get familiar with the task
-    <br>2. Trials asking to select the larger image
-    <br>3. Trials asking to select the smaller image
-    <br>
-    <br>Before starting, place your <strong>left</strong> index finger on the <strong>z</strong> key and your <strong>right</strong> index finger on the <strong>m</strong> key.
-    <br>
-    <br>Press any key to begin.
+      In this experiment, you will be shown two images of real world objects. 
+      <br>Your task is to determine which image on the screen is larger or smaller, regardless of the real size of the objects shown.
+      <br>You would press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>You would have to complete <strong>3</strong> blocks of trials:
+      <br>1. Practice trials so you get familiar with the task
+      <br>2. Trials asking to select the larger image
+      <br>3. Trials asking to select the smaller image
+      <br>
+      <br>Before starting, place your <strong>left</strong> index finger on the <strong>z</strong> key and your <strong>right</strong> index finger on the <strong>m</strong> key.
+      <br>
+      <br>Press any key to begin.
     ` 
   };
   
   // timeline.push(instructions);
 
   /* create stimulus list */
-  // Congruent stimuli
+  // adds the proper data each stimulus list 
  var congruent_stimuli = congruent_images.map(function(img) {
     return {
       image_name: img,
       correct_response: "left",   
       correct_response_key: "z",
       trial_type: "congruent",
-      css_classes: 'normal'
+      css_classes: 'normal' //css_classes is important so the image can get flipped 
     };
   });
 
@@ -215,35 +215,35 @@
 
  console.log(stimulus_list)
   
-  // this is where the stimulus from the list earlier can get flipped
-  // cb means counterbalanced
-
- var cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
-      {
+ // this is where the stimulus from the list earlier can get flipped
+ // cb means counterbalanced
+ var cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff, 
+      {                                                // ==> works the same as function()
        ...flipped, /*...flipped means it copies everything from stimulus list and then 
-       adds the suff after it*/
-       trial_type: flipped.trial_type + "_flipped", /* this is just to keep track of of what is counterbalanced */
-       correct_response: flipped.correct_response === "left" ? "right" : "left",
+       adds the stuff after it*/
+       /* changes the name of the trial type, adds _flipped to the end of it */
+       trial_type: flipped.trial_type + "_flipped", 
+       /* checks if correct response is left, if it is left, 
+       changes it to right and vice versa, the ? works as an if else function  */
+       correct_response: flipped.correct_response === "left" ? "right" : "left", 
        correct_response_key: flipped.correct_response_key === "z" ? "m" : "z",
-       css_classes: 'flipped',
+       css_classes: 'cb',
       }
     )
   );   
 
   console.log(cb_stimulus_list);
 
+  //combines counterbalancecd list and stimulus list
   var all_stimulus_list = stimulus_list.concat(cb_stimulus_list);
 
   console.log(all_stimulus_list);
 
-  var test_stimulus_list = all_stimulus_list.slice(0,3);
+  var test_stimulus_list = cb_stimulus_list.slice(0,3);
   
   // jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list, 3);
 
   console.log(test_stimulus_list);
-
-  // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
-  // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
 
   // Fixation Cross for practice trials
   var fixation = {
@@ -273,9 +273,9 @@
   var big_instruction = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
-    <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
-    <br>Press any key to continue.
+      <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press any key to continue.
     `
   };
 
@@ -283,9 +283,9 @@
   var small_instruction = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
-    <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
-    <br>Press any key to continue.
+      <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press any key to continue.
     `
   };
 
@@ -293,12 +293,12 @@
   var practice_instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <h1>This is the practice trial section.</h1>
-    <br>You will see complete two trials and receive feedback.
-    <br>The trials would tell you which image to pick on the bottom of the screen. 
-    <br>If you chose wrong, you would need to redo that trial until you get it right.
-    <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
-    <br>Press any key to continue.
+      <h1>This is the practice trial section.</h1>
+      <br>You will see complete two trials and receive feedback.
+      <br>The trials would tell you which image to pick on the bottom of the screen. 
+      <br>If you chose wrong, you would need to redo that trial until you get it right.
+      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press any key to continue.
     `
   };
 
@@ -309,7 +309,7 @@
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
   var test_trials = {
     type: jsPsychImageKeyboardResponse,
-    prompt: "<p>Press z if the left image is larger, m if the right image is larger.</p>",
+    prompt: "<p>Press <strong>z</strong> to choose the left image, <strong>m</strong> to choose the right image.</p>",
     choices: ["z", "m"],
     stimulus: jsPsych.timelineVariable('image_name'),
     data: { 
@@ -318,9 +318,9 @@
       correct_response_key: jsPsych.timelineVariable('correct_response_key'),
       css_classes: jsPsych.timelineVariable('css_classes')
     },
-    /* this is where we can add the class to flip the image,
-    the plan is to make it be able to check if the trial is using a flipped imaged or not
-    if it uses a cb stimulus, it will be the 'flipped' class and the image will be flipped
+    /* this is where we can add the class to flip the image for counterbalancing.
+    The plan is to make it be able to check if the trial is using a flipped imaged or not
+    if it uses a cb stimulus, it will be the 'cb' class and the image will be flipped
     otherwise it will be normal and not flipped */
     css_classes: jsPsych.timelineVariable('css_classes'),
 
