@@ -283,7 +283,7 @@
     trial_duration: 1000,
   };
 
-  //instruction before fixation FOR BIGGER QUESTION
+  //instruction for SELECTING THE BIGGER IMAGE block 
   var big_instruction = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
@@ -293,7 +293,7 @@
     `
   };
 
-   //instruction before fixation FOR SMALLER QUESTION
+   //instruction for SELECTING THE SMALLER IMAGE block
   var small_instruction = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
@@ -303,6 +303,7 @@
     `
   };
 
+  //instructions for the PRACTICE TRIALS block
   var practice_instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
