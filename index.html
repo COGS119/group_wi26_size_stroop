@@ -17,8 +17,12 @@
     .cb means that only stuff in the stimulus with the cb class would be affected 
     prevents the normal stimulus from being flipped since it wont have the cb class
     */
-   .cb #jspsych-image-keyboard-response-stimulus {
+   .flipped #jspsych-image-keyboard-response-stimulus {
       transform: scaleX(-1);
+    }
+
+    .normal #jspsych-image-keyboard-response-stimulus {
+      transform: scaleX(1);
     }
 
   </style>
@@ -188,7 +192,8 @@
       image_name: img,
       correct_response: "left",   
       correct_response_key: "z",
-      trial_type: "congruent"
+      trial_type: "congruent",
+      css_classes: 'normal'
     };
   });
 
@@ -198,7 +203,8 @@
       image_name: img,
       correct_response: "right",  
       correct_response_key: "m",
-      trial_type: "incongruent"
+      trial_type: "incongruent",
+      css_classes: 'normal'
     };
   });
 
@@ -217,12 +223,22 @@
        trial_type: flipped.trial_type + "_flipped", /* this is just to keep track of of what is counterbalanced */
        correct_response: flipped.correct_response === "left" ? "right" : "left",
        correct_response_key: flipped.correct_response_key === "z" ? "m" : "z",
-       flipped: true,
+       css_classes: 'flipped',
       }
     )
   );   
 
   console.log(cb_stimulus_list);
+
+  var all_stimulus_list = stimulus_list.concat(cb_stimulus_list);
+
+  console.log(all_stimulus_list);
+
+  var test_stimulus_list = all_stimulus_list.slice(0,3);
+  
+  // jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list, 3);
+
+  console.log(test_stimulus_list);
 
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
   // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
@@ -297,19 +313,15 @@
     data: { 
       trial_type: jsPsych.timelineVariable('trial_type'),
       correct_response: jsPsych.timelineVariable('correct_response'),
-      correct_response_key: jsPsych.timelineVariable('correct_response_key')
+      correct_response_key: jsPsych.timelineVariable('correct_response_key'),
+      css_classes: jsPsych.timelineVariable('css_classes')
     },
     /* this is where we can add the class to flip the image,
     the plan is to make it be able to check if the trial is using a flipped imaged or not
     if it uses a flip stimulus, it will be the 'cb' class and the image will be flipped
     otherwise it will be normal and not flipped */
-    css_classes: function() {
-      if (jsPsych.timelineVariable('flipped')) {
-        return "cb";
-      } else {
-        return "normal";
-      }
-    },
+    css_classes: jsPsych.timelineVariable('css_classes'),
+
     // check to see of the response is correct or not and adds it into the data
     on_finish: function(data) {
       console.log(data.trial_type);
@@ -328,7 +340,7 @@
 
   var trial = {
     timeline: [test_trials],
-    timeline_variables: stimulus_list,
+    timeline_variables: test_stimulus_list,
   }
 
   timeline.push(trial);
