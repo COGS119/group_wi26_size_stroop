@@ -330,8 +330,12 @@
     }
   };
 
+  var trial_block = {
+    timeline: [fixation, test_trials, feedback]
+  }
+
   var trial = {
-    timeline: [cb_trials],
+    timeline: [test_trials],
     timeline_variables: all_stimulus_list,
   }
 
