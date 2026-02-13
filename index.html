@@ -127,7 +127,7 @@
   /*preload*/
   var preload = {
     type: jsPsychPreload,
-   images: congruent_images.concat(incongruent_images)
+    images: congruent_images.concat(incongruent_images)
   };
 
   timeline.push(preload);
@@ -136,7 +136,7 @@
   var welcome = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus:`
-    <h1>Welcome to the experiment.</h1>
+    <h1>Welcome to the experiment!</h1>
     <p>Press any key to begin</p>
     `
   };
@@ -187,8 +187,8 @@
   
   // timeline.push(instructions);
 
-  /* create stimulus list */
-  // adds the proper data each stimulus list 
+  /* creating the stimulus list */
+  // 1. adds the proper data each stimulus list 
  var congruent_stimuli = congruent_images.map(function(img) {
     return {
       image_name: img,
@@ -210,7 +210,7 @@
     };
   });
 
- // Combine both lists
+ // 2. Combine both lists
  var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
 
  console.log(stimulus_list)
@@ -234,11 +234,13 @@
 
   console.log(cb_stimulus_list);
 
-  //combines counterbalancecd list and stimulus list
+  //combines counterbalancecd list and stimulus list into one list
+  //this exisit so we can take from it randomly 
   var all_stimulus_list = stimulus_list.concat(cb_stimulus_list);
 
   console.log(all_stimulus_list);
 
+  // creates a new stimulus list by randomly taking x amount from the combined list above
   var test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list, 3);
 
   console.log(test_stimulus_list);
@@ -252,6 +254,7 @@
   };
 
   //provides feedback saying if the previous trial is correct or not
+  //could maybe add a way to repeat previous trial if incorrect jhere
   var feedback = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus:
@@ -260,7 +263,7 @@
         if (last_trial_correct) {
           return "<p style='color:green; font-size: 48px;'>Correct!</p>";
         } else {
-          return "<p style='color:red; font-size: 48px;'>Incorrect.</p>";
+          return "<p style='color:red; font-size: 48px;'>Incorrect!</p>";
         }
       },
     choices: "NO_KEYS",
@@ -299,8 +302,6 @@
       <br>Press any key to continue.
     `
   };
-
-  var test_list = jsPsych.randomization.shuffle(stimulus_list)
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
@@ -346,6 +347,7 @@
   timeline.push(trial);
 
   /*goodbye*/
+  // may be a fun idea to add a background image here for fun
  var goodbye = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "<h1> Thank you for your participation! </h1>",
