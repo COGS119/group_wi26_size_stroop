@@ -287,11 +287,9 @@
   var big_instruction = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <h2>Which is visually <span style="color:red;font-size:40px">bigger</span> on the screen?</h2>
-    <br> For the next part,
-    <br>Press <span style="color:red;font-size:23px;font-weight:bold">z</span> for the left image, <span style="color:red;font-size:23px;font-weight:bold">m</span> for the right image.
-    <br>
-    <br>When you are ready, press any key to continue.
+      <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press any key to continue.
     `
   };
 
@@ -299,13 +297,24 @@
   var small_instruction = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-    <h2>Which is visually <span style="color:red;font-size:40px">smaller</span> on the screen?</h2>
-    <br> For the next part,
-    <br>Press <span style="color:red;font-size:23px;font-weight:bold">z</span> for the left image, <span style="color:red;font-size:23px;font-weight:bold">m</span> for the right image.
-    <br>
-    <br>When you are ready, press any key to continue.
+      <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press any key to continue.
     `
   };
+
+  //instructions for the PRACTICE TRIALS block
+  var practice_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <h1>This is the practice trial section.</h1>
+      <br>You will see complete two trials and receive feedback.
+      <br>The trials would tell you which image to pick on the bottom of the screen. 
+      <br>If you chose wrong, you would need to redo that trial until you get it right.
+      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press any key to continue.
+    `
+  }
 
   //Practice trial ONE (big, congruent)
   var prac_trial_one = {
