@@ -180,7 +180,7 @@
     ` 
   };
   
-  timeline.push(instructions);
+  // timeline.push(instructions);
 
   /* create stimulus list */
   // Congruent stimuli
@@ -224,10 +224,6 @@
   );   
 
   console.log(cb_stimulus_list);
-
-  var all_stimulus_list = stimulus_list.concat(cb_stimulus_list);
-
-  console.log(all_stimulus_list)
 
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
   // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
@@ -320,6 +316,7 @@
       console.log(data.trial_type);
       console.log(data.response);
       console.log(data.correct_response_key);
+      console.log(data.css_classes);
 
       data.choices = data.response;  // Sees if the choice made was correct or incorrect.
       if (data.choices == data.correct_response_key) {
@@ -330,13 +327,9 @@
     }
   };
 
-  var trial_block = {
-    timeline: [fixation, test_trials, feedback]
-  }
-
   var trial = {
     timeline: [test_trials],
-    timeline_variables: all_stimulus_list,
+    timeline_variables: stimulus_list,
   }
 
   timeline.push(trial);
