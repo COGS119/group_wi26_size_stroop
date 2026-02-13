@@ -141,7 +141,7 @@
     `
   };
 
-  timeline.push(welcome);
+  // timeline.push(welcome);
 
   // full screen mode ENTER
   var enter_fullscreen = {
@@ -185,7 +185,7 @@
     ` 
   };
   
-  // timeline.push(instructions);
+  timeline.push(instructions);
 
   /* creating the stimulus list */
   // 1. adds the proper data each stimulus list 
@@ -300,6 +300,14 @@
       <br>If you chose wrong, you would need to redo that trial until you get it right.
       <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
       <br>Press any key to continue.
+    `
+  };
+
+  var actual_instructions = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <h1>Now you will begin the actual trials.</h1>  
+      <p>Press any key to continue.</p>
     `
   };
 
