@@ -19,10 +19,12 @@
     */
    .flipped #jspsych-image-keyboard-response-stimulus {
       transform: scaleX(-1);
+      width: 75%;
     }
 
     .normal #jspsych-image-keyboard-response-stimulus {
       transform: scaleX(1);
+      width: 75%;
     }
 
   </style>
@@ -204,7 +206,7 @@
       correct_response: "right",  
       correct_response_key: "m",
       trial_type: "incongruent",
-      css_classes: 'normal'
+      css_classes: 'normal' 
     };
   });
 
@@ -318,7 +320,7 @@
     },
     /* this is where we can add the class to flip the image,
     the plan is to make it be able to check if the trial is using a flipped imaged or not
-    if it uses a flip stimulus, it will be the 'cb' class and the image will be flipped
+    if it uses a cb stimulus, it will be the 'flipped' class and the image will be flipped
     otherwise it will be normal and not flipped */
     css_classes: jsPsych.timelineVariable('css_classes'),
 
