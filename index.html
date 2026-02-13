@@ -182,37 +182,6 @@
   
   timeline.push(instructions);
 
-  // create stimulus list, this would hold all the information for each stimulus
-  stimulus_list = [
-    {
-      image_name: "stimuli/1-Congruent.jpg",
-      correct_response: "left",
-      correct_response_key: "z",
-      trial_type: "congruent"
-    },
-    {
-      image_name: "stimuli/1-Inongruent.jpg", 
-      correct_response: "right",
-      correct_response_key: "m",
-      trial_type: "incongruent"
-    }
-  ]
-  
-  // this is where the stimulus from the list earlier can get flipped
-  // cb means counterbalanced
-  cb_stimulus_list = stimulus_list.map (flipped => ( //.map means add stuff
-      {
-       ...flipped, /*...flipped means it copies everything from stimulus list and then 
-       adds the suff after it*/
-       trial_type: flipped.trial_type + "_flipped", /* this is just to keep track of of what is counterbalanced */
-       correct_response: flipped.correct_response === "left" ? "right" : "left",
-       correct_response_key: flipped.correct_response_key === "z" ? "m" : "z",
-       flipped: true,
-      }
-    )
-  );   
-
-  console.log(cb_stimulus_list);
   /* create stimulus list */
   // Congruent stimuli
  var congruent_stimuli = congruent_images.map(function(img) {
@@ -255,6 +224,10 @@
   );   
 
   console.log(cb_stimulus_list);
+
+  var all_stimulus_list = stimulus_list.concat(cb_stimulus_list);
+
+  console.log(all_stimulus_list)
 
   // IDEA: each element in the array will be a dictionary so that we can concurrently store information about the correctness of the response
   // MAIN TO DO: How can we expand this systematically to encompass all stimuli?
@@ -316,33 +289,12 @@
     `
   };
 
-  //2 practice trials, counterbalanced, shuffled order, 4 in total
-  var two_practice_trials = {
-    type: jsPsychImageKeyboardResponse,
-    choices: ["z", "m"],
-    stimulus: jsPsych.timelineVariable('image_name'),
-    data: {
-      trial_type: jsPsych.timelineVariable('trial_type'),
-      correct_response: jsPsych.timelineVariable('correct_response'),
-      correct_response_key: jsPsych.timelineVariable('correct_response_key'),
-    },
-    post_trial_gap: 900,
-  };
-
-
-  //create timeline, where fixation before every shuffled trial
-  var prac_trial = {
-    timeline: [fixation, two_practice_trials],    //placeholder for timeline_variables
-    timeline_variables: stimulus_list,
-  };
-
-  //push to main timeline
-  timeline.push(big_instruction, small_instruction);
+  var test_list = jsPsych.randomization.shuffle(stimulus_list)
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
-  var cb_trials = {
+  var test_trials = {
     type: jsPsychImageKeyboardResponse,
     prompt: "<p>Press z if the left image is larger, m if the right image is larger.</p>",
     choices: ["z", "m"],
@@ -380,7 +332,7 @@
 
   var trial = {
     timeline: [cb_trials],
-    timeline_variables: cb_stimulus_list,
+    timeline_variables: all_stimulus_list,
   }
 
   timeline.push(trial);
