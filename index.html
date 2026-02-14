@@ -185,7 +185,7 @@
     ` 
   };
   
-  timeline.push(instructions);
+  // timeline.push(instructions);
 
   /* creating the stimulus list */
   // 1. adds the proper data each stimulus list 
@@ -326,7 +326,7 @@
   };
 
   //push prac trial one to main timeline
-  timeline.push(big_instruction, fixation, prac_trial_one);
+  // timeline.push(big_instruction, fixation, prac_trial_one);
 
   //Practice trial TWO (small, incongruent)
   var prac_trial_two = {
@@ -342,7 +342,53 @@
   };
 
   //push prac trial two to main timeline
-  timeline.push(small_instruction, fixation, prac_trial_two);
+  // timeline.push(small_instruction, fixation, prac_trial_two);
+
+  //this new practice trial, sets the values based on which stimulus is used
+  var prac_trial_JW = {
+    type: jsPsychImageKeyboardResponse,
+    prompt: "<p>Press <strong>z</strong> to choose the left image, <strong>m</strong> to choose the right image.</p>",
+    choices: ["z", "m"],
+    stimulus: jsPsych.timelineVariable('image_name'),
+    data: { 
+      trial_type: jsPsych.timelineVariable('trial_type'),
+      correct_response: jsPsych.timelineVariable('correct_response'),
+      correct_response_key: jsPsych.timelineVariable('correct_response_key'),
+      css_classes: jsPsych.timelineVariable('css_classes')
+    },
+    css_classes: jsPsych.timelineVariable('css_classes'),
+    on_finish: function(data) {
+      console.log(data.trial_type); //could honestly delete all the console.log 
+      console.log(data.response);   //these things are mainly for debugging
+      console.log(data.correct_response_key);
+      console.log(data.css_classes);
+      data.choices = data.response;  
+      if (data.choices == data.correct_response_key) {
+        data.correct = true;
+      } else {
+        data.correct = false;
+      }
+    },
+  };
+
+  var prac_looper = {
+    timeline: [prac_trial_rep, feedback],
+    loop_function: function(data){ //loop_function loops the function, like the name says
+      var last_trial = data.values()[0]; //last_trial holds the data from the trial. 
+      if (last_trial.correct == false) { //last_trial.correct looks at if correct is true or false
+        return true; // because it is == false, if they get it wrong, loop_function will turn on
+      } else {
+        return false; //if they did it right, no loop
+      }
+    },
+  };
+
+  var prac_trials_test ={
+    timeline: [prac_looper],
+    timeline_variables: test_stimulus_list, //timeline variable out here so the stimulus doesnt get swapped 
+  };
+
+  timeline.push(prac_trials_test)
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
@@ -385,7 +431,7 @@
     timeline_variables: test_stimulus_list,
   }
 
-  timeline.push(trial);
+  // timeline.push(trial);
 
   /*goodbye*/
   // may be a fun idea to add a background image here for fun
