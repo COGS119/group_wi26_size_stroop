@@ -261,9 +261,9 @@
       function () {
         var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
         if (last_trial_correct) {
-          return "<p style='color:green; font-size: 48px;'>Correct!</p>";
+          return "<p style='color:green; font-size: 48px;'>That is correct!</p>";
         } else {
-          return "<p style='color:red; font-size: 48px;'>Incorrect!</p>";
+          return "<p style='color:red; font-size: 48px;'>Incorrect! Try again.</p>";
         }
       },
     choices: "NO_KEYS",
