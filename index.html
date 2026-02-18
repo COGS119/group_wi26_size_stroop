@@ -462,12 +462,12 @@
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
 
   /*goodbye*/
-  // may be a fun idea to add a background image here for fun
+  //goodbye cat background image in goodbye trial
   var goodbye = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "<h1> Thank you for your participation! </h1>",
-    trial_duration: 2000, /* without the duration or input, the screen would not change */
-  }
+    stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
+    trial_duration: 5000, /* without the duration or input, the screen would not change */
+  };
 
   timeline.push(goodbye);
 
