@@ -474,7 +474,7 @@
   };
 
   var trial = {
-    timeline: [fixation, test_trials],
+    timeline: [fixation, test_trials, feedback], //feedback is here for debug and testing, remove when done
     timeline_variables: test_stimulus_list,
     randomization: true,
   }
@@ -489,7 +489,7 @@
 
 
   var small_question_block = {
-    timeline: [small_instruction, trial]
+    timeline: [small_instruction, trial, feedback] //feedback is here for debug and testing, remove when done
   }
 
   timeline.push(small_question_block)
