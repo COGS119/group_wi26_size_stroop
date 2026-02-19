@@ -272,6 +272,8 @@
 
   console.log(test_stimulus_list);
 
+  var small_test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 3);
+
   // Fixation Cross for practice trials
   var fixation = {
     type: jsPsychHtmlKeyboardResponse,
@@ -473,23 +475,29 @@
     }
   };
 
-  var trial = {
+  var big_trial = {
     timeline: [fixation, test_trials, feedback], //feedback is here for debug and testing, remove when done
     timeline_variables: test_stimulus_list,
+    randomization: true,
+  }
+
+  var small_trial = {
+    timeline: [fixation, test_trials, feedback], //feedback is here for debug and testing, remove when done
+    timeline_variables: small_test_stimulus_list,
     randomization: true,
   }
 
   timeline.push(actual_instructions)
 
   var big_question_block = {
-    timeline: [big_instruction, trial]
+    timeline: [big_instruction, big_trial]
   }
 
   timeline.push(big_question_block);
 
 
   var small_question_block = {
-    timeline: [small_instruction, trial, feedback] //feedback is here for debug and testing, remove when done
+    timeline: [small_instruction, small_trial,]
   }
 
   timeline.push(small_question_block)
