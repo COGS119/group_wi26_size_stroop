@@ -433,11 +433,11 @@
 
 
   // creates a new stimulus list by randomly taking x amount from the combined list above
-  var test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list, 10);
+  var test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list, 3);
 
   console.log(test_stimulus_list);
 
-  var small_test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 10);
+  var small_test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 3);
 
 
   // here's how we can construct a simple size stroop judgment trial
