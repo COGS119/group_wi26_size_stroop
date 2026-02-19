@@ -40,7 +40,8 @@
     {
       on_finish: function () {
         jsPsych.data.displayData();
-      }
+      },
+      show_progress_bar: true
     }
   );
 
@@ -391,7 +392,6 @@
     timeline: [prac_looper],
     timeline_variables: pract_small, //timeline variable out here so the stimulus doesnt get swapped 
   };
-
 
   var practice_blocks = {
     timeline: [practice_instructions, big_instruction, prac_trial_big, small_instruction, prac_trial_small]
