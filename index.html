@@ -335,38 +335,6 @@
     `
   };
 
-  //Practice trial ONE (big, congruent)
-  var prac_trial_one = {
-    type: jsPsychImageKeyboardResponse,
-    choices: ["z", "m"],
-    stimulus: 'stimuli/1-Congruent.jpg',
-    data: {
-      trial_type: "congruent",
-      correct_response: "left",
-      correct_response_key: "z",
-    },
-    post_trial_gap: 900,
-  };
-
-  //push prac trial one to main timeline
-  // timeline.push(big_instruction, fixation, prac_trial_one);
-
-  //Practice trial TWO (small, incongruent)
-  var prac_trial_two = {
-    type: jsPsychImageKeyboardResponse,
-    choices: ["z", "m"],
-    stimulus: 'stimuli/1-Incongruent.jpg',
-    data: {
-      trial_type: "incongruent",
-      correct_response: "right",
-      correct_response_key: "m",
-    },
-    post_trial_gap: 900,
-  };
-
-  //push prac trial two to main timeline
-  // timeline.push(small_instruction, fixation, prac_trial_two);
-
   //this new practice trial, sets the values based on which stimulus is used
   var prac_trial_JW = {
     type: jsPsychImageKeyboardResponse,
@@ -406,11 +374,11 @@
     },
   };
 
-  var pract_big = all_stimulus_list.slice(0,1)
+  var pract_big = all_stimulus_list.slice(0,1) //gives us stimuli/1-Congruent.jpg for big & congruent
 
   console.log(pract_big)
 
-  var pract_small = all_stimulus_list_small.slice(36,37)
+  var pract_small = all_stimulus_list_small.slice(36,37) //gives us stimuli/1-Incongruent.jpg for small and incongruent
 
   console.log(pract_small)
 
