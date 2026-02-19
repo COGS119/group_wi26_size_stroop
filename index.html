@@ -278,7 +278,7 @@
 
   //provides feedback saying if the previous trial is correct or not
   //could maybe add a way to repeat previous trial if incorrect jhere
-  var feedback = {
+  var practice_feedback = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus:
       function () {
@@ -364,7 +364,7 @@
   };
 
   var prac_looper = {
-    timeline: [prac_trial_JW, feedback],
+    timeline: [prac_trial_JW, practice_feedback],
     loop_function: function(data){ //loop_function loops the function, like the name says
       var last_trial = data.values()[0]; //last_trial holds the data from the trial. 
       if (last_trial.correct == false) { //last_trial.correct looks at if correct is true or false
@@ -444,14 +444,32 @@
     }
   };
 
+    var actual_feedback = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus:  "<p style='color:red; font-size: 48px;'>Incorrect!</p>",
+    trial_duration: 1000,
+    choices: "NO_KEYS",
+  };
+
+  var actual_feedback_node = {
+    timeline: [actual_feedback],
+    conditional_function: function() {
+      const last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+      if (last_trial_correct) {
+        return false;
+      } else {
+        return true;
+    }
+  }};
+
   var big_trial = {
-    timeline: [fixation, test_trials, feedback], //feedback is here for debug and testing, remove when done
+    timeline: [fixation, test_trials, actual_feedback_node], //feedback is here for debug and testing, remove when done
     timeline_variables: test_stimulus_list,
     randomization: true,
   }
 
   var small_trial = {
-    timeline: [fixation, test_trials, feedback], //feedback is here for debug and testing, remove when done
+    timeline: [fixation, test_trials, actual_feedback_node], //feedback is here for debug and testing, remove when done
     timeline_variables: small_test_stimulus_list,
     randomization: true,
   }
