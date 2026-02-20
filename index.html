@@ -418,11 +418,13 @@
 
 
   // creates a new stimulus list by randomly taking x amount from the combined list above
-  var test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2);
+  var test_stimulus_list = jsPsych.randomization.shuffle(all_stimulus_list_big); //shuffle is for the entire thing
+  // jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2); this is for debugging
 
   console.log(test_stimulus_list);
 
-  var small_test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2);
+  var small_test_stimulus_list = jsPsych.randomization.shuffle(all_stimulus_list_small); //shuffle is for the entire thing
+  // jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2); this is for debugging 
 
 
   // here's how we can construct a simple size stroop judgment trial
