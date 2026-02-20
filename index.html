@@ -187,17 +187,18 @@
   var instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: ` 
-      In this experiment, you will be shown two images of real world objects. 
+      <p>In this experiment, you will be shown two images of real world objects. 
       <br>Your task is to determine which image on the screen is either larger or smaller, regardless of the real size of the objects shown.
       <br>To respond, you will press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
       <br>You will be asked to complete <strong>3</strong> blocks of trials:
       <br>1. Practice trials so you get familiar with the task
       <br>2. Trials asking you to select the larger image
       <br>3. Trials asking you to select the smaller image
-      <br>
+      <br>Each trial will start with a fixation cross then the stimulus. 
       <br>Before starting, place your <strong>left</strong> index finger on the <strong>z</strong> key and your <strong>right</strong> index finger on the <strong>m</strong> key.
       <br>
       <br>Press any key to begin.
+      </p>
     `
   };
 
@@ -319,8 +320,8 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
       <h1>This is the practice trial section.</h1>
-      <br>You will see complete two trials and receive feedback.
-      <br>The trials would tell you which image to pick on the bottom of the screen. 
+      <br>You will complete two trials and receive feedback.
+      <br>Before each trial begins, you would see a screen that tells you which image to pick. 
       <br>If you chose wrong, you would need to redo that trial until you get it right.
       <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
       <br>Press any key to continue.
