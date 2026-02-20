@@ -171,7 +171,7 @@
   var participant_id_entry = {
     type: jsPsychSurveyText,
     questions: [
-      { prompt: "Please enter your student ID number:", name: "participant_id" }
+      { prompt: "Please enter your participant ID:", name: "participant_id" }
     ],
     on_finish: function (data) {
       console.log(data.responses);
@@ -187,17 +187,18 @@
   var instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: ` 
-      In this experiment, you will be shown two images of real world objects. 
+      <p>In this experiment, you will be shown two images of real world objects. 
       <br>Your task is to determine which image on the screen is either larger or smaller, regardless of the real size of the objects shown.
       <br>To respond, you will press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
       <br>You will be asked to complete <strong>3</strong> blocks of trials:
       <br>1. Practice trials so you get familiar with the task
       <br>2. Trials asking you to select the larger image
       <br>3. Trials asking you to select the smaller image
-      <br>
+      <br>Each trial will start with a fixation cross then the stimulus. 
       <br>Before starting, place your <strong>left</strong> index finger on the <strong>z</strong> key and your <strong>right</strong> index finger on the <strong>m</strong> key.
       <br>
       <br>Press any key to begin.
+      </p>
     `
   };
 
@@ -294,7 +295,7 @@
 
   //provides feedback saying if the previous trial is correct or not
   //could maybe add a way to repeat previous trial if incorrect jhere
-  var feedback = {
+  var practice_feedback = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus:
       function () {
@@ -335,8 +336,8 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
       <h1>This is the practice trial section.</h1>
-      <br>You will see complete two trials and receive feedback.
-      <br>The trials would tell you which image to pick on the bottom of the screen. 
+      <br>You will complete two trials and receive feedback.
+      <br>Before each trial begins, you would see a screen that tells you which image to pick. 
       <br>If you chose wrong, you would need to redo that trial until you get it right.
       <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
       <br>Press any key to continue.
@@ -380,7 +381,7 @@
   };
 
   var prac_looper = {
-    timeline: [prac_trial_JW, feedback],
+    timeline: [prac_trial_JW, practice_feedback],
     loop_function: function(data){ //loop_function loops the function, like the name says
       var last_trial = data.values()[0]; //last_trial holds the data from the trial. 
       if (last_trial.correct == false) { //last_trial.correct looks at if correct is true or false
@@ -460,16 +461,34 @@
     }
   };
 
+    var actual_feedback = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus:  "<p style='color:red; font-size: 48px;'>Incorrect!</p>",
+    trial_duration: 1000,
+    choices: "NO_KEYS",
+  };
+
+  var actual_feedback_node = {
+    timeline: [actual_feedback],
+    conditional_function: function() {
+      const last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+      if (last_trial_correct) {
+        return false;
+      } else {
+        return true;
+    }
+  }};
+
   var big_trial = {
-    timeline: [fixation, test_trials, feedback], //feedback is here for debug and testing, remove when done
+    timeline: [fixation, test_trials, actual_feedback_node], //feedback is here for debug and testing, remove when done
     timeline_variables: test_stimulus_list,
-    randomization: true,
+    randomize_order: true,
   }
 
   var small_trial = {
-    timeline: [fixation, test_trials, feedback], //feedback is here for debug and testing, remove when done
+    timeline: [fixation, test_trials, actual_feedback_node], //feedback is here for debug and testing, remove when done
     timeline_variables: small_test_stimulus_list,
-    randomization: true,
+    randomize_order: true,
   }
 
   timeline.push(actual_instructions)
