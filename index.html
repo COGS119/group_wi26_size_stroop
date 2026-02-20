@@ -257,12 +257,28 @@
 
   console.log(all_stimulus_list);
 
+  var all_stimulus_list_big = all_stimulus_list.map(big => ({
+  ...big,
+  trial_type: big.trial_type + "_big",
+  size_condition: "big",
+  prompt_text: `
+    <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+    <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+  `
+}));
+  console.log(all_stimulus_list_big)
+
   var all_stimulus_list_small = all_stimulus_list.map(small => ( 
     {
       ...small,
       trial_type: small.trial_type + "_small",
       correct_response: small.correct_response === "left" ? "right" : "left",
       correct_response_key: small.correct_response_key === "z" ? "m" : "z",
+      size_condition: "small",
+      prompt_text: `
+        <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+        <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+      `
     }
   )
   );
@@ -402,11 +418,11 @@
 
 
   // creates a new stimulus list by randomly taking x amount from the combined list above
-  var test_stimulus_list = jsPsych.randomization.shuffle(all_stimulus_list)
+  var test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2);
 
   console.log(test_stimulus_list);
 
-  var small_test_stimulus_list =jsPsych.randomization.shuffle(all_stimulus_list_small)
+  var small_test_stimulus_list = jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2);
 
 
   // here's how we can construct a simple size stroop judgment trial
@@ -414,7 +430,7 @@
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
   var test_trials = {
     type: jsPsychImageKeyboardResponse,
-    prompt: "<p>Press <strong>z</strong> to choose the left image, <strong>m</strong> to choose the right image.</p>",
+    prompt: jsPsych.timelineVariable('prompt_text'),  
     choices: ["z", "m"],
     stimulus: jsPsych.timelineVariable('image_name'),
     data: {
