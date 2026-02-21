@@ -171,7 +171,7 @@
   var participant_id_entry = {
     type: jsPsychSurveyText,
     questions: [
-      { prompt: "Please enter your student ID number:", name: "participant_id" }
+      { prompt: "Please enter your particpant ID number:", name: "participant_id" }
     ],
     on_finish: function (data) {
       console.log(data.responses);
@@ -208,7 +208,7 @@
 
   timeline.push(instructions);
 
-  /* creating the stimulus list */
+  /* creating the different stimulus lists */
   // 1. adds the proper data each stimulus list 
   var congruent_stimuli = congruent_images.map(function (img) {
     return {
@@ -220,7 +220,6 @@
     };
   });
 
-  // Incongruent stimuli
   var incongruent_stimuli = incongruent_images.map(function (img) {
     return {
       image_name: img,
@@ -231,13 +230,12 @@
     };
   });
 
-  // 2. Combine both lists
+  // 2. Combine both lists into one big list
   var stimulus_list = congruent_stimuli.concat(incongruent_stimuli);
 
   console.log(stimulus_list)
 
-  // this is where the stimulus from the list earlier can get flipped
-  // cb means counterbalanced
+  // this is where the stimulus from the list earlier can get flipped, cb means counterbalanced
   var cb_stimulus_list = stimulus_list.map(flipped => ( //.map means add stuff, 
     {                                                // ==> works the same as function()
       ...flipped, /*...flipped means it copies everything from stimulus list and then 
@@ -255,41 +253,40 @@
 
   console.log(cb_stimulus_list);
 
-  //combines counterbalancecd list and stimulus list into one list
-  //this exisit so we can take from it randomly 
+  //combines counterbalancecd list and stimulus list into one list, holds all the stimuli 
+  //we can take from it randomly for testing
   var all_stimulus_list = stimulus_list.concat(cb_stimulus_list);
 
   console.log(all_stimulus_list);
 
+  //creates the stimulus list for the BIG BLOCK
   var all_stimulus_list_big = all_stimulus_list.map(big => ({
-  ...big,
-  trial_type: big.trial_type + "_big",
-  size_condition: "big",
-  prompt_text: `
-    <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
-    <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
-  `
-}));
+    ...big,
+    trial_type: big.trial_type + "_big",
+    size_condition: "big",
+    prompt_text: `
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    `
+  }));
   console.log(all_stimulus_list_big)
 
-  var all_stimulus_list_small = all_stimulus_list.map(small => ( 
-    {
-      ...small,
-      trial_type: small.trial_type + "_small",
-      correct_response: small.correct_response === "left" ? "right" : "left",
-      correct_response_key: small.correct_response_key === "z" ? "m" : "z",
-      size_condition: "small",
-      prompt_text: `
-        <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
-        <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
-      `
-    }
-  )
-  );
+  //creates the stimulus list for the SMALL BLOCK
+  var all_stimulus_list_small = all_stimulus_list.map(small => ({
+    ...small,
+    trial_type: small.trial_type + "_small",
+    correct_response: small.correct_response === "left" ? "right" : "left",
+    correct_response_key: small.correct_response_key === "z" ? "m" : "z",
+    size_condition: "small",
+    prompt_text: `
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    `
+  }));
 
   console.log(all_stimulus_list_small)
 
-  // Fixation Cross for practice trials
+  // Fixation cross code
   var fixation = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<div style="font-size:60px;">+</div>',
@@ -297,8 +294,7 @@
     trial_duration: 700,
   };
 
-  //provides feedback saying if the previous trial is correct or not
-  //could maybe add a way to repeat previous trial if incorrect jhere
+  //provides feedback saying if the previous trial is correct or not, for the practice trials
   var practice_feedback = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus:
@@ -324,7 +320,6 @@
     `
   };
 
-   //instructions for SELECTING THE SMALLER IMAGE block
   //instruction for SELECTING THE SMALLER IMAGE block
   var small_instruction = {
     type: jsPsychHtmlKeyboardResponse,
@@ -359,8 +354,8 @@
     `
   };
 
-  //this new practice trial, sets the values based on which stimulus is used
-  var prac_trial_JW = {
+  //practice trial code, sets the values based on which stimulus is used
+  var prac_trial_JW = { //should change the name of this 
     type: jsPsychImageKeyboardResponse,
     prompt: "<p>Press <strong>z</strong> to choose the left image, <strong>m</strong> to choose the right image.</p>",
     choices: ["z", "m"],
@@ -386,7 +381,7 @@
     },
   };
 
-  var prac_looper = {
+  var prac_looper = { //loops the practice trial if the partipant got it wrong 
     timeline: [prac_trial_JW, practice_feedback],
     loop_function: function(data){ //loop_function loops the function, like the name says
       var last_trial = data.values()[0]; //last_trial holds the data from the trial. 
@@ -423,29 +418,39 @@
   timeline.push(practice_blocks)
 
 
-  // creates a new stimulus list by randomly taking x amount from the combined list above
-  var test_stimulus_list = jsPsych.randomization.shuffle(all_stimulus_list_big); //shuffle is for the entire thing
-  // jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2); this is for debugging
+  // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
+  var test_stimulus_list = //should change the name of this
+    //shuffle is for the entire thing
+    // jsPsych.randomization.shuffle(all_stimulus_list_big) 
 
+    // this is for debugging
+    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2)
+  
   console.log(test_stimulus_list);
 
-  var small_test_stimulus_list = jsPsych.randomization.shuffle(all_stimulus_list_small); //shuffle is for the entire thing
-  // jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2); this is for debugging 
+  var small_test_stimulus_list = //should change the name of this
+    //shuffle is for the entire thing
+    //jsPsych.randomization.shuffle(all_stimulus_list_small) 
+
+    //<--this is for debugging 
+    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2) 
+  
 
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
-  var test_trials = {
+  var test_trials = { //should probaly change the name of this to actual trials
     type: jsPsychImageKeyboardResponse,
-    prompt: jsPsych.timelineVariable('prompt_text'),  
+    prompt: jsPsych.timelineVariable('prompt_text'),  //changes the prompt based on the stimulus 
     choices: ["z", "m"],
     stimulus: jsPsych.timelineVariable('image_name'),
     data: {
       trial_type: jsPsych.timelineVariable('trial_type'),
       correct_response: jsPsych.timelineVariable('correct_response'),
       correct_response_key: jsPsych.timelineVariable('correct_response_key'),
-      css_classes: jsPsych.timelineVariable('css_classes')
+      css_classes: jsPsych.timelineVariable('css_classes'),
+      size_condition: jsPsych.timelineVariable('size_condition')
     },
     /* this is where we can add the class to flip the image for counterbalancing.
     The plan is to make it be able to check if the trial is using a flipped imaged or not
@@ -453,14 +458,14 @@
     otherwise it will be normal and not flipped */
     css_classes: jsPsych.timelineVariable('css_classes'),
 
-    // check to see of the response is correct or not and adds it into the data
+    // check to see if the response is correct or not, adds it into the data
     on_finish: function (data) {
       console.log(data.trial_type);
       console.log(data.response);
       console.log(data.correct_response_key);
       console.log(data.css_classes);
 
-      data.choices = data.response;  // Sees if the choice made was correct or incorrect.
+      data.choices = data.response; 
       if (data.choices == data.correct_response_key) {
         data.correct = true;
       } else {
@@ -469,14 +474,14 @@
     }
   };
 
-    var actual_feedback = {
+  var actual_feedback = { //feedback for the actual trials, different than the practie_feedback 
     type: jsPsychHtmlKeyboardResponse,
     stimulus:  "<p style='color:red; font-size: 48px;'>Incorrect!</p>",
     trial_duration: 1000,
     choices: "NO_KEYS",
   };
 
-  var actual_feedback_node = {
+  var actual_feedback_node = { //makes the feedback conditional 
     timeline: [actual_feedback],
     conditional_function: function() {
       const last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
@@ -487,20 +492,22 @@
     }
   }};
 
-  var big_trial = {
-    timeline: [fixation, test_trials, actual_feedback_node], //feedback is here for debug and testing, remove when done
+  //sets up how a trial should work: fixation cross, stimulus, conditional feedback
+  var big_trial = { 
+    timeline: [fixation, test_trials, actual_feedback_node], 
     timeline_variables: test_stimulus_list,
     randomize_order: true,
   }
 
   var small_trial = {
-    timeline: [fixation, test_trials, actual_feedback_node], //feedback is here for debug and testing, remove when done
+    timeline: [fixation, test_trials, actual_feedback_node], 
     timeline_variables: small_test_stimulus_list,
     randomize_order: true,
   }
 
   timeline.push(actual_instructions)
 
+  //makes the trial blocks
   var big_question_block = {
     timeline: [big_instruction, big_trial]
   }
