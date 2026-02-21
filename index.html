@@ -187,16 +187,20 @@
   var instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: ` 
-      <p>In this experiment, you will be shown two images of real world objects. 
-      <br>Your task is to determine which image on the screen is either larger or smaller, regardless of the real size of the objects shown.
-      <br>To respond, you will press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
-      <br>You will be asked to complete <strong>3</strong> blocks of trials:
-      <br>1. Practice trials so you get familiar with the task
-      <br>2. Trials asking you to select the larger image
-      <br>3. Trials asking you to select the smaller image
-      <br>Each trial will start with a fixation cross then the stimulus. 
-      <br>Before starting, place your <strong>left</strong> index finger on the <strong>z</strong> key and your <strong>right</strong> index finger on the <strong>m</strong> key.
+      <h1>Instructions</h1>
+      <p>In this experiment, you will see 2 images of real world objects on each trial.
+      <br>Your task is to determine which image appears larger or smaller on the screen.
       <br>
+      <br>You will be asked to complete <strong>3</strong> blocks of trials:
+      <br>
+      <br>1. Practice block (get familiar with the task)
+      <br>2. Larger image block (select the image that appears larger)
+      <br>3. Smaller image block (select the image that appears smaller)
+      <br>
+      <br>Each trial will begin with a fixation cross (<strong>+</strong>), followed by the images.
+      <br>
+      <br>To respond, you will press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>Before starting, place your <strong>left</strong> index finger on <strong>z</strong> and <strong>right</strong> index finger on <strong>m</strong>.
       <br>Press any key to begin.
       </p>
     `
@@ -315,7 +319,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
       <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
-      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
       <br>Press any key to continue.
     `
   };
@@ -326,7 +330,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
       <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
-      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
       <br>Press any key to continue.
     `
   };
@@ -335,11 +339,13 @@
   var practice_instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-      <h1>This is the practice trial section.</h1>
-      <br>You will complete two trials and receive feedback.
+      <h1>Practice Trials</h1>
+      <br>You will complete two practice trials and receive feedback.
+      <br>
       <br>Instructions will appear on the screen. 
-      <br>If you chose wrong, you would need to redo that trial until you get it right.
-      <br>Press <strong>z</strong> to pick the image on the left, press <strong>m</strong> to pick the image on the right
+      <br>If your response is incorrect, you must repeat the trial until correct.
+      <br>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
       <br>Press any key to continue.
     `
   }
