@@ -157,7 +157,7 @@
     `
   };
 
-  timeline.push(welcome);
+  // timeline.push(welcome);
 
   // full screen mode ENTER
   var enter_fullscreen = {
@@ -165,7 +165,7 @@
     fullscreen_mode: true
   };
 
-  timeline.push(enter_fullscreen);
+  // timeline.push(enter_fullscreen);
 
   //take participant's student ID number
   var participant_id_entry = {
@@ -181,7 +181,7 @@
     }
   };
 
-  timeline.push(participant_id_entry);
+  // timeline.push(participant_id_entry);
 
   //creates instruction page
   var instructions = {
@@ -206,7 +206,7 @@
     `
   };
 
-  timeline.push(instructions);
+  // timeline.push(instructions);
 
   /* creating the different stimulus lists */
   // 1. adds the proper data each stimulus list 
@@ -354,6 +354,24 @@
     `
   };
 
+  var transition_instructions = {
+    type:jsPsychHtmlKeyboardResponse,
+    stimulus: function() {
+      var last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;
+      if (last_trial_size == "big") {
+        return `<p> Great job, you are half way done!
+          <br> In the next part of the experiment, we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
+          <br>instead of deciding which image is <strong>larger</strong>, we're going to ask you to decide which image is <strong>smaller</strong>, 
+          <br>as quickly as you can while still being accurate.</p>`;
+      } else {
+        return `<p>Great job! In the next part of the experiment, 
+          <br> we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
+          <br>instead of deciding which image is <strong>smaller<strong>, we're going to ask you to decide which image is <strong>larger</strong>, 
+          <br>as quickly as you can while still being accurate.</p>`;
+      }
+    }
+  }
+
   //practice trial code, sets the values based on which stimulus is used
   var prac_trial_JW = { //should change the name of this 
     type: jsPsychImageKeyboardResponse,
@@ -364,7 +382,8 @@
       trial_type: jsPsych.timelineVariable('trial_type'),
       correct_response: jsPsych.timelineVariable('correct_response'),
       correct_response_key: jsPsych.timelineVariable('correct_response_key'),
-      css_classes: jsPsych.timelineVariable('css_classes')
+      css_classes: jsPsych.timelineVariable('css_classes'),
+      size_condition: jsPsych.timelineVariable('size_condition')
     },
     css_classes: jsPsych.timelineVariable('css_classes'),
     on_finish: function(data) {
@@ -393,7 +412,7 @@
     },
   };
 
-  var pract_big = all_stimulus_list.slice(0,1) //gives us stimuli/1-Congruent.jpg for big & congruent
+  var pract_big = all_stimulus_list_big.slice(0,1) //gives us stimuli/1-Congruent.jpg for big & congruent
 
   console.log(pract_big)
 
@@ -415,7 +434,7 @@
     timeline: [practice_instructions, big_instruction, prac_trial_big, small_instruction, prac_trial_small]
   }
 
-  timeline.push(practice_blocks)
+  // timeline.push(practice_blocks)
 
 
   // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
@@ -514,6 +533,7 @@
 
   timeline.push(big_question_block);
 
+  timeline.push(transition_instructions);
 
   var small_question_block = {
     timeline: [small_instruction, small_trial,]
@@ -539,7 +559,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
     choices: "NO_KEYS",
-    // trial_duration: 2000, /* without the duration or input, the screen would not change */
+    trial_duration: 2000, /* without the duration or input, the screen would not change */
   };
 
   timeline.push(goodbye);
