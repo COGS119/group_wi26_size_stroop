@@ -41,7 +41,8 @@
       on_finish: function () {
         jsPsych.data.displayData();
       },
-      show_progress_bar: true
+      show_progress_bar: true,
+      message_progress_bar: "Progress",
     }
   );
 
@@ -294,7 +295,7 @@
     trial_duration: 700,
   };
 
-  //provides feedback saying if the previous trial is correct or not, for the practice trials
+  //provides feedback saying if the previous trial is correct or not, for the PRACTICE TRIALS ONLY
   var practice_feedback = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus:
@@ -354,6 +355,25 @@
     `
   };
 
+  //A page telling partipants that they would now be chaging what they are picking
+  var transition_instructions = {
+    type:jsPsychHtmlKeyboardResponse,
+    stimulus: function() { // message changes based on if the last block was for big or small selection 
+      var last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;
+      if (last_trial_size == "big") {
+        return `<p> Great job, you are half way done!
+          <br> In the next part of the experiment, we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
+          <br>instead of deciding which image is <strong>larger</strong>, we're going to ask you to decide which image is <strong>smaller</strong>, 
+          <br>as quickly as you can while still being accurate.</p>`;
+      } else {
+        return `<p>Great job! In the next part of the experiment, 
+          <br> we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
+          <br>instead of deciding which image is <strong>smaller<strong>, we're going to ask you to decide which image is <strong>larger</strong>, 
+          <br>as quickly as you can while still being accurate.</p>`;
+      }
+    }
+  };
+
   //practice trial code, sets the values based on which stimulus is used
   var prac_trial_JW = { //should change the name of this 
     type: jsPsychImageKeyboardResponse,
@@ -364,7 +384,8 @@
       trial_type: jsPsych.timelineVariable('trial_type'),
       correct_response: jsPsych.timelineVariable('correct_response'),
       correct_response_key: jsPsych.timelineVariable('correct_response_key'),
-      css_classes: jsPsych.timelineVariable('css_classes')
+      css_classes: jsPsych.timelineVariable('css_classes'),
+      size_condition: jsPsych.timelineVariable('size_condition')
     },
     css_classes: jsPsych.timelineVariable('css_classes'),
     on_finish: function(data) {
@@ -393,13 +414,13 @@
     },
   };
 
-  var pract_big = all_stimulus_list.slice(0,1) //gives us stimuli/1-Congruent.jpg for big & congruent
+  var pract_big = all_stimulus_list_big.slice(0,1) //gives us stimuli/1-Congruent.jpg for big & congruent
 
-  console.log(pract_big)
+  console.log(pract_big);
 
   var pract_small = all_stimulus_list_small.slice(36,37) //gives us stimuli/1-Incongruent.jpg for small and incongruent
 
-  console.log(pract_small)
+  console.log(pract_small);
 
   var prac_trial_big ={
     timeline: [prac_looper],
@@ -411,31 +432,29 @@
     timeline_variables: pract_small, //timeline variable out here so the stimulus doesnt get swapped 
   };
 
-  var practice_blocks = {
+  var practice_blocks = { //may need to break this apart into big block and small block
     timeline: [practice_instructions, big_instruction, prac_trial_big, small_instruction, prac_trial_small]
-  }
+  };
 
-  timeline.push(practice_blocks)
+  timeline.push(practice_blocks);
 
 
   // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
-  var test_stimulus_list = //should change the name of this
-    //shuffle is for the entire thing
-    // jsPsych.randomization.shuffle(all_stimulus_list_big) 
+  var test_stimulus_list = //should change the name of this, this is for the big stimulus 
+    //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
+    // jsPsych.randomization.shuffle(all_stimulus_list_big); 
 
-    // this is for debugging
-    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2)
+    // this is for debugging, 
+    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2);
   
   console.log(test_stimulus_list);
 
-  var small_test_stimulus_list = //should change the name of this
-    //shuffle is for the entire thing
+  var small_test_stimulus_list = //should change the name of this, this is for the small stimulus 
+    //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
     //jsPsych.randomization.shuffle(all_stimulus_list_small) 
 
     //<--this is for debugging 
-    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2) 
-  
-
+    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2);
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
@@ -453,7 +472,7 @@
       size_condition: jsPsych.timelineVariable('size_condition')
     },
     /* this is where we can add the class to flip the image for counterbalancing.
-    The plan is to make it be able to check if the trial is using a flipped imaged or not
+    Lets us check if the trial is using a flipped imaged or not
     if it uses a cb stimulus, it will be the 'cb' class and the image will be flipped
     otherwise it will be normal and not flipped */
     css_classes: jsPsych.timelineVariable('css_classes'),
@@ -474,14 +493,14 @@
     }
   };
 
-  var actual_feedback = { //feedback for the actual trials, different than the practie_feedback 
+  var actual_feedback = { //feedback for the actual trials, different than the practice_feedback 
     type: jsPsychHtmlKeyboardResponse,
     stimulus:  "<p style='color:red; font-size: 48px;'>Incorrect!</p>",
     trial_duration: 1000,
     choices: "NO_KEYS",
   };
 
-  var actual_feedback_node = { //makes the feedback conditional 
+  var actual_feedback_node = { //makes the feedback conditional, only shows up if they get it wrong 
     timeline: [actual_feedback],
     conditional_function: function() {
       const last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
@@ -514,6 +533,7 @@
 
   timeline.push(big_question_block);
 
+  timeline.push(transition_instructions);
 
   var small_question_block = {
     timeline: [small_instruction, small_trial,]
@@ -538,6 +558,7 @@
   var goodbye = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
+    choices: "NO_KEYS",
     trial_duration: 2000, /* without the duration or input, the screen would not change */
   };
 
@@ -550,7 +571,7 @@
     delay_after: 0
   }
 
-  // timeline.push(exit_fullscreen)
+  timeline.push(exit_fullscreen)
 
   /* start the experiment */
   jsPsych.run(timeline);
