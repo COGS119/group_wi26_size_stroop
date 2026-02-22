@@ -538,7 +538,8 @@
   var goodbye = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
-    trial_duration: 2000, /* without the duration or input, the screen would not change */
+    choices: "NO_KEYS",
+    // trial_duration: 2000, /* without the duration or input, the screen would not change */
   };
 
   timeline.push(goodbye);
@@ -550,7 +551,7 @@
     delay_after: 0
   }
 
-  // timeline.push(exit_fullscreen)
+  timeline.push(exit_fullscreen)
 
   /* start the experiment */
   jsPsych.run(timeline);
