@@ -11,6 +11,7 @@
   <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@2.0.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-survey-text@2.1.0"></script>
   <script src="https://unpkg.com/@jspsych/plugin-preload@2.0.0"></script>
+  <script src="https://unpkg.com/@jspsych/plugin-html-slider-response@2.0.0"></script> <!-- this is for the rating -->
   <!-- This is for data storage - please be sure to keep this script in all future updates to the code!! -->
   <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
   <link href="https://unpkg.com/jspsych@8.0.0/css/jspsych.css" rel="stylesheet" type="text/css" />
@@ -51,7 +52,7 @@
 
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
   //create a unique filename by combining a random string and a millisecond counter (to avoid duplicates)
-  var random_id = jsPsych.randomization.randomID(10);
+  var random_id = jsPsych.randomization.randomID(10); 
   const date = new Date();
   random_id = "p" + random_id.toString();
   var file_id = random_id + "_" + date.getTime().toString();
@@ -541,6 +542,46 @@
 
   timeline.push(small_question_block)
 
+  //Rating the experiment
+  var overall_rating = {
+    type: jsPsychHtmlSliderResponse,
+    stimulus: "<p>How would you rate our experiment? (Lowest:1, Highest:5)</p>",
+    min: 1,
+    max: 5,
+    start: 3,
+    step: 1,
+    labels: ["1", "2", "3", "4", "5"],
+    require_movement: true,    
+  };
+
+  timeline.push(overall_rating)
+
+  //Survey for the experiment
+  var ending_survey = {
+    type: jsPsychSurveyText,
+    preamble: "<h2>Quick Survey</h2><p>Please help us answer a few questions before finishing.</p>",
+    questions: [
+      {prompt: "1. How do you think about our experiment?", placeholder: "Type your answer here...", rows: 3, columns: 70, required: true},
+      {prompt: "2. What do you think is the topic we are testing on?", placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
+      {prompt: "3. Do you think you have a good knoweledge about the real-world size?",placeholder: "Type your answe here...", rows: 3, columns:70, required: true},
+      {prompt: "4. Was there any technical issue you ran into?", placeholder: "Yes/ No. If yes, type it here... ", rows: 3, columns:70, required: true},
+    ]
+  };
+
+  timeline.push(ending_survey)
+
+  //Short debrief before finishing the experiment
+  var debrief = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus:`
+    <h1>Thank you so much for participating!</h1>
+    <p>This study is testing on people's knowledge about different objects' size in the real world, including their relevant size comparison.</p>
+    <p>If you have any questions or recommendations about the experiment, feel free to reach out to us or come talk to us.</p>
+    <p><i>Press any key to finish the experiment.</i></p>
+  `
+  };
+  timeline.push(debrief)
+  
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
   //this portion of the code ensures that the data gets sent to be stored on OSF
   const save_data = {
