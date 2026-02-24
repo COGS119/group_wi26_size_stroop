@@ -360,7 +360,7 @@
   var transition_instructions = {
     type:jsPsychHtmlKeyboardResponse,
     stimulus: function() { // message changes based on if the last block was for big or small selection 
-      var last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;
+      var last_trial_size = jsPsych.data.get().last(1).values()[0].size_condition;
       if (last_trial_size == undefined) {
         last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;}
       if (last_trial_size == "big") {
