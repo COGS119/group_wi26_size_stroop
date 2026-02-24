@@ -361,6 +361,8 @@
     type:jsPsychHtmlKeyboardResponse,
     stimulus: function() { // message changes based on if the last block was for big or small selection 
       var last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;
+      if (last_trial_size == undefined) {
+        last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;}
       if (last_trial_size == "big") {
         return `<p> Great job, you are half way done!
           <br> In the next part of the experiment, we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
