@@ -337,7 +337,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
       <h1>Practice Trials</h1>
-      <br>You will complete two practice trials and receive feedback.
+      <br>You will complete one practice trials and receive feedback.
       <br>
       <br>Instructions will appear on the screen. 
       <br>If your response is incorrect, you must repeat the trial until correct.
@@ -433,21 +433,25 @@
     timeline_variables: pract_small, //timeline variable out here so the stimulus doesnt get swapped 
   };
 
-  var practice_blocks = { //may need to break this apart into big block and small block
-    timeline: [practice_instructions, big_instruction, prac_trial_big, small_instruction, prac_trial_small]
+  var practice_block_big = { 
+    timeline: [practice_instructions, big_instruction, prac_trial_big]
+  };
+
+  var practice_block_small = { 
+    timeline: [practice_instructions, small_instruction, prac_trial_small]
   };
 
   // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
-  var test_stimulus_list = //should change the name of this, this is for the big stimulus 
+  var big_stimulus_list = //should change the name of this, this is for the big stimulus 
     //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
-    // jsPsych.randomization.shuffle(all_stimulus_list_big); 
+    //jsPsych.randomization.shuffle(all_stimulus_list_big); 
 
     // this is for debugging, 
     jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2);
   
-  console.log(test_stimulus_list);
+  console.log(big_stimulus_list);
 
-  var small_test_stimulus_list = //should change the name of this, this is for the small stimulus 
+  var small_stimulus_list = //should change the name of this, this is for the small stimulus 
     //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
     //jsPsych.randomization.shuffle(all_stimulus_list_small) 
 
@@ -512,13 +516,13 @@
   //sets up how a trial should work: fixation cross, stimulus, conditional feedback
   var big_trial = { 
     timeline: [fixation, test_trials, actual_feedback_node], 
-    timeline_variables: test_stimulus_list,
+    timeline_variables: big_stimulus_list,
     randomize_order: true,
   }
 
   var small_trial = {
     timeline: [fixation, test_trials, actual_feedback_node], 
-    timeline_variables: small_test_stimulus_list,
+    timeline_variables: small_stimulus_list,
     randomize_order: true,
   }
 
@@ -533,13 +537,13 @@
     timeline: [small_instruction, small_trial,]
   }
 
-// Counterbalance order
+// Randomize block order
 var big_block = {
-  timeline: [/*practice_blocks, */actual_instructions, big_question_block]
+  timeline: [practice_block_big, actual_instructions, big_question_block]
 };
 
 var small_block = {
-  timeline: [/*practice_blocks, */actual_instructions, small_question_block]
+  timeline: [practice_block_small, actual_instructions, small_question_block]
 };
 
 var block_array = [big_block, small_block];
