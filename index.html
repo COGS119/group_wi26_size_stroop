@@ -35,15 +35,17 @@
 <body></body>
 
 <script>
-/*set trials amount = progress bar limits and count for correct trial*/
-  var total_correct = 6 /*practice trials + actual (big +small), it would be 288, could maybe make this automated?*/ 
+  /*set trials amount = progress bar limits and count for correct trial*/
+  var total_correct = 6 /*practice trials + actual (big +small)*/ 
+  /*it would be 288 for the full experiment, could maybe make this automated?*/ 
  
   var correct_count = 0;
 
   function updateProgress() {
-  correct_count++;
-  jsPsych.progressBar.progress = correct_count / total_correct;
-}
+    correct_count++;
+    jsPsych.progressBar.progress = correct_count / total_correct;
+  }
+
   /* initialize jsPsych */
   var jsPsych = initJsPsych(
     {
@@ -567,27 +569,27 @@
     timeline: [small_instruction, small_trial,]
   }
 
-// Randomize block order
-var big_block = {
-  timeline: [practice_block_big, actual_instructions, big_question_block]
-};
+  // Randomize block order
+  var big_block = {
+    timeline: [practice_block_big, actual_instructions, big_question_block]
+  };
 
-var small_block = {
-  timeline: [practice_block_small, actual_instructions, small_question_block]
-};
+  var small_block = {
+    timeline: [practice_block_small, actual_instructions, small_question_block]
+  };
 
-var block_array = [big_block, small_block];
+  var block_array = [big_block, small_block];
 
-block_array = jsPsych.randomization.shuffle(block_array);
+  block_array = jsPsych.randomization.shuffle(block_array);
 
-var task_order =
-  (block_array[0] === big_block) ? "big_first" : "small_first";
+  var task_order =
+    (block_array[0] === big_block) ? "big_first" : "small_first";
 
-jsPsych.data.addProperties({ task_order: task_order });
+  jsPsych.data.addProperties({ task_order: task_order });
 
-block_array.splice(1, 0, transition_instructions);
+  block_array.splice(1, 0, transition_instructions);
 
-timeline = timeline.concat(block_array); //works the same as timeline.push(block_array)
+  timeline = timeline.concat(block_array); //works the same as timeline.push(block_array)
 
 
 
@@ -631,18 +633,18 @@ timeline = timeline.concat(block_array); //works the same as timeline.push(block
   timeline.push(save_data);
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
 
-    //Short debrief before finishing the experiment
-    var debrief = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus:`
-      <h1>Thank you very much for participating!</h1>
-      <p><img src="goodbye/cat_goodbye.jpeg"></p>
-      <p>This experiment attempts to study people's knowledge about objects' real-world sizes, measured by reaction time (RT) in congruent and incongruent trials.</p>
-      <p>If you have any questions or comments about our experiment, feel free to reach out.</p>
-      <p><i>Press any key to exit the experiment.</i></p>
-    `
-    };
-    timeline.push(debrief)
+  //Short debrief before finishing the experiment
+  var debrief = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus:`
+    <h1>Thank you very much for participating!</h1>
+    <p><img src="goodbye/cat_goodbye.jpeg"></p>
+    <p>This experiment attempts to study people's knowledge about objects' real-world sizes, measured by reaction time (RT) in congruent and incongruent trials.</p>
+    <p>If you have any questions or comments about our experiment, feel free to reach out.</p>
+    <p><i>Press any key to exit the experiment.</i></p>
+  `
+  };
+  timeline.push(debrief)
 
   // full screen mode EXIT
   var exit_fullscreen = {
