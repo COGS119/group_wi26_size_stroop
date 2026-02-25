@@ -364,15 +364,15 @@
       if (last_trial_size == undefined) {
         last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;}
       if (last_trial_size == "big") {
-        return `<p> Great job, you are half way done!
-          <br> In the next part of the experiment, we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
-          <br>instead of deciding which image is <strong>larger</strong>, we're going to ask you to decide which image is <strong>smaller</strong>, 
-          <br>as quickly as you can while still being accurate.</p>`;
+        return `<p> Great job, you are half way there!
+          <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
+          <br>Instead of deciding which image is <strong>larger</strong>, you will decide which image is <strong>smaller</strong>.
+          <br>Please respond as quickly and accurately as possible.</p>`;
       } else {
-        return `<p>Great job! In the next part of the experiment, 
-          <br> we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
-          <br>instead of deciding which image is <strong>smaller<strong>, we're going to ask you to decide which image is <strong>larger</strong>, 
-          <br>as quickly as you can while still being accurate.</p>`;
+        return `<p> Great job, you are half way there!
+          <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
+          <br>Instead of deciding which image is <strong>smaller</strong>, you will decide which image is <strong>larger</strong>.
+          <br>Please respond as quickly and accurately as possible.</p>`;
       }
     }
   };
@@ -561,12 +561,12 @@
   //Survey for the experiment
   var ending_survey = {
     type: jsPsychSurveyText,
-    preamble: "<h2>Quick Survey</h2><p>Please help us answer a few questions before finishing.</p>",
+    preamble: "<h2>Post-experimental Survey</h2><p>Please help us answer a few questions before leaving.</p>",
     questions: [
-      {prompt: "1. How do you think about our experiment?", placeholder: "Type your answer here...", rows: 3, columns: 70, required: true},
-      {prompt: "2. What do you think is the topic we are testing on?", placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
-      {prompt: "3. Do you think you have a good knoweledge about the real-world size?",placeholder: "Type your answe here...", rows: 3, columns:70, required: true},
-      {prompt: "4. Was there any technical issue you ran into?", placeholder: "Yes/ No. If yes, type it here... ", rows: 3, columns:70, required: true},
+      {prompt: "1. How do you feel about our experiment?", placeholder: "Type your answer here...", rows: 3, columns: 70, required: true},
+      {prompt: "2. What do you think we are trying to measure?", placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
+      {prompt: "3. Do you find the first OR second half of our experiment more difficult?",placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
+      {prompt: "4. Was there any technical issue you ran into?", placeholder: "If yes, please put it down here... ", rows: 3, columns:70, required: true},
     ]
   };
 
@@ -576,10 +576,10 @@
   var debrief = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:`
-    <h1>Thank you so much for participating!</h1>
-    <p>This study is testing on people's knowledge about different objects' size in the real world, including their relevant size comparison.</p>
-    <p>If you have any questions or recommendations about the experiment, feel free to reach out to us or come talk to us.</p>
-    <p><i>Press any key to finish the experiment.</i></p>
+    <h1>Thank you very much for participating!</h1>
+    <p>This experiment attempts to study people's knowledge about objects' real-world sizes, measured by reaction time (RT) in congruent and incongruent trials.</p>
+    <p>If you have any questions or comments about our experiment, feel free to reach out.</p>
+    <p><i>Press any key to exit the experiment.</i></p>
   `
   };
   timeline.push(debrief)
