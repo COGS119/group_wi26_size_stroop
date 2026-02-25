@@ -159,7 +159,7 @@
     `
   };
 
-  timeline.push(welcome);
+  // timeline.push(welcome);
 
   // full screen mode ENTER
   var enter_fullscreen = {
@@ -167,7 +167,7 @@
     fullscreen_mode: true
   };
 
-  timeline.push(enter_fullscreen);
+  // timeline.push(enter_fullscreen);
 
   //take participant's student ID number
   var participant_id_entry = {
@@ -183,7 +183,7 @@
     }
   };
 
-  timeline.push(participant_id_entry);
+  // timeline.push(participant_id_entry);
 
   //creates instruction page
   var instructions = {
@@ -208,7 +208,7 @@
     `
   };
 
-  timeline.push(instructions);
+  // timeline.push(instructions);
 
   /* creating the different stimulus lists */
   // 1. adds the proper data each stimulus list 
@@ -437,9 +437,6 @@
     timeline: [practice_instructions, big_instruction, prac_trial_big, small_instruction, prac_trial_small]
   };
 
-  timeline.push(practice_blocks);
-
-
   // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
   var test_stimulus_list = //should change the name of this, this is for the big stimulus 
     //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
@@ -525,22 +522,40 @@
     randomize_order: true,
   }
 
-  timeline.push(actual_instructions)
+  // timeline.push(actual_instructions)
 
   //makes the trial blocks
   var big_question_block = {
     timeline: [big_instruction, big_trial]
   }
 
-  timeline.push(big_question_block);
-
-  timeline.push(transition_instructions);
-
   var small_question_block = {
     timeline: [small_instruction, small_trial,]
   }
 
-  timeline.push(small_question_block)
+// Counterbalance order
+var big_block = {
+  timeline: [/*practice_blocks, */actual_instructions, big_question_block]
+};
+
+var small_block = {
+  timeline: [/*practice_blocks, */actual_instructions, small_question_block]
+};
+
+var block_array = [big_block, small_block];
+
+block_array = jsPsych.randomization.shuffle(block_array);
+
+var task_order =
+  (block_array[0] === big_block) ? "big_first" : "small_first";
+
+jsPsych.data.addProperties({ task_order: task_order });
+
+block_array.splice(1, 0, transition_instructions);
+
+timeline = timeline.concat(block_array);
+
+
 
   //Rating the experiment
   var overall_rating = {
@@ -554,7 +569,7 @@
     require_movement: true,    
   };
 
-  timeline.push(overall_rating)
+  // timeline.push(overall_rating)
 
   //Survey for the experiment
   var ending_survey = {
@@ -568,7 +583,7 @@
     ]
   };
 
-  timeline.push(ending_survey)
+  // timeline.push(ending_survey)
 
   //Short debrief before finishing the experiment
   var debrief = {
@@ -580,7 +595,7 @@
     <p><i>Press any key to finish the experiment.</i></p>
   `
   };
-  timeline.push(debrief)
+  // timeline.push(debrief)
   
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
   //this portion of the code ensures that the data gets sent to be stored on OSF
