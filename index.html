@@ -35,24 +35,33 @@
 <body></body>
 
 <script>
+/*set trials amount = progress bar limits and count for correct trial*/
+  var total_correct = 6 /*practice trials + actual (big +small)*/
+ 
+  var correct_count = 0;
 
+  function updateProgress() {
+  correct_count++;
+  jsPsych.progressBar.progress = correct_count / total_correct;
+}
   /* initialize jsPsych */
   var jsPsych = initJsPsych(
     {
       on_finish: function () {
         jsPsych.data.displayData();
+      
       },
       show_progress_bar: true,
+      auto_update_progress_bar: false,   
       message_progress_bar: "Progress",
     }
   );
-
   /* create timeline */
   var timeline = [];
-
+  
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
   //create a unique filename by combining a random string and a millisecond counter (to avoid duplicates)
-  var random_id = jsPsych.randomization.randomID(10); 
+  var random_id = jsPsych.randomization.randomID(10); 1
   const date = new Date();
   random_id = "p" + random_id.toString();
   var file_id = random_id + "_" + date.getTime().toString();
@@ -156,7 +165,8 @@
     stimulus: `
     <h1>Welcome to the experiment!</h1>
     <p>Press any key to begin</p>
-    `
+    `,
+    
   };
 
   timeline.push(welcome);
@@ -164,7 +174,7 @@
   // full screen mode ENTER
   var enter_fullscreen = {
     type: jsPsychFullscreen,
-    fullscreen_mode: true
+    fullscreen_mode: true,
   };
 
   timeline.push(enter_fullscreen);
@@ -180,7 +190,7 @@
       jsPsych.data.addProperties({
         participant: data.response.participant_id
       });
-    }
+    },
   };
 
   timeline.push(participant_id_entry);
@@ -205,7 +215,8 @@
       <br>Before starting, place your <strong>left</strong> index finger on <strong>z</strong> and <strong>right</strong> index finger on <strong>m</strong>.
       <br>Press any key to begin.
       </p>
-    `
+    `,
+
   };
 
   timeline.push(instructions);
@@ -401,6 +412,7 @@
       data.choices = data.response;  
       if (data.choices == data.correct_response_key) {
         data.correct = true;
+        updateProgress();
       } else {
         data.correct = false;
       }
@@ -495,7 +507,12 @@
       } else {
         data.correct = false;
       }
-    }
+      correct_count++;
+      jsPsych.progressBar.progress = correct_count / total_correct;
+    },
+    on_finish: function() {
+    updateProgress();
+  }
   };
 
   var actual_feedback = { //feedback for the actual trials, different than the practice_feedback 
