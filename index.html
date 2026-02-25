@@ -563,13 +563,13 @@
 
   //sets up how a trial should work: fixation cross, stimulus, conditional feedback
   var big_trial = { 
-    timeline: [fixation, test_trials, actual_feedback_node], 
+    timeline: [fixation, actual_trials, actual_feedback_node], 
     timeline_variables: big_stimulus_list, //actual_big,
     randomize_order: true,
   }
 
   var small_trial = {
-    timeline: [fixation, test_trials, actual_feedback_node], 
+    timeline: [fixation, actual_trials, actual_feedback_node], 
     timeline_variables: small_stimulus_list, //actual_small,
     randomize_order: true,
   }
@@ -607,7 +607,7 @@
 
 
   //END OF EXPERIMENT RELATED CODE
-  
+
   //Rating the experiment
   var overall_rating = {
     type: jsPsychHtmlSliderResponse,
