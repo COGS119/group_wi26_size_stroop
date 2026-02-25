@@ -35,24 +35,33 @@
 <body></body>
 
 <script>
+/*set trials amount = progress bar limits and count for correct trial*/
+  var total_correct = 6 /*practice trials + actual (big +small)*/
+ 
+  var correct_count = 0;
 
+  function updateProgress() {
+  correct_count++;
+  jsPsych.progressBar.progress = correct_count / total_correct;
+}
   /* initialize jsPsych */
   var jsPsych = initJsPsych(
     {
       on_finish: function () {
         jsPsych.data.displayData();
+      
       },
       show_progress_bar: true,
+      auto_update_progress_bar: false,   
       message_progress_bar: "Progress",
     }
   );
-
   /* create timeline */
   var timeline = [];
-
+  
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
   //create a unique filename by combining a random string and a millisecond counter (to avoid duplicates)
-  var random_id = jsPsych.randomization.randomID(10); 
+  var random_id = jsPsych.randomization.randomID(10); 1
   const date = new Date();
   random_id = "p" + random_id.toString();
   var file_id = random_id + "_" + date.getTime().toString();
@@ -156,18 +165,19 @@
     stimulus: `
     <h1>Welcome to the experiment!</h1>
     <p>Press any key to begin</p>
-    `
+    `,
+    
   };
 
-  timeline.push(welcome);
+  // timeline.push(welcome);
 
   // full screen mode ENTER
   var enter_fullscreen = {
     type: jsPsychFullscreen,
-    fullscreen_mode: true
+    fullscreen_mode: true,
   };
 
-  timeline.push(enter_fullscreen);
+  // timeline.push(enter_fullscreen);
 
   //take participant's student ID number
   var participant_id_entry = {
@@ -180,10 +190,10 @@
       jsPsych.data.addProperties({
         participant: data.response.participant_id
       });
-    }
+    },
   };
 
-  timeline.push(participant_id_entry);
+  // timeline.push(participant_id_entry);
 
   //creates instruction page
   var instructions = {
@@ -205,10 +215,11 @@
       <br>Before starting, place your <strong>left</strong> index finger on <strong>z</strong> and <strong>right</strong> index finger on <strong>m</strong>.
       <br>Press any key to begin.
       </p>
-    `
+    `,
+
   };
 
-  timeline.push(instructions);
+  // timeline.push(instructions);
 
   /* creating the different stimulus lists */
   // 1. adds the proper data each stimulus list 
@@ -337,7 +348,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
       <h1>Practice Trials</h1>
-      <br>You will complete two practice trials and receive feedback.
+      <br>You will complete one practice trials and receive feedback.
       <br>
       <br>Instructions will appear on the screen. 
       <br>If your response is incorrect, you must repeat the trial until correct.
@@ -365,15 +376,17 @@
         last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition; }
       console.log(last_trial_size);
       if (last_trial_size == "big") {
-        return `<p> Great job, you are half way done!
-          <br> In the next part of the experiment, we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
-          <br>instead of deciding which image is <strong>larger</strong>, we're going to ask you to decide which image is <strong>smaller</strong>, 
-          <br>as quickly as you can while still being accurate.</p>`;
+        return `<p> Great job, you are half way there!
+          <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
+          <br>Instead of deciding which image is <strong>larger</strong>, you will decide which image is <strong>smaller</strong>.
+          <br>Please respond as quickly and accurately as possible.</p>
+          <br>Press any key to continue.`;
       } else {
-        return `<p>Great job! In the next part of the experiment, 
-          <br> we're going to ask you to make the <strong>opposite</strong> judgment of the one you just made: 
-          <br>instead of deciding which image is <strong>smaller<strong>, we're going to ask you to decide which image is <strong>larger</strong>, 
-          <br>as quickly as you can while still being accurate.</p>`;
+        return `<p> Great job, you are half way there!
+          <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
+          <br>Instead of deciding which image is <strong>smaller</strong>, you will decide which image is <strong>larger</strong>.
+          <br>Please respond as quickly and accurately as possible.</p>
+          <br>Press any key to continue.`;
       }
     }
   };
@@ -400,6 +413,7 @@
       data.choices = data.response;  
       if (data.choices == data.correct_response_key) {
         data.correct = true;
+        updateProgress();
       } else {
         data.correct = false;
       }
@@ -443,24 +457,25 @@
     timeline_variables: pract_small, //timeline variable out here so the stimulus doesnt get swapped 
   };
 
-  var practice_blocks = { //may need to break this apart into big block and small block
-    timeline: [practice_instructions, big_instruction, prac_trial_big, small_instruction, prac_trial_small]
+  var practice_block_big = { 
+    timeline: [practice_instructions, big_instruction, prac_trial_big]
   };
 
-  timeline.push(practice_blocks);
-
+  var practice_block_small = { 
+    timeline: [practice_instructions, small_instruction, prac_trial_small]
+  };
 
   // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
-  var test_stimulus_list = //should change the name of this, this is for the big stimulus 
+  var big_stimulus_list = //should change the name of this, this is for the big stimulus 
     //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
-    // jsPsych.randomization.shuffle(all_stimulus_list_big); 
+    //jsPsych.randomization.shuffle(all_stimulus_list_big); 
 
     // this is for debugging, 
     jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2);
   
-  console.log(test_stimulus_list);
+  console.log(big_stimulus_list);
 
-  var small_test_stimulus_list = //should change the name of this, this is for the small stimulus 
+  var small_stimulus_list = //should change the name of this, this is for the small stimulus 
     //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
     //jsPsych.randomization.shuffle(all_stimulus_list_small) 
 
@@ -501,7 +516,12 @@
       } else {
         data.correct = false;
       }
-    }
+      correct_count++;
+      jsPsych.progressBar.progress = correct_count / total_correct;
+    },
+    on_finish: function() {
+    updateProgress();
+  }
   };
 
   var actual_feedback = { //feedback for the actual trials, different than the practice_feedback 
@@ -525,32 +545,50 @@
   //sets up how a trial should work: fixation cross, stimulus, conditional feedback
   var big_trial = { 
     timeline: [fixation, test_trials, actual_feedback_node], 
-    timeline_variables: test_stimulus_list,
+    timeline_variables: big_stimulus_list,
     randomize_order: true,
   }
 
   var small_trial = {
     timeline: [fixation, test_trials, actual_feedback_node], 
-    timeline_variables: small_test_stimulus_list,
+    timeline_variables: small_stimulus_list,
     randomize_order: true,
   }
 
-  timeline.push(actual_instructions)
+  // timeline.push(actual_instructions)
 
   //makes the trial blocks
   var big_question_block = {
     timeline: [big_instruction, big_trial]
   }
 
-  timeline.push(big_question_block);
-
-  timeline.push(transition_instructions);
-
   var small_question_block = {
     timeline: [small_instruction, small_trial,]
   }
 
-  timeline.push(small_question_block)
+// Randomize block order
+var big_block = {
+  timeline: [practice_block_big, actual_instructions, big_question_block]
+};
+
+var small_block = {
+  timeline: [practice_block_small, actual_instructions, small_question_block]
+};
+
+var block_array = [big_block, small_block];
+
+block_array = jsPsych.randomization.shuffle(block_array);
+
+var task_order =
+  (block_array[0] === big_block) ? "big_first" : "small_first";
+
+jsPsych.data.addProperties({ task_order: task_order });
+
+block_array.splice(1, 0, transition_instructions);
+
+timeline = timeline.concat(block_array);
+
+
 
   //Rating the experiment
   var overall_rating = {
@@ -564,33 +602,34 @@
     require_movement: true,    
   };
 
-  timeline.push(overall_rating)
+  // timeline.push(overall_rating)
 
   //Survey for the experiment
   var ending_survey = {
     type: jsPsychSurveyText,
-    preamble: "<h2>Quick Survey</h2><p>Please help us answer a few questions before finishing.</p>",
+    preamble: "<h2>Post-experimental Survey</h2><p>Please help us answer a few questions before leaving.</p>",
     questions: [
-      {prompt: "1. How do you think about our experiment?", placeholder: "Type your answer here...", rows: 3, columns: 70, required: true},
-      {prompt: "2. What do you think is the topic we are testing on?", placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
-      {prompt: "3. Do you think you have a good knoweledge about the real-world size?",placeholder: "Type your answe here...", rows: 3, columns:70, required: true},
-      {prompt: "4. Was there any technical issue you ran into?", placeholder: "Yes/ No. If yes, type it here... ", rows: 3, columns:70, required: true},
+      {prompt: "1. How do you feel about our experiment?", placeholder: "Type your answer here...", rows: 3, columns: 70, required: true},
+      {prompt: "2. What do you think we are trying to measure?", placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
+      {prompt: "3. Do you find the first OR second half of our experiment more difficult?",placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
+      {prompt: "4. Was there any technical issue you ran into?", placeholder: "If yes, please put it down here... ", rows: 3, columns:70, required: true},
     ]
   };
 
-  timeline.push(ending_survey)
+  // timeline.push(ending_survey)
 
   //Short debrief before finishing the experiment
   var debrief = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:`
-    <h1>Thank you so much for participating!</h1>
-    <p>This study is testing on people's knowledge about different objects' size in the real world, including their relevant size comparison.</p>
-    <p>If you have any questions or recommendations about the experiment, feel free to reach out to us or come talk to us.</p>
-    <p><i>Press any key to finish the experiment.</i></p>
+    <h1>Thank you very much for participating!</h1>
+    <p><img src="goodbye/cat_goodbye.jpeg"></p>
+    <p>This experiment attempts to study people's knowledge about objects' real-world sizes, measured by reaction time (RT) in congruent and incongruent trials.</p>
+    <p>If you have any questions or comments about our experiment, feel free to reach out.</p>
+    <p><i>Press any key to exit the experiment.</i></p>
   `
   };
-  timeline.push(debrief)
+  // timeline.push(debrief)
   
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
   //this portion of the code ensures that the data gets sent to be stored on OSF
@@ -604,16 +643,16 @@
   timeline.push(save_data);
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
 
-  /*goodbye*/
-  // goodbye cat background image in goodbye trial
-  var goodbye = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
-    choices: "NO_KEYS",
-    trial_duration: 2000, /* without the duration or input, the screen would not change */
-  };
+  // /*goodbye*/
+  // // goodbye cat background image in goodbye trial
+  // var goodbye = {
+  //   type: jsPsychHtmlKeyboardResponse,
+  //   stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
+  //   choices: "NO_KEYS",
+  //   trial_duration: 2000, /* without the duration or input, the screen would not change */
+  // };
 
-  timeline.push(goodbye);
+  // timeline.push(goodbye);
 
   // full screen mode EXIT
   var exit_fullscreen = {
