@@ -367,12 +367,14 @@
         return `<p> Great job, you are half way there!
           <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
           <br>Instead of deciding which image is <strong>larger</strong>, you will decide which image is <strong>smaller</strong>.
-          <br>Please respond as quickly and accurately as possible.</p>`;
+          <br>Please respond as quickly and accurately as possible.</p>
+          <br>Press any key to continue.`;
       } else {
         return `<p> Great job, you are half way there!
           <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
           <br>Instead of deciding which image is <strong>smaller</strong>, you will decide which image is <strong>larger</strong>.
-          <br>Please respond as quickly and accurately as possible.</p>`;
+          <br>Please respond as quickly and accurately as possible.</p>
+          <br>Press any key to continue.`;
       }
     }
   };
@@ -577,6 +579,7 @@
   type: jsPsychHtmlKeyboardResponse,
   stimulus:`
     <h1>Thank you very much for participating!</h1>
+    <p><img src="goodbye/cat_goodbye.jpeg"></p>
     <p>This experiment attempts to study people's knowledge about objects' real-world sizes, measured by reaction time (RT) in congruent and incongruent trials.</p>
     <p>If you have any questions or comments about our experiment, feel free to reach out.</p>
     <p><i>Press any key to exit the experiment.</i></p>
@@ -596,16 +599,16 @@
   timeline.push(save_data);
   //PLEASE KEEP FOR ALL FUTURE ITERATIONS
 
-  /*goodbye*/
-  // goodbye cat background image in goodbye trial
-  var goodbye = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
-    choices: "NO_KEYS",
-    trial_duration: 2000, /* without the duration or input, the screen would not change */
-  };
+  // /*goodbye*/
+  // // goodbye cat background image in goodbye trial
+  // var goodbye = {
+  //   type: jsPsychHtmlKeyboardResponse,
+  //   stimulus: '<h1> Thank you for your participation! </h1><p><img src="goodbye/cat_goodbye.jpeg"></p>',
+  //   choices: "NO_KEYS",
+  //   trial_duration: 2000, /* without the duration or input, the screen would not change */
+  // };
 
-  timeline.push(goodbye);
+  // timeline.push(goodbye);
 
   // full screen mode EXIT
   var exit_fullscreen = {
