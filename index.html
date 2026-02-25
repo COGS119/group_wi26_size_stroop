@@ -224,6 +224,7 @@
   timeline.push(instructions);
 
   /* creating the different stimulus lists */
+
   // 1. adds the proper data each stimulus list 
   var congruent_stimuli = congruent_images.map(function (img) {
     return {
@@ -250,7 +251,7 @@
 
   console.log(stimulus_list)
 
-  // this is where the stimulus from the list earlier can get flipped, cb means counterbalanced
+  // 2.2 this is where the stimulus from the list earlier can get flipped, cb means counterbalanced
   var cb_stimulus_list = stimulus_list.map(flipped => ( //.map means add stuff, 
     {                                                // ==> works the same as function()
       ...flipped, /*...flipped means it copies everything from stimulus list and then 
@@ -268,7 +269,7 @@
 
   console.log(cb_stimulus_list);
 
-  //combines counterbalancecd list and stimulus list into one list, holds all the stimuli 
+  // 2.3 combines counterbalancecd list and stimulus list into one list, holds all the stimuli 
   //we can take from it randomly for testing
   var all_stimulus_list = stimulus_list.concat(cb_stimulus_list);
 
@@ -298,8 +299,43 @@
       <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
     `
   }));
-
   console.log(all_stimulus_list_small)
+
+  // 3. take from the stimulus list to make block/trial specific lists
+
+  //gives us stimuli/1-Congruent.jpg for big & congruent
+  var pract_big = all_stimulus_list_big.slice(0,1) 
+
+  //removes the practice image from the big stimulus list
+  var actual_big = all_stimulus_list_big.toSpliced(0,1) 
+
+  console.log(pract_big);
+  console.log(actual_big);
+
+  //gives us stimuli/1-Incongruent.jpg for small and incongruent
+  var pract_small = all_stimulus_list_small.slice(36,37) 
+
+  //removes the practice image from the small stimulus list
+  var actual_small = all_stimulus_list_small.toSpliced(36,1) 
+  console.log(pract_small);
+  console.log(actual_small);
+
+  // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
+  var big_stimulus_list = //should change the name of this, this is for the big stimulus 
+    //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
+    //jsPsych.randomization.shuffle(all_stimulus_list_big); 
+
+    // this is for debugging, 
+    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2);
+  
+  console.log(big_stimulus_list);
+
+  var small_stimulus_list = //should change the name of this, this is for the small stimulus 
+    //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
+    //jsPsych.randomization.shuffle(all_stimulus_list_small) 
+
+    //<--this is for debugging 
+    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2);
 
   // Fixation cross code
   var fixation = {
@@ -393,6 +429,7 @@
     }
   };
 
+  //PRACTICE BLOCK RELATED CODE
   //practice trial code, sets the values based on which stimulus is used
   var prac_trial= { //should change the name of this 
     type: jsPsychImageKeyboardResponse,
@@ -422,7 +459,8 @@
     },
   };
 
-  var prac_looper = { //loops the practice trial if the partipant got it wrong 
+  //loops the practice trial if the partipant got it wrong, will keep looping until correct
+  var prac_looper = { 
     timeline: [prac_trial, practice_feedback],
     loop_function: function(data){ //loop_function loops the function, like the name says
       var last_trial = data.values()[0]; //last_trial holds the data from the trial. 
@@ -434,21 +472,7 @@
     },
   };
 
-  var pract_big = all_stimulus_list_big.slice(0,1) //gives us stimuli/1-Congruent.jpg for big & congruent
-
-  var actual_big = all_stimulus_list_big.toSpliced(0,1) //removes the stimulus used for pract_big
-
-  console.log(pract_big);
-
-  console.log(actual_big);
-
-  var pract_small = all_stimulus_list_small.slice(36,37) //gives us stimuli/1-Incongruent.jpg for small and incongruent
-
-  var actual_small = all_stimulus_list_small.toSpliced(36,1) //removes the stimulus used for pract_small
-  console.log(pract_small);
-  console.log(actual_small);
-
-
+  //code for how the trial should go (the timeline) 
   var prac_trial_big ={
     timeline: [prac_looper],
     timeline_variables: pract_big, //timeline variable out here so the stimulus doesnt get swapped 
@@ -459,6 +483,7 @@
     timeline_variables: pract_small, //timeline variable out here so the stimulus doesnt get swapped 
   };
 
+  //making the two practice trial blocks
   var practice_block_big = { 
     timeline: [practice_instructions, big_instruction, prac_trial_big]
   };
@@ -467,27 +492,13 @@
     timeline: [practice_instructions, small_instruction, prac_trial_small]
   };
 
-  // creates a new stimulus list by randomly taking x amount from the combined list above FOR TESTING
-  var big_stimulus_list = //should change the name of this, this is for the big stimulus 
-    //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
-    //jsPsych.randomization.shuffle(all_stimulus_list_big); 
 
-    // this is for debugging, 
-    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_big, 2);
-  
-  console.log(big_stimulus_list);
-
-  var small_stimulus_list = //should change the name of this, this is for the small stimulus 
-    //shuffle is for the entire thing, un-comment it to test the entire thing (will go through 144 trials)
-    //jsPsych.randomization.shuffle(all_stimulus_list_small) 
-
-    //<--this is for debugging 
-    jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2);
+  //ACTUAL BLOCK RELATED CODE
 
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
-  var test_trials = { //should probaly change the name of this to actual trials
+  var actual_trials = { //should probaly change the name of this to actual trials
     type: jsPsychImageKeyboardResponse,
     prompt: jsPsych.timelineVariable('prompt_text'),  //changes the prompt based on the stimulus 
     choices: ["z", "m"],
@@ -528,14 +539,17 @@
     }
   };
 
-  var actual_feedback = { //feedback for the actual trials, different than the practice_feedback 
+  /*feedback for the actual trials, different than the practice_feedback
+  this only shows up for if they get it wrong*/
+  var actual_feedback = {  
     type: jsPsychHtmlKeyboardResponse,
     stimulus:  "<p style='color:red; font-size: 48px;'>Incorrect!</p>",
     trial_duration: 1000,
     choices: "NO_KEYS",
   };
 
-  var actual_feedback_node = { //makes the feedback conditional, only shows up if they get it wrong 
+  //makes the feedback conditional, only shows up if they get it wrong 
+  var actual_feedback_node = { 
     timeline: [actual_feedback],
     conditional_function: function() {
       var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
@@ -592,7 +606,8 @@
   timeline = timeline.concat(block_array); //works the same as timeline.push(block_array)
 
 
-
+  //END OF EXPERIMENT RELATED CODE
+  
   //Rating the experiment
   var overall_rating = {
     type: jsPsychHtmlSliderResponse,
