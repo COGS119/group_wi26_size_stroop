@@ -36,7 +36,7 @@
 
 <script>
   /*set trials amount = progress bar limits and count for correct trial*/
-  var total_correct = 6 /*practice trials + actual (big +small)*/ 
+  var total_correct = 288 /*practice trials + actual (big +small)*/ 
   /*it would be 288 for the full experiment, could maybe make this automated?*/ 
  
   var correct_count = 0;
@@ -49,10 +49,9 @@
   /* initialize jsPsych */
   var jsPsych = initJsPsych(
     {
-      on_finish: function () {
-        jsPsych.data.displayData();
-      
-      },
+      // on_finish: function () {
+      //   jsPsych.data.displayData();
+      // },
       show_progress_bar: true,
       auto_update_progress_bar: false,   
       message_progress_bar: "Progress",
@@ -565,13 +564,13 @@
   //sets up how a trial should work: fixation cross, stimulus, conditional feedback
   var big_trial = { 
     timeline: [fixation, actual_trials, actual_feedback_node], 
-    timeline_variables: big_stimulus_list, //actual_big,
+    timeline_variables: actual_big,
     randomize_order: true,
   }
 
   var small_trial = {
     timeline: [fixation, actual_trials, actual_feedback_node], 
-    timeline_variables: small_stimulus_list, //actual_small,
+    timeline_variables: actual_small,
     randomize_order: true,
   }
 
