@@ -430,7 +430,7 @@
 
   //PRACTICE BLOCK RELATED CODE
   //practice trial code, sets the values based on which stimulus is used
-  var prac_trial= { //should change the name of this 
+  var prac_trial= { 
     type: jsPsychImageKeyboardResponse,
     prompt: "<p>Press <strong>z</strong> to choose the left image, <strong>m</strong> to choose the right image.</p>",
     choices: ["z", "m"],
@@ -498,7 +498,7 @@
   // here's how we can construct a simple size stroop judgment trial
   // TO DO: Hm, there's quite a lot of whitespace below the image slide, making the prompt appear far below it. Maybe that could be improved?
   // OTHER TO DOs: what else do we need to add to the trial procedure? What other information should we store? How can we turn this into a complete experiment timeline?
-  var actual_trials = { //should probaly change the name of this to actual trials
+  var actual_trials = { 
     type: jsPsychImageKeyboardResponse,
     prompt: jsPsych.timelineVariable('prompt_text'),  //changes the prompt based on the stimulus 
     choices: ["z", "m"],
