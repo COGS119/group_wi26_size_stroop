@@ -167,7 +167,6 @@
     <h1>Welcome to the experiment!</h1>
     <p>Press any key to begin</p>
     `,
-    
   };
 
   timeline.push(welcome);
@@ -186,6 +185,7 @@
     questions: [
       { prompt: "Please enter your particpant ID:", name: "participant_id" }
     ],
+
     on_finish: function (data) {
       console.log(data.responses);
       jsPsych.data.addProperties({
@@ -335,6 +335,7 @@
 
     //<--this is for debugging 
     jsPsych.randomization.sampleWithoutReplacement(all_stimulus_list_small, 2);
+  console.log(small_stimulus_list); 
 
   // Fixation cross code
   var fixation = {
@@ -389,12 +390,14 @@
   };
 
   //A page telling partipants that they would now be chaging what they are picking
+  // message changes based on if the last block was for big or small selection
   var transition_instructions = {
     type:jsPsychHtmlKeyboardResponse,
-    stimulus: function() { // message changes based on if the last block was for big or small selection 
+    stimulus: function() {  
       var last_trial_size = jsPsych.data.get().last(1).values()[0].size_condition;
       if (last_trial_size == undefined) {
-         last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition; }
+        last_trial_size = jsPsych.data.get().last(2).values()[0].size_condition;
+      }
       console.log(last_trial_size);
       if (last_trial_size == "big") {
         return `<p> Great job, you are half way there!
@@ -564,13 +567,13 @@
   //sets up how a trial should work: fixation cross, stimulus, conditional feedback
   var big_trial = { 
     timeline: [fixation, actual_trials, actual_feedback_node], 
-    timeline_variables: actual_big,
+    timeline_variables: actual_big, //big_stimulus_list, 
     randomize_order: true,
   }
 
   var small_trial = {
     timeline: [fixation, actual_trials, actual_feedback_node], 
-    timeline_variables: actual_small,
+    timeline_variables: actual_small, //small_stimulus_list, 
     randomize_order: true,
   }
 
@@ -611,12 +614,11 @@
   //Rating the experiment
   var overall_rating = {
     type: jsPsychHtmlSliderResponse,
-    stimulus: "<p>How would you rate our experiment? (Lowest:1, Highest:5)</p>",
+    stimulus: "<p>How would you rate our experiment? (Horrible:1, Amazing:8)</p>",
     min: 1,
-    max: 5,
-    start: 3,
+    max: 8,
     step: 1,
-    labels: ["1", "2", "3", "4", "5"],
+    labels: ["1", "2", "3", "4", "5","6","7","8"],
     require_movement: true,    
   };
 
@@ -631,7 +633,15 @@
       {prompt: "2. What do you think we are trying to measure?", placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
       {prompt: "3. Do you find the first OR second half of our experiment more difficult?",placeholder: "Type your answer here...", rows: 3, columns:70, required: true},
       {prompt: "4. Was there any technical issue you ran into?", placeholder: "If yes, please put it down here... ", rows: 3, columns:70, required: true},
-    ]
+    ],
+
+    data: {
+      task_type: "ending_survey",
+      Q0: "thoughts on experiment",
+      Q1: "what they think we are measuring",
+      Q2: "which half is more difficult",
+      Q3: "technical issues?",
+    },
   };
 
   timeline.push(ending_survey)
