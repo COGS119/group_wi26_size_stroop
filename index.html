@@ -369,14 +369,14 @@
   var practice_instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
-      <h1>Practice Trials</h1>
-      <br>You will complete one practice trials and receive feedback.
+      <h1>Now you will complete the practice trial.</h1>
+      <br>You will complete one practice trial and receive feedback.
+      <br>If your response is incorrect, you would repeat the trial until correct
       <br>
-      <br>Instructions will appear on the screen. 
-      <br>If your response is incorrect, you must repeat the trial until correct.
+      <br>Instruction on which size to pick will appear on the next screen. .
       <br>
       <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
-      <br>Press any key to continue.
+      <br><i>Press any key to continue.</i>
     `
   }
 
@@ -385,7 +385,7 @@
     type: jsPsychHtmlKeyboardResponse,
     stimulus: `
       <h1>Now you will begin the actual trials.</h1>  
-      <p>Press any key to continue.</p>
+      <p><i>Press any key to continue.</p></i>
     `
   };
 
@@ -404,13 +404,13 @@
           <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
           <br>Instead of deciding which image is <strong>larger</strong>, you will decide which image is <strong>smaller</strong>.
           <br>Please respond as quickly and accurately as possible.</p>
-          <br>Press any key to continue.`;
+          <br><i>Press any key to continue.</i>`;
       } else {
         return `<p> Great job, you are half way there!
           <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
           <br>Instead of deciding which image is <strong>smaller</strong>, you will decide which image is <strong>larger</strong>.
           <br>Please respond as quickly and accurately as possible.</p>
-          <br>Press any key to continue.`;
+          <br><i>Press any key to continue.</i>`;
       }
     }
   };
