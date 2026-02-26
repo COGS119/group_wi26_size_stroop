@@ -461,9 +461,10 @@
 
   //loops the practice trial if the partipant got it wrong, will keep looping until correct
   var prac_looper = { 
-    timeline: [prac_trial, practice_feedback],
+    timeline: [fixation, prac_trial, practice_feedback],
     loop_function: function(data){ //loop_function loops the function, like the name says
-      var last_trial = data.values()[0]; //last_trial holds the data from the trial. 
+      var last_trial = data.values()[1]; //last_trial holds the data from the trial. 
+      console.log(last_trial)
       if (last_trial.correct == false) { //last_trial.correct looks at if correct is true or false
         return true; // because it is == false, if they get it wrong, loop_function will turn on
       } else {
