@@ -304,19 +304,19 @@
   // 3. take from the stimulus list to make block/trial specific lists
 
   //gives us stimuli/1-Congruent.jpg for big & congruent
-  var pract_big = all_stimulus_list_big.slice(0,1) 
+  var pract_big = all_stimulus_list_big.slice(0,3) 
 
   //removes the practice image from the big stimulus list
-  var actual_big = all_stimulus_list_big.toSpliced(0,1) 
+  var actual_big = all_stimulus_list_big.toSpliced(0,3) 
 
   console.log(pract_big);
   console.log(actual_big);
 
   //gives us stimuli/1-Incongruent.jpg for small and incongruent
-  var pract_small = all_stimulus_list_small.slice(36,37) 
+  var pract_small = all_stimulus_list_small.slice(36,39) 
 
   //removes the practice image from the small stimulus list
-  var actual_small = all_stimulus_list_small.toSpliced(36,1) 
+  var actual_small = all_stimulus_list_small.toSpliced(36,3) 
   console.log(pract_small);
   console.log(actual_small);
 
