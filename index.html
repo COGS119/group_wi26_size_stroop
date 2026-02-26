@@ -344,22 +344,6 @@
     trial_duration: 700,
   };
 
-  //provides feedback saying if the previous trial is correct or not, for the PRACTICE TRIALS ONLY
-  var practice_feedback = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus:
-      function () {
-        var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
-        if (last_trial_correct) {
-          return "<p style='color:green; font-size: 48px;'>That is correct!</p>";
-        } else {
-          return "<p style='color:red; font-size: 48px;'>Incorrect! Try again.</p>";
-        }
-      },
-    choices: "NO_KEYS",
-    trial_duration: 1000,
-  };
-
   //instructions for SELECTING THE BIGGER IMAGE block 
   var big_instruction = {
     type: jsPsychHtmlKeyboardResponse,
@@ -456,6 +440,22 @@
         data.correct = false;
       }
     },
+  };
+
+  //provides feedback saying if the previous trial is correct or not, for the PRACTICE TRIALS ONLY
+  var practice_feedback = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus:
+      function () {
+        var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+        if (last_trial_correct) {
+          return "<p style='color:green; font-size: 48px;'>That is correct!</p>";
+        } else {
+          return "<p style='color:red; font-size: 48px;'>Incorrect! Try again.</p>";
+        }
+      },
+    choices: "NO_KEYS",
+    trial_duration: 1000,
   };
 
   //loops the practice trial if the partipant got it wrong, will keep looping until correct
