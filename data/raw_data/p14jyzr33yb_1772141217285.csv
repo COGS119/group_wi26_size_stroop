@@ -1,0 +1,1525 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","plugin_version","time_elapsed","random_id","task_order","participant","rt","stimulus","response","task_type","correct_response","correct_response_key","css_classes","size_condition","choices","correct","prompt_text","slider_start","Q0","Q1","Q2","Q3"
+"true","false","[]","[]","[]","preload","0","2.0.0","688","p14jyzr33yb","small_first","penguin","","","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","1","2.0.0","4250","p14jyzr33yb","small_first","penguin","3562","
+    <h1>Welcome to the experiment!</h1>
+    <p>Press any key to begin</p>
+    "," ","","","","","","","","","","","","",""
+"true","","","","","fullscreen","2","2.1.0","6411","p14jyzr33yb","small_first","penguin","1157","","","","","","","","","","","","","","",""
+"","","","","","survey-text","3","2.1.0","8552","p14jyzr33yb","small_first","penguin","2138","","{""participant_id"":""penguin""}","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","4","2.0.0","9302","p14jyzr33yb","small_first","penguin","750"," 
+      <h1>Instructions</h1>
+      <p>In this experiment, you will see 2 images of real world objects on each trial.
+      <br>Your task is to determine which image appears larger or smaller on the screen.
+      <br>Please respond as quickly and accurately as possible.
+      <br>
+      <br>You will be asked to complete <strong>2</strong> blocks of trials:
+      <br>1. Larger image block (select the image that appears larger)
+      <br>2. Smaller image block (select the image that appears smaller)
+      <br>
+      <br>Each block will contain practice trials with feedback, followed by actual trials without feedback.
+      <br>Each trial will begin with a fixation cross (<strong>+</strong>), followed by the images, and feedback if applicable.
+      <br>
+      <br>To respond, you will press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>Before starting, place your <strong>left</strong> index finger on <strong>z</strong> and <strong>right</strong> index finger on <strong>m</strong>.
+      <br>
+      <br><i>Press any key to begin.</i>
+      </p>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","5","2.0.0","9726","p14jyzr33yb","small_first","penguin","422","
+      <h1>Now you will complete the practice trial.</h1>
+      <br>You will complete one practice trial and receive feedback.
+      <br>If your response is incorrect, you would repeat the trial until correct.
+      <br>
+      <br>Instruction on which size to pick will appear on the next screen.
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>
+      <br><i>Press any key to continue.</i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","6","2.0.0","10096","p14jyzr33yb","small_first","penguin","370","
+      <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.</i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","7","2.0.0","10799","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","8","2.0.0","11520","p14jyzr33yb","small_first","penguin","713","stimuli/1-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","","","","","",""
+"","","","","","html-keyboard-response","9","2.0.0","12524","p14jyzr33yb","small_first","penguin","null","<p style='color:green; font-size: 48px;'>That is correct!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","10","2.0.0","12877","p14jyzr33yb","small_first","penguin","351","
+      <h1>Now you will begin the actual trials.</h1>  
+      <p><i>Press any key to continue.</p></i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","11","2.0.0","13334","p14jyzr33yb","small_first","penguin","456","
+      <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.</i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","12","2.0.0","14036","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","13","2.0.0","16056","p14jyzr33yb","small_first","penguin","2017","stimuli/18-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","15","2.0.0","16759","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","16","2.0.0","18947","p14jyzr33yb","small_first","penguin","2185","stimuli/9-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","18","2.0.0","19650","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","19","2.0.0","20179","p14jyzr33yb","small_first","penguin","527","stimuli/14-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","21","2.0.0","20881","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","22","2.0.0","21454","p14jyzr33yb","small_first","penguin","571","stimuli/27-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","24","2.0.0","22157","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","25","2.0.0","22563","p14jyzr33yb","small_first","penguin","404","stimuli/19-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","27","2.0.0","23267","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","28","2.0.0","23722","p14jyzr33yb","small_first","penguin","453","stimuli/21-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","30","2.0.0","24426","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","31","2.0.0","24881","p14jyzr33yb","small_first","penguin","453","stimuli/11-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","33","2.0.0","25584","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","34","2.0.0","25993","p14jyzr33yb","small_first","penguin","407","stimuli/22-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","36","2.0.0","26696","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","37","2.0.0","27056","p14jyzr33yb","small_first","penguin","357","stimuli/8-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","39","2.0.0","27758","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","40","2.0.0","28224","p14jyzr33yb","small_first","penguin","464","stimuli/24-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","42","2.0.0","28927","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","43","2.0.0","29334","p14jyzr33yb","small_first","penguin","406","stimuli/8-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","45","2.0.0","30037","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","46","2.0.0","30423","p14jyzr33yb","small_first","penguin","386","stimuli/11-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","48","2.0.0","31125","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","49","2.0.0","31503","p14jyzr33yb","small_first","penguin","375","stimuli/6-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","51","2.0.0","32206","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","52","2.0.0","32593","p14jyzr33yb","small_first","penguin","386","stimuli/13-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","54","2.0.0","33296","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","55","2.0.0","33653","p14jyzr33yb","small_first","penguin","355","stimuli/7-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","57","2.0.0","34355","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","58","2.0.0","34742","p14jyzr33yb","small_first","penguin","385","stimuli/36-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","60","2.0.0","35445","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","61","2.0.0","35879","p14jyzr33yb","small_first","penguin","432","stimuli/10-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","63","2.0.0","36583","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","64","2.0.0","36939","p14jyzr33yb","small_first","penguin","354","stimuli/11-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","66","2.0.0","37641","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","67","2.0.0","38082","p14jyzr33yb","small_first","penguin","439","stimuli/2-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","69","2.0.0","38785","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","70","2.0.0","39302","p14jyzr33yb","small_first","penguin","515","stimuli/15-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","72","2.0.0","40005","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","73","2.0.0","40913","p14jyzr33yb","small_first","penguin","906","stimuli/25-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","75","2.0.0","41615","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","76","2.0.0","42008","p14jyzr33yb","small_first","penguin","391","stimuli/4-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","78","2.0.0","42710","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","79","2.0.0","43149","p14jyzr33yb","small_first","penguin","437","stimuli/12-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","81","2.0.0","43851","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","82","2.0.0","44264","p14jyzr33yb","small_first","penguin","408","stimuli/8-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","84","2.0.0","44967","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","85","2.0.0","45352","p14jyzr33yb","small_first","penguin","383","stimuli/20-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","87","2.0.0","46055","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","88","2.0.0","46425","p14jyzr33yb","small_first","penguin","368","stimuli/31-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","90","2.0.0","47128","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","91","2.0.0","47529","p14jyzr33yb","small_first","penguin","396","stimuli/31-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","93","2.0.0","48232","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","94","2.0.0","48644","p14jyzr33yb","small_first","penguin","410","stimuli/6-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","96","2.0.0","49347","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","97","2.0.0","49781","p14jyzr33yb","small_first","penguin","431","stimuli/28-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","99","2.0.0","50484","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","100","2.0.0","50871","p14jyzr33yb","small_first","penguin","383","stimuli/4-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","102","2.0.0","51574","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","103","2.0.0","52361","p14jyzr33yb","small_first","penguin","784","stimuli/10-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","105","2.0.0","53063","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","106","2.0.0","53453","p14jyzr33yb","small_first","penguin","388","stimuli/22-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","108","2.0.0","54157","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","109","2.0.0","54546","p14jyzr33yb","small_first","penguin","386","stimuli/26-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","111","2.0.0","55249","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","112","2.0.0","55622","p14jyzr33yb","small_first","penguin","371","stimuli/19-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","114","2.0.0","56326","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","115","2.0.0","56715","p14jyzr33yb","small_first","penguin","387","stimuli/13-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","117","2.0.0","57418","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","118","2.0.0","57826","p14jyzr33yb","small_first","penguin","404","stimuli/1-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","120","2.0.0","58530","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","121","2.0.0","58913","p14jyzr33yb","small_first","penguin","382","stimuli/23-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","123","2.0.0","59616","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","124","2.0.0","60032","p14jyzr33yb","small_first","penguin","414","stimuli/26-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","126","2.0.0","60735","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","127","2.0.0","61137","p14jyzr33yb","small_first","penguin","399","stimuli/5-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","129","2.0.0","61840","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","130","2.0.0","62195","p14jyzr33yb","small_first","penguin","352","stimuli/2-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","132","2.0.0","62898","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","133","2.0.0","63274","p14jyzr33yb","small_first","penguin","373","stimuli/18-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","135","2.0.0","63976","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","136","2.0.0","64541","p14jyzr33yb","small_first","penguin","561","stimuli/31-Incongruent.jpg","z","incongruent_flipped_small","right","m","cb","small","z","false","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","137","2.0.0","65544","p14jyzr33yb","small_first","penguin","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","138","2.0.0","66247","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","139","2.0.0","66707","p14jyzr33yb","small_first","penguin","458","stimuli/29-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","141","2.0.0","67411","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","142","2.0.0","67823","p14jyzr33yb","small_first","penguin","410","stimuli/29-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","144","2.0.0","68526","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","145","2.0.0","68870","p14jyzr33yb","small_first","penguin","342","stimuli/6-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","147","2.0.0","69573","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","148","2.0.0","69961","p14jyzr33yb","small_first","penguin","385","stimuli/17-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","150","2.0.0","70663","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","151","2.0.0","71078","p14jyzr33yb","small_first","penguin","412","stimuli/27-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","153","2.0.0","71781","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","154","2.0.0","72190","p14jyzr33yb","small_first","penguin","406","stimuli/7-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","156","2.0.0","72893","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","157","2.0.0","73335","p14jyzr33yb","small_first","penguin","440","stimuli/8-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","159","2.0.0","74037","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","160","2.0.0","74402","p14jyzr33yb","small_first","penguin","363","stimuli/22-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","162","2.0.0","75104","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","163","2.0.0","75513","p14jyzr33yb","small_first","penguin","405","stimuli/20-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","165","2.0.0","76216","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","166","2.0.0","76576","p14jyzr33yb","small_first","penguin","359","stimuli/15-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","168","2.0.0","77279","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","169","2.0.0","77619","p14jyzr33yb","small_first","penguin","338","stimuli/36-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","171","2.0.0","78322","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","172","2.0.0","78685","p14jyzr33yb","small_first","penguin","360","stimuli/9-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","174","2.0.0","79388","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","175","2.0.0","79759","p14jyzr33yb","small_first","penguin","369","stimuli/18-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","177","2.0.0","80463","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","178","2.0.0","80842","p14jyzr33yb","small_first","penguin","377","stimuli/16-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","180","2.0.0","81545","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","181","2.0.0","81932","p14jyzr33yb","small_first","penguin","383","stimuli/16-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","183","2.0.0","82636","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","184","2.0.0","83031","p14jyzr33yb","small_first","penguin","393","stimuli/27-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","186","2.0.0","83734","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","187","2.0.0","84202","p14jyzr33yb","small_first","penguin","465","stimuli/20-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","189","2.0.0","84905","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","190","2.0.0","85284","p14jyzr33yb","small_first","penguin","378","stimuli/11-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","192","2.0.0","85988","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","193","2.0.0","86387","p14jyzr33yb","small_first","penguin","398","stimuli/12-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","195","2.0.0","87089","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","196","2.0.0","87514","p14jyzr33yb","small_first","penguin","423","stimuli/36-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","198","2.0.0","88217","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","199","2.0.0","88579","p14jyzr33yb","small_first","penguin","358","stimuli/3-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","201","2.0.0","89281","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","202","2.0.0","89718","p14jyzr33yb","small_first","penguin","435","stimuli/28-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","204","2.0.0","90420","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","205","2.0.0","90787","p14jyzr33yb","small_first","penguin","365","stimuli/22-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","207","2.0.0","91490","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","208","2.0.0","91870","p14jyzr33yb","small_first","penguin","377","stimuli/9-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","210","2.0.0","92574","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","211","2.0.0","92968","p14jyzr33yb","small_first","penguin","392","stimuli/35-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","213","2.0.0","93671","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","214","2.0.0","94072","p14jyzr33yb","small_first","penguin","399","stimuli/18-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","216","2.0.0","94775","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","217","2.0.0","95125","p14jyzr33yb","small_first","penguin","347","stimuli/5-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","219","2.0.0","95828","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","220","2.0.0","96224","p14jyzr33yb","small_first","penguin","394","stimuli/36-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","222","2.0.0","96927","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","223","2.0.0","97331","p14jyzr33yb","small_first","penguin","402","stimuli/17-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","225","2.0.0","98034","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","226","2.0.0","98481","p14jyzr33yb","small_first","penguin","443","stimuli/32-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","228","2.0.0","99184","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","229","2.0.0","99656","p14jyzr33yb","small_first","penguin","470","stimuli/10-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","231","2.0.0","100359","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","232","2.0.0","100768","p14jyzr33yb","small_first","penguin","407","stimuli/26-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","234","2.0.0","101472","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","235","2.0.0","101892","p14jyzr33yb","small_first","penguin","417","stimuli/26-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","237","2.0.0","102595","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","238","2.0.0","102925","p14jyzr33yb","small_first","penguin","328","stimuli/30-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","240","2.0.0","103627","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","241","2.0.0","104090","p14jyzr33yb","small_first","penguin","460","stimuli/2-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","243","2.0.0","104792","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","244","2.0.0","105155","p14jyzr33yb","small_first","penguin","360","stimuli/25-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","246","2.0.0","105857","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","247","2.0.0","106280","p14jyzr33yb","small_first","penguin","422","stimuli/24-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","249","2.0.0","106983","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","250","2.0.0","107580","p14jyzr33yb","small_first","penguin","595","stimuli/30-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","252","2.0.0","108283","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","253","2.0.0","108648","p14jyzr33yb","small_first","penguin","362","stimuli/4-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","255","2.0.0","109351","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","256","2.0.0","109704","p14jyzr33yb","small_first","penguin","351","stimuli/5-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","258","2.0.0","110407","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","259","2.0.0","110820","p14jyzr33yb","small_first","penguin","411","stimuli/5-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","261","2.0.0","111523","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","262","2.0.0","111923","p14jyzr33yb","small_first","penguin","396","stimuli/3-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","264","2.0.0","112627","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","265","2.0.0","113087","p14jyzr33yb","small_first","penguin","458","stimuli/2-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","267","2.0.0","113790","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","268","2.0.0","114192","p14jyzr33yb","small_first","penguin","400","stimuli/14-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","270","2.0.0","114895","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","271","2.0.0","115299","p14jyzr33yb","small_first","penguin","401","stimuli/1-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","273","2.0.0","116002","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","274","2.0.0","116356","p14jyzr33yb","small_first","penguin","352","stimuli/27-Congruent.jpg","m","congruent_flipped_small","left","z","cb","small","m","false","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","275","2.0.0","117359","p14jyzr33yb","small_first","penguin","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","276","2.0.0","118061","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","277","2.0.0","118700","p14jyzr33yb","small_first","penguin","638","stimuli/6-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","279","2.0.0","119403","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","280","2.0.0","119812","p14jyzr33yb","small_first","penguin","407","stimuli/34-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","282","2.0.0","120516","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","283","2.0.0","120924","p14jyzr33yb","small_first","penguin","407","stimuli/9-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","285","2.0.0","121627","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","286","2.0.0","122044","p14jyzr33yb","small_first","penguin","415","stimuli/30-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","288","2.0.0","122747","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","289","2.0.0","123118","p14jyzr33yb","small_first","penguin","368","stimuli/34-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","291","2.0.0","123821","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","292","2.0.0","124202","p14jyzr33yb","small_first","penguin","376","stimuli/29-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","294","2.0.0","124905","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","295","2.0.0","125302","p14jyzr33yb","small_first","penguin","396","stimuli/19-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","297","2.0.0","126006","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","298","2.0.0","126417","p14jyzr33yb","small_first","penguin","408","stimuli/15-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","300","2.0.0","127120","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","301","2.0.0","127522","p14jyzr33yb","small_first","penguin","400","stimuli/12-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","303","2.0.0","128225","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","304","2.0.0","128621","p14jyzr33yb","small_first","penguin","394","stimuli/32-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","306","2.0.0","129324","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","307","2.0.0","129762","p14jyzr33yb","small_first","penguin","434","stimuli/23-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","309","2.0.0","130466","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","310","2.0.0","130833","p14jyzr33yb","small_first","penguin","365","stimuli/35-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","312","2.0.0","131536","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","313","2.0.0","131955","p14jyzr33yb","small_first","penguin","417","stimuli/28-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","315","2.0.0","132657","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","316","2.0.0","133005","p14jyzr33yb","small_first","penguin","344","stimuli/3-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","318","2.0.0","133707","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","319","2.0.0","134041","p14jyzr33yb","small_first","penguin","333","stimuli/15-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","321","2.0.0","134745","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","322","2.0.0","135122","p14jyzr33yb","small_first","penguin","375","stimuli/14-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","324","2.0.0","135825","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","325","2.0.0","136209","p14jyzr33yb","small_first","penguin","380","stimuli/13-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","327","2.0.0","136912","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","328","2.0.0","137361","p14jyzr33yb","small_first","penguin","446","stimuli/14-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","330","2.0.0","138064","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","331","2.0.0","138651","p14jyzr33yb","small_first","penguin","585","stimuli/29-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","333","2.0.0","139354","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","334","2.0.0","139745","p14jyzr33yb","small_first","penguin","389","stimuli/7-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","336","2.0.0","140448","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","337","2.0.0","140868","p14jyzr33yb","small_first","penguin","417","stimuli/30-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","339","2.0.0","141571","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","340","2.0.0","141908","p14jyzr33yb","small_first","penguin","335","stimuli/25-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","342","2.0.0","142611","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","343","2.0.0","143006","p14jyzr33yb","small_first","penguin","391","stimuli/4-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","345","2.0.0","143709","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","346","2.0.0","144090","p14jyzr33yb","small_first","penguin","378","stimuli/10-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","348","2.0.0","144793","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","349","2.0.0","145220","p14jyzr33yb","small_first","penguin","425","stimuli/19-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","351","2.0.0","145923","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","352","2.0.0","146341","p14jyzr33yb","small_first","penguin","414","stimuli/16-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","354","2.0.0","147044","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","355","2.0.0","147455","p14jyzr33yb","small_first","penguin","410","stimuli/32-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","357","2.0.0","148158","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","358","2.0.0","148607","p14jyzr33yb","small_first","penguin","447","stimuli/21-Incongruent.jpg","z","incongruent_flipped_small","right","m","cb","small","z","false","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","359","2.0.0","149609","p14jyzr33yb","small_first","penguin","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","360","2.0.0","150312","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","361","2.0.0","151046","p14jyzr33yb","small_first","penguin","731","stimuli/21-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","363","2.0.0","151750","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","364","2.0.0","152171","p14jyzr33yb","small_first","penguin","420","stimuli/33-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","366","2.0.0","152874","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","367","2.0.0","153410","p14jyzr33yb","small_first","penguin","534","stimuli/17-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","369","2.0.0","154112","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","370","2.0.0","154614","p14jyzr33yb","small_first","penguin","499","stimuli/23-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","372","2.0.0","155317","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","373","2.0.0","155696","p14jyzr33yb","small_first","penguin","377","stimuli/24-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","375","2.0.0","156399","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","376","2.0.0","156859","p14jyzr33yb","small_first","penguin","458","stimuli/33-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","378","2.0.0","157562","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","379","2.0.0","157949","p14jyzr33yb","small_first","penguin","385","stimuli/34-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","381","2.0.0","158652","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","382","2.0.0","159037","p14jyzr33yb","small_first","penguin","383","stimuli/12-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","384","2.0.0","159740","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","385","2.0.0","160163","p14jyzr33yb","small_first","penguin","420","stimuli/1-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","387","2.0.0","160865","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","388","2.0.0","161249","p14jyzr33yb","small_first","penguin","380","stimuli/31-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","390","2.0.0","161953","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","391","2.0.0","162373","p14jyzr33yb","small_first","penguin","418","stimuli/24-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","393","2.0.0","163076","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","394","2.0.0","163568","p14jyzr33yb","small_first","penguin","491","stimuli/3-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","396","2.0.0","164271","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","397","2.0.0","164796","p14jyzr33yb","small_first","penguin","522","stimuli/17-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","399","2.0.0","165499","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","400","2.0.0","165880","p14jyzr33yb","small_first","penguin","379","stimuli/32-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","402","2.0.0","166581","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","403","2.0.0","167009","p14jyzr33yb","small_first","penguin","426","stimuli/7-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","405","2.0.0","167713","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","406","2.0.0","168156","p14jyzr33yb","small_first","penguin","440","stimuli/34-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","408","2.0.0","168860","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","409","2.0.0","169243","p14jyzr33yb","small_first","penguin","381","stimuli/35-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","411","2.0.0","169946","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","412","2.0.0","170407","p14jyzr33yb","small_first","penguin","459","stimuli/33-Congruent.jpg","z","congruent_flipped_small","left","z","cb","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","414","2.0.0","171110","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","415","2.0.0","171698","p14jyzr33yb","small_first","penguin","585","stimuli/21-Incongruent.jpg","m","incongruent_small","left","z","normal","small","m","false","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","416","2.0.0","172701","p14jyzr33yb","small_first","penguin","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","417","2.0.0","173404","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","418","2.0.0","173940","p14jyzr33yb","small_first","penguin","534","stimuli/16-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","420","2.0.0","174644","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","421","2.0.0","175254","p14jyzr33yb","small_first","penguin","608","stimuli/20-Incongruent.jpg","m","incongruent_small","left","z","normal","small","m","false","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","422","2.0.0","176257","p14jyzr33yb","small_first","penguin","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","423","2.0.0","176959","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","424","2.0.0","177524","p14jyzr33yb","small_first","penguin","562","stimuli/35-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","426","2.0.0","178227","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","427","2.0.0","178715","p14jyzr33yb","small_first","penguin","486","stimuli/13-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","429","2.0.0","179418","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","430","2.0.0","179850","p14jyzr33yb","small_first","penguin","428","stimuli/25-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","432","2.0.0","180553","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","433","2.0.0","180962","p14jyzr33yb","small_first","penguin","408","stimuli/23-Incongruent.jpg","m","incongruent_flipped_small","right","m","cb","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","435","2.0.0","181665","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","436","2.0.0","182056","p14jyzr33yb","small_first","penguin","389","stimuli/28-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","438","2.0.0","182759","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","439","2.0.0","183181","p14jyzr33yb","small_first","penguin","420","stimuli/33-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","441","2.0.0","184253","p14jyzr33yb","small_first","penguin","1067","<p> Great job, you are half way there!
+          <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
+          <br>Instead of deciding which image is <strong>smaller</strong>, you will decide which image is <strong>larger</strong>.
+          <br>Please respond as quickly and accurately as possible.</p>
+          <br><i>Press any key to continue.</i>"," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","442","2.0.0","189478","p14jyzr33yb","small_first","penguin","5225","
+      <h1>Now you will complete the practice trial.</h1>
+      <br>You will complete one practice trial and receive feedback.
+      <br>If your response is incorrect, you would repeat the trial until correct.
+      <br>
+      <br>Instruction on which size to pick will appear on the next screen.
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>
+      <br><i>Press any key to continue.</i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","443","2.0.0","191017","p14jyzr33yb","small_first","penguin","1538","
+      <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.<i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","444","2.0.0","191719","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","445","2.0.0","192250","p14jyzr33yb","small_first","penguin","527","stimuli/1-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","","","","","",""
+"","","","","","html-keyboard-response","446","2.0.0","193254","p14jyzr33yb","small_first","penguin","null","<p style='color:green; font-size: 48px;'>That is correct!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","447","2.0.0","194276","p14jyzr33yb","small_first","penguin","1021","
+      <h1>Now you will begin the actual trials.</h1>  
+      <p><i>Press any key to continue.</p></i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","448","2.0.0","194892","p14jyzr33yb","small_first","penguin","614","
+      <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.<i>
+    "," ","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","449","2.0.0","195595","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","450","2.0.0","196006","p14jyzr33yb","small_first","penguin","410","stimuli/3-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","452","2.0.0","196708","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","453","2.0.0","197496","p14jyzr33yb","small_first","penguin","784","stimuli/14-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","455","2.0.0","198199","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","456","2.0.0","198670","p14jyzr33yb","small_first","penguin","467","stimuli/21-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","458","2.0.0","199373","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","459","2.0.0","200125","p14jyzr33yb","small_first","penguin","750","stimuli/12-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","461","2.0.0","200828","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","462","2.0.0","201274","p14jyzr33yb","small_first","penguin","444","stimuli/33-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","464","2.0.0","201977","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","465","2.0.0","202401","p14jyzr33yb","small_first","penguin","422","stimuli/24-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","467","2.0.0","203104","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","468","2.0.0","203636","p14jyzr33yb","small_first","penguin","529","stimuli/4-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","470","2.0.0","204339","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","471","2.0.0","204830","p14jyzr33yb","small_first","penguin","489","stimuli/35-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","473","2.0.0","205532","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","474","2.0.0","205931","p14jyzr33yb","small_first","penguin","396","stimuli/9-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","476","2.0.0","206635","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","477","2.0.0","207174","p14jyzr33yb","small_first","penguin","538","stimuli/26-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","479","2.0.0","207877","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","480","2.0.0","208316","p14jyzr33yb","small_first","penguin","437","stimuli/13-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","482","2.0.0","209019","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","483","2.0.0","209413","p14jyzr33yb","small_first","penguin","391","stimuli/1-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","485","2.0.0","210117","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","486","2.0.0","210560","p14jyzr33yb","small_first","penguin","441","stimuli/7-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","488","2.0.0","211262","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","489","2.0.0","211734","p14jyzr33yb","small_first","penguin","470","stimuli/14-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","491","2.0.0","212437","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","492","2.0.0","212839","p14jyzr33yb","small_first","penguin","398","stimuli/33-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","494","2.0.0","213541","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","495","2.0.0","213919","p14jyzr33yb","small_first","penguin","376","stimuli/9-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","497","2.0.0","214623","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","498","2.0.0","215065","p14jyzr33yb","small_first","penguin","440","stimuli/30-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","500","2.0.0","215768","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","501","2.0.0","216131","p14jyzr33yb","small_first","penguin","359","stimuli/24-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","503","2.0.0","216833","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","504","2.0.0","217220","p14jyzr33yb","small_first","penguin","385","stimuli/29-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","506","2.0.0","217923","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","507","2.0.0","218307","p14jyzr33yb","small_first","penguin","382","stimuli/20-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","509","2.0.0","219010","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","510","2.0.0","219353","p14jyzr33yb","small_first","penguin","339","stimuli/2-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","512","2.0.0","220055","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","513","2.0.0","220446","p14jyzr33yb","small_first","penguin","388","stimuli/8-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","515","2.0.0","221149","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","516","2.0.0","221532","p14jyzr33yb","small_first","penguin","381","stimuli/32-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","518","2.0.0","222234","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","519","2.0.0","222692","p14jyzr33yb","small_first","penguin","455","stimuli/28-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","521","2.0.0","223395","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","522","2.0.0","223844","p14jyzr33yb","small_first","penguin","447","stimuli/24-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","524","2.0.0","224547","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","525","2.0.0","224980","p14jyzr33yb","small_first","penguin","431","stimuli/28-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","527","2.0.0","225683","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","528","2.0.0","226082","p14jyzr33yb","small_first","penguin","396","stimuli/32-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","530","2.0.0","226786","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","531","2.0.0","227204","p14jyzr33yb","small_first","penguin","416","stimuli/14-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","533","2.0.0","227907","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","534","2.0.0","228266","p14jyzr33yb","small_first","penguin","357","stimuli/5-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","536","2.0.0","228968","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","537","2.0.0","229354","p14jyzr33yb","small_first","penguin","381","stimuli/31-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","539","2.0.0","230057","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","540","2.0.0","230464","p14jyzr33yb","small_first","penguin","405","stimuli/23-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","542","2.0.0","231167","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","543","2.0.0","231557","p14jyzr33yb","small_first","penguin","388","stimuli/19-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","545","2.0.0","232260","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","546","2.0.0","232826","p14jyzr33yb","small_first","penguin","563","stimuli/17-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","548","2.0.0","233529","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","549","2.0.0","233882","p14jyzr33yb","small_first","penguin","351","stimuli/12-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","551","2.0.0","234585","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","552","2.0.0","235051","p14jyzr33yb","small_first","penguin","463","stimuli/36-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","554","2.0.0","235754","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","555","2.0.0","236186","p14jyzr33yb","small_first","penguin","428","stimuli/10-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","557","2.0.0","236889","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","558","2.0.0","237316","p14jyzr33yb","small_first","penguin","424","stimuli/36-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","560","2.0.0","238017","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","561","2.0.0","238447","p14jyzr33yb","small_first","penguin","429","stimuli/3-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","563","2.0.0","239150","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","564","2.0.0","239631","p14jyzr33yb","small_first","penguin","479","stimuli/4-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","566","2.0.0","240334","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","567","2.0.0","240708","p14jyzr33yb","small_first","penguin","372","stimuli/35-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","569","2.0.0","241411","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","570","2.0.0","241804","p14jyzr33yb","small_first","penguin","391","stimuli/15-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","572","2.0.0","242507","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","573","2.0.0","242898","p14jyzr33yb","small_first","penguin","388","stimuli/23-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","575","2.0.0","243601","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","576","2.0.0","243947","p14jyzr33yb","small_first","penguin","343","stimuli/16-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","578","2.0.0","244651","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","579","2.0.0","245022","p14jyzr33yb","small_first","penguin","370","stimuli/17-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","581","2.0.0","245725","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","582","2.0.0","246106","p14jyzr33yb","small_first","penguin","377","stimuli/16-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","584","2.0.0","246809","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","585","2.0.0","247182","p14jyzr33yb","small_first","penguin","370","stimuli/28-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","587","2.0.0","247885","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","588","2.0.0","248294","p14jyzr33yb","small_first","penguin","407","stimuli/14-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","590","2.0.0","248998","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","591","2.0.0","249393","p14jyzr33yb","small_first","penguin","391","stimuli/29-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","593","2.0.0","250096","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","594","2.0.0","250430","p14jyzr33yb","small_first","penguin","332","stimuli/5-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","596","2.0.0","251133","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","597","2.0.0","251488","p14jyzr33yb","small_first","penguin","353","stimuli/11-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","599","2.0.0","252191","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","600","2.0.0","252431","p14jyzr33yb","small_first","penguin","236","stimuli/31-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","602","2.0.0","253134","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","603","2.0.0","253442","p14jyzr33yb","small_first","penguin","305","stimuli/26-Congruent.jpg","z","congruent_flipped_big","right","m","cb","big","z","false","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","604","2.0.0","254445","p14jyzr33yb","small_first","penguin","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","605","2.0.0","255147","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","606","2.0.0","255578","p14jyzr33yb","small_first","penguin","429","stimuli/6-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","608","2.0.0","256282","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","609","2.0.0","256691","p14jyzr33yb","small_first","penguin","406","stimuli/18-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","611","2.0.0","257395","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","612","2.0.0","257799","p14jyzr33yb","small_first","penguin","402","stimuli/9-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","614","2.0.0","258502","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","615","2.0.0","258859","p14jyzr33yb","small_first","penguin","355","stimuli/5-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","617","2.0.0","259562","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","618","2.0.0","259955","p14jyzr33yb","small_first","penguin","390","stimuli/18-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","620","2.0.0","260659","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","621","2.0.0","260999","p14jyzr33yb","small_first","penguin","338","stimuli/18-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","623","2.0.0","261702","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","624","2.0.0","262220","p14jyzr33yb","small_first","penguin","517","stimuli/8-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","626","2.0.0","262922","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","627","2.0.0","263405","p14jyzr33yb","small_first","penguin","481","stimuli/21-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","629","2.0.0","264108","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","630","2.0.0","264915","p14jyzr33yb","small_first","penguin","806","stimuli/22-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","632","2.0.0","265617","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","633","2.0.0","266185","p14jyzr33yb","small_first","penguin","565","stimuli/23-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","635","2.0.0","266888","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","636","2.0.0","267337","p14jyzr33yb","small_first","penguin","446","stimuli/2-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","638","2.0.0","268039","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","639","2.0.0","268488","p14jyzr33yb","small_first","penguin","448","stimuli/33-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","641","2.0.0","269191","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","642","2.0.0","269607","p14jyzr33yb","small_first","penguin","414","stimuli/7-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","644","2.0.0","270310","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","645","2.0.0","270694","p14jyzr33yb","small_first","penguin","380","stimuli/34-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","647","2.0.0","271397","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","648","2.0.0","271863","p14jyzr33yb","small_first","penguin","464","stimuli/2-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","650","2.0.0","272566","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","651","2.0.0","272985","p14jyzr33yb","small_first","penguin","417","stimuli/19-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","653","2.0.0","273687","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","654","2.0.0","274082","p14jyzr33yb","small_first","penguin","392","stimuli/23-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","656","2.0.0","274785","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","657","2.0.0","275166","p14jyzr33yb","small_first","penguin","379","stimuli/29-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","659","2.0.0","275868","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","660","2.0.0","276230","p14jyzr33yb","small_first","penguin","360","stimuli/28-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","662","2.0.0","276932","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","663","2.0.0","277877","p14jyzr33yb","small_first","penguin","942","stimuli/15-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","665","2.0.0","278580","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","666","2.0.0","279030","p14jyzr33yb","small_first","penguin","447","stimuli/13-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","668","2.0.0","279733","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","669","2.0.0","280159","p14jyzr33yb","small_first","penguin","424","stimuli/8-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","671","2.0.0","280861","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","672","2.0.0","281433","p14jyzr33yb","small_first","penguin","568","stimuli/33-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","674","2.0.0","282135","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","675","2.0.0","282517","p14jyzr33yb","small_first","penguin","379","stimuli/6-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","677","2.0.0","283220","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","678","2.0.0","283629","p14jyzr33yb","small_first","penguin","407","stimuli/25-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","680","2.0.0","284332","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","681","2.0.0","284924","p14jyzr33yb","small_first","penguin","588","stimuli/15-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","683","2.0.0","285627","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","684","2.0.0","286106","p14jyzr33yb","small_first","penguin","476","stimuli/34-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","686","2.0.0","286808","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","687","2.0.0","287404","p14jyzr33yb","small_first","penguin","592","stimuli/13-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","689","2.0.0","288106","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","690","2.0.0","288712","p14jyzr33yb","small_first","penguin","602","stimuli/19-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","692","2.0.0","289415","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","693","2.0.0","289856","p14jyzr33yb","small_first","penguin","438","stimuli/25-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","695","2.0.0","290559","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","696","2.0.0","291055","p14jyzr33yb","small_first","penguin","494","stimuli/22-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","698","2.0.0","291757","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","699","2.0.0","292137","p14jyzr33yb","small_first","penguin","376","stimuli/22-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","701","2.0.0","292840","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","702","2.0.0","293260","p14jyzr33yb","small_first","penguin","418","stimuli/10-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","704","2.0.0","293963","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","705","2.0.0","294357","p14jyzr33yb","small_first","penguin","393","stimuli/10-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","707","2.0.0","295059","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","708","2.0.0","295472","p14jyzr33yb","small_first","penguin","411","stimuli/1-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","710","2.0.0","296175","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","711","2.0.0","296596","p14jyzr33yb","small_first","penguin","419","stimuli/34-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","713","2.0.0","297299","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","714","2.0.0","297723","p14jyzr33yb","small_first","penguin","422","stimuli/2-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","716","2.0.0","298426","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","717","2.0.0","298807","p14jyzr33yb","small_first","penguin","377","stimuli/30-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","719","2.0.0","299510","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","720","2.0.0","299904","p14jyzr33yb","small_first","penguin","392","stimuli/5-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","722","2.0.0","300607","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","723","2.0.0","301083","p14jyzr33yb","small_first","penguin","475","stimuli/24-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","725","2.0.0","301788","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","726","2.0.0","302172","p14jyzr33yb","small_first","penguin","382","stimuli/29-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","728","2.0.0","302876","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","729","2.0.0","303240","p14jyzr33yb","small_first","penguin","363","stimuli/6-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","731","2.0.0","303943","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","732","2.0.0","304366","p14jyzr33yb","small_first","penguin","422","stimuli/32-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","734","2.0.0","305069","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","735","2.0.0","305480","p14jyzr33yb","small_first","penguin","407","stimuli/17-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","737","2.0.0","306182","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","738","2.0.0","306638","p14jyzr33yb","small_first","penguin","454","stimuli/9-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","740","2.0.0","307341","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","741","2.0.0","307754","p14jyzr33yb","small_first","penguin","411","stimuli/11-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","743","2.0.0","308457","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","744","2.0.0","308960","p14jyzr33yb","small_first","penguin","499","stimuli/7-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","746","2.0.0","309664","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","747","2.0.0","310024","p14jyzr33yb","small_first","penguin","357","stimuli/3-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","749","2.0.0","310727","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","750","2.0.0","311129","p14jyzr33yb","small_first","penguin","400","stimuli/8-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","752","2.0.0","311832","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","753","2.0.0","312321","p14jyzr33yb","small_first","penguin","486","stimuli/20-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","755","2.0.0","313024","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","756","2.0.0","313384","p14jyzr33yb","small_first","penguin","358","stimuli/30-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","758","2.0.0","314087","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","759","2.0.0","314524","p14jyzr33yb","small_first","penguin","435","stimuli/20-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","761","2.0.0","315228","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","762","2.0.0","315632","p14jyzr33yb","small_first","penguin","401","stimuli/31-Congruent.jpg","m","congruent_big","left","z","normal","big","m","false","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","763","2.0.0","316635","p14jyzr33yb","small_first","penguin","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","764","2.0.0","317339","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","765","2.0.0","317725","p14jyzr33yb","small_first","penguin","384","stimuli/35-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","767","2.0.0","318428","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","768","2.0.0","318793","p14jyzr33yb","small_first","penguin","363","stimuli/20-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","770","2.0.0","319496","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","771","2.0.0","319877","p14jyzr33yb","small_first","penguin","377","stimuli/4-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","773","2.0.0","320581","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","774","2.0.0","320922","p14jyzr33yb","small_first","penguin","340","stimuli/21-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","776","2.0.0","321625","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","777","2.0.0","322028","p14jyzr33yb","small_first","penguin","400","stimuli/25-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","779","2.0.0","322731","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","780","2.0.0","323091","p14jyzr33yb","small_first","penguin","355","stimuli/34-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","782","2.0.0","323794","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","783","2.0.0","324167","p14jyzr33yb","small_first","penguin","371","stimuli/1-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","785","2.0.0","324870","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","786","2.0.0","325281","p14jyzr33yb","small_first","penguin","408","stimuli/12-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","788","2.0.0","325984","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","789","2.0.0","326401","p14jyzr33yb","small_first","penguin","413","stimuli/13-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","791","2.0.0","327103","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","792","2.0.0","327497","p14jyzr33yb","small_first","penguin","393","stimuli/25-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","794","2.0.0","328199","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","795","2.0.0","328600","p14jyzr33yb","small_first","penguin","399","stimuli/32-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","797","2.0.0","329302","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","798","2.0.0","329704","p14jyzr33yb","small_first","penguin","400","stimuli/19-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","800","2.0.0","330405","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","801","2.0.0","330811","p14jyzr33yb","small_first","penguin","405","stimuli/11-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","803","2.0.0","331514","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","804","2.0.0","331920","p14jyzr33yb","small_first","penguin","405","stimuli/17-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","806","2.0.0","332623","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","807","2.0.0","333027","p14jyzr33yb","small_first","penguin","403","stimuli/27-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","809","2.0.0","333731","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","810","2.0.0","334164","p14jyzr33yb","small_first","penguin","432","stimuli/36-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","812","2.0.0","334868","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","813","2.0.0","335277","p14jyzr33yb","small_first","penguin","408","stimuli/21-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","815","2.0.0","335980","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","816","2.0.0","336430","p14jyzr33yb","small_first","penguin","447","stimuli/11-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","818","2.0.0","337133","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","819","2.0.0","337499","p14jyzr33yb","small_first","penguin","364","stimuli/27-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","821","2.0.0","338202","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","822","2.0.0","338584","p14jyzr33yb","small_first","penguin","380","stimuli/10-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","824","2.0.0","339287","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","825","2.0.0","339656","p14jyzr33yb","small_first","penguin","366","stimuli/27-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","827","2.0.0","340359","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","828","2.0.0","340895","p14jyzr33yb","small_first","penguin","534","stimuli/26-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","830","2.0.0","341598","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","831","2.0.0","341979","p14jyzr33yb","small_first","penguin","380","stimuli/18-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","833","2.0.0","342682","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","834","2.0.0","343073","p14jyzr33yb","small_first","penguin","388","stimuli/27-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","836","2.0.0","343776","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","837","2.0.0","344184","p14jyzr33yb","small_first","penguin","405","stimuli/30-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","839","2.0.0","344887","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","840","2.0.0","345246","p14jyzr33yb","small_first","penguin","357","stimuli/22-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","842","2.0.0","345950","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","843","2.0.0","346354","p14jyzr33yb","small_first","penguin","400","stimuli/35-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","845","2.0.0","347056","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","846","2.0.0","347456","p14jyzr33yb","small_first","penguin","399","stimuli/36-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","848","2.0.0","348157","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","849","2.0.0","348525","p14jyzr33yb","small_first","penguin","366","stimuli/3-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","851","2.0.0","349228","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","852","2.0.0","349624","p14jyzr33yb","small_first","penguin","394","stimuli/7-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","854","2.0.0","350327","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","855","2.0.0","350728","p14jyzr33yb","small_first","penguin","399","stimuli/16-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","857","2.0.0","351431","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","858","2.0.0","351893","p14jyzr33yb","small_first","penguin","460","stimuli/16-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","860","2.0.0","352596","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","861","2.0.0","352999","p14jyzr33yb","small_first","penguin","400","stimuli/31-Congruent.jpg","m","congruent_flipped_big","right","m","cb","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","863","2.0.0","353702","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","864","2.0.0","354088","p14jyzr33yb","small_first","penguin","384","stimuli/4-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","866","2.0.0","354791","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","867","2.0.0","355395","p14jyzr33yb","small_first","penguin","602","stimuli/15-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","869","2.0.0","356098","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","870","2.0.0","356447","p14jyzr33yb","small_first","penguin","348","stimuli/12-Incongruent.jpg","z","incongruent_flipped_big","left","z","cb","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","872","2.0.0","357150","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","873","2.0.0","357647","p14jyzr33yb","small_first","penguin","495","stimuli/6-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","875","2.0.0","358350","p14jyzr33yb","small_first","penguin","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","876","2.0.0","358743","p14jyzr33yb","small_first","penguin","391","stimuli/26-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-slider-response","878","2.0.0","368492","p14jyzr33yb","small_first","penguin","9741","<p>How would you rate our experiment? (Horrible:1, Amazing:10)</p>","7","","","","","","","","","50","","","",""
+"","","","","","survey-text","879","2.1.0","387378","p14jyzr33yb","small_first","penguin","18874","","{""Q0"":""it's alright"",""Q1"":""RT"",""Q2"":""second half"",""Q3"":""no""}","ending_survey","","","","","","","","","thoughts on experiment","what they think we are measuring","which half is more difficult","technical issues?"

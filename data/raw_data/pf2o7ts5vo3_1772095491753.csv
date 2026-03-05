@@ -1,0 +1,114 @@
+"success","timeout","failed_images","failed_audio","failed_video","trial_type","trial_index","plugin_version","time_elapsed","random_id","task_order","participant","rt","stimulus","response","task_type","correct_response","correct_response_key","css_classes","size_condition","choices","correct","prompt_text","slider_start","Q0","Q1","Q2","Q3"
+"true","false","[]","[]","[]","preload","0","2.0.0","54","pf2o7ts5vo3","small_first","hsdhfasdhf","","","","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","1","2.0.0","5818","pf2o7ts5vo3","small_first","hsdhfasdhf","5763","
+    <h1>Welcome to the experiment!</h1>
+    <p>Press any key to begin</p>
+    "," ","","","","","","","","","","","","",""
+"true","","","","","fullscreen","2","2.1.0","8043","pf2o7ts5vo3","small_first","hsdhfasdhf","1219","","","","","","","","","","","","","","",""
+"","","","","","survey-text","3","2.1.0","9668","pf2o7ts5vo3","small_first","hsdhfasdhf","1613","","{""participant_id"":""hsdhfasdhf""}","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","4","2.0.0","11175","pf2o7ts5vo3","small_first","hsdhfasdhf","1504"," 
+      <h1>Instructions</h1>
+      <p>In this experiment, you will see 2 images of real world objects on each trial.
+      <br>Your task is to determine which image appears larger or smaller on the screen.
+      <br>
+      <br>You will be asked to complete <strong>2</strong> blocks of trials:
+      <br>1. Larger image block (select the image that appears larger)
+      <br>2. Smaller image block (select the image that appears smaller)
+      <br>
+      <br>Each block will contain practice trials with feedback, followed by actual trials without feedback.
+      <br>Each trial will begin with a fixation cross (<strong>+</strong>), followed by the images, and feedback is applicable.
+      <br>
+      <br>To respond, you will press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>Before starting, place your <strong>left</strong> index finger on <strong>z</strong> and <strong>right</strong> index finger on <strong>m</strong>.
+      <br>
+      <br><i>Press any key to begin.</i>
+      </p>
+    ","j","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","5","2.0.0","11987","pf2o7ts5vo3","small_first","hsdhfasdhf","810","
+      <h1>Now you will complete the practice trial.</h1>
+      <br>You will complete one practice trial and receive feedback.
+      <br>If your response is incorrect, you would repeat the trial until correct.
+      <br>
+      <br>Instruction on which size to pick will appear on the next screen.
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>
+      <br><i>Press any key to continue.</i>
+    ","j","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","6","2.0.0","13800","pf2o7ts5vo3","small_first","hsdhfasdhf","1812","
+      <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.</i>
+    ","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","7","2.0.0","14503","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","8","2.0.0","16078","pf2o7ts5vo3","small_first","hsdhfasdhf","1559","stimuli/1-Incongruent.jpg","m","incongruent_small","left","z","normal","small","m","false","","","","","",""
+"","","","","","html-keyboard-response","9","2.0.0","17081","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<p style='color:red; font-size: 48px;'>Incorrect! Try again.</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","10","2.0.0","17786","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","11","2.0.0","18760","pf2o7ts5vo3","small_first","hsdhfasdhf","969","stimuli/1-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","","","","","",""
+"","","","","","html-keyboard-response","12","2.0.0","19764","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<p style='color:green; font-size: 48px;'>That is correct!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","13","2.0.0","22950","pf2o7ts5vo3","small_first","hsdhfasdhf","3183","
+      <h1>Now you will begin the actual trials.</h1>  
+      <p><i>Press any key to continue.</p></i>
+    ","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","14","2.0.0","24084","pf2o7ts5vo3","small_first","hsdhfasdhf","1133","
+      <h1>Which is visually <strong>smaller</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.</i>
+    ","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","15","2.0.0","24787","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","16","2.0.0","25969","pf2o7ts5vo3","small_first","hsdhfasdhf","1179","stimuli/15-Congruent.jpg","m","congruent_small","right","m","normal","small","m","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","18","2.0.0","26674","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","19","2.0.0","28433","pf2o7ts5vo3","small_first","hsdhfasdhf","1755","stimuli/2-Incongruent.jpg","z","incongruent_small","left","z","normal","small","z","true","
+      <h1>Which is visually <strong>SMALLER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","21","2.0.0","29956","pf2o7ts5vo3","small_first","hsdhfasdhf","1519","<p> Great job, you are half way there!
+          <br> In the next part of the experiment, you will make the <strong>opposite</strong> judgment.
+          <br>Instead of deciding which image is <strong>smaller</strong>, you will decide which image is <strong>larger</strong>.
+          <br>Please respond as quickly and accurately as possible.</p>
+          <br><i>Press any key to continue.</i>","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","22","2.0.0","34569","pf2o7ts5vo3","small_first","hsdhfasdhf","4611","
+      <h1>Now you will complete the practice trial.</h1>
+      <br>You will complete one practice trial and receive feedback.
+      <br>If your response is incorrect, you would repeat the trial until correct.
+      <br>
+      <br>Instruction on which size to pick will appear on the next screen.
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br>
+      <br><i>Press any key to continue.</i>
+    ","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","23","2.0.0","37909","pf2o7ts5vo3","small_first","hsdhfasdhf","3338","
+      <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.<i>
+    ","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","24","2.0.0","38613","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","25","2.0.0","39591","pf2o7ts5vo3","small_first","hsdhfasdhf","974","stimuli/1-Congruent.jpg","m","congruent_big","left","z","normal","big","m","false","","","","","",""
+"","","","","","html-keyboard-response","26","2.0.0","40593","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<p style='color:red; font-size: 48px;'>Incorrect! Try again.</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","27","2.0.0","41300","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","28","2.0.0","42731","pf2o7ts5vo3","small_first","hsdhfasdhf","1428","stimuli/1-Congruent.jpg","z","congruent_big","left","z","normal","big","z","true","","","","","",""
+"","","","","","html-keyboard-response","29","2.0.0","43735","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<p style='color:green; font-size: 48px;'>That is correct!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","30","2.0.0","44661","pf2o7ts5vo3","small_first","hsdhfasdhf","924","
+      <h1>Now you will begin the actual trials.</h1>  
+      <p><i>Press any key to continue.</p></i>
+    ","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","31","2.0.0","45571","pf2o7ts5vo3","small_first","hsdhfasdhf","908","
+      <h1>Which is visually <strong>bigger</strong> on the screen?</h1>
+      <br>Press <strong>z</strong> to choose the left image, and <strong>m</strong> to choose the right image.
+      <br><i>Press any key to continue.<i>
+    ","m","","","","","","","","","","","","",""
+"","","","","","html-keyboard-response","32","2.0.0","46273","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","33","2.0.0","47188","pf2o7ts5vo3","small_first","hsdhfasdhf","912","stimuli/26-Incongruent.jpg","m","incongruent_big","right","m","normal","big","m","true","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","35","2.0.0","47892","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<div style=""font-size:60px;"">+</div>","null","","","","","","","","","","","","",""
+"","","","","","image-keyboard-response","36","2.0.0","48734","pf2o7ts5vo3","small_first","hsdhfasdhf","837","stimuli/19-Incongruent.jpg","m","incongruent_flipped_big","left","z","cb","big","m","false","
+      <h1>Which is visually <strong>BIGGER</strong> on the screen?</h1>
+      <p>Press <strong>z</strong> for left, <strong>m</strong> for right</p>
+    ","","","","",""
+"","","","","","html-keyboard-response","37","2.0.0","49738","pf2o7ts5vo3","small_first","hsdhfasdhf","null","<p style='color:red; font-size: 48px;'>Incorrect!</p>","null","","","","","","","","","","","","",""
+"","","","","","html-slider-response","38","2.0.0","110674","pf2o7ts5vo3","small_first","hsdhfasdhf","60928","<p>How would you rate our experiment? (Horrible:1, Amazing:8)</p>","5","","","","","","","","","50","","","",""
+"","","","","","survey-text","39","2.1.0","122870","pf2o7ts5vo3","small_first","hsdhfasdhf","12181","","{""Q0"":""fdsaf"",""Q1"":""sfsafsdaf"",""Q2"":""sfsafsdf"",""Q3"":""safsafsf""}","ending_survey","","","","","","","","","thoughts on experiment","what they think we are measuring","which half is more difficult","technical issues?"
