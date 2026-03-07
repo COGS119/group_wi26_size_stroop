@@ -37,68 +37,37 @@ counts_by_random_id <- exp_data %>%
 write_csv(counts_by_random_id,here(processed_data_directory,paste0(file_name,"-participant-list.csv")))
 
 #extract reward question
-free_recall <- exp_data %>% 
-  filter(trial_index %in% seq(4,16)) %>%
-  #fill in stimulus list
-  fill(stimulus,.direction="down") %>%
+final_questions <- exp_data %>% 
+  filter(trial_index >5) %>%
+  select(-c(Q0:Q3)) %>%
   filter(trial_type =="survey-text") %>%
-  rename(stimulus_list = stimulus) %>%
   mutate(json = map(response, ~ fromJSON(.) %>% as.data.frame())) %>% 
   unnest(json) %>%
   rename(
-    word_1 = Q0,
-    word_2 = Q1,
-    word_3 = Q2,
-    word_4 = Q3,
-    word_5 = Q4,
-    word_6 = Q5,
-    word_7 = Q6,
-    word_8 = Q7,
-    word_9 = Q8,
-    word_10 = Q9,
-    word_11 = Q10,
-    word_12 = Q11,
-    word_13 = Q12,
-    word_14 = Q13,
-    word_15 = Q14
-  )
+    experiment_thoughts = Q0,
+    what_exp_about = Q1,
+    which_half_more_difficult = Q2,
+    tech_issues = Q3
+  ) %>%
+  distinct(random_id, participant_id,experiment_thoughts,what_exp_about,which_half_more_difficult,tech_issues)
 
 #join back in
 exp_data <- exp_data %>%
-  left_join(free_recall)
+  left_join(final_questions)
 
-#extract likert responses
-recognition_trials <- exp_data %>%
-  filter(task=="recognition") %>%
-  mutate(json = map(response, ~ fromJSON(.) %>% as.data.frame())) %>%
-  unnest(json) %>%
-  rename(likert_rating = Q0)
-
-#join into exp_data
-exp_data <- exp_data %>%
-  left_join(recognition_trials)
-
-#extract final questionnaire responses
-questionnaire_responses <- exp_data %>% 
-  filter(trial_index ==100) %>%
-  mutate(json = map(response, ~ fromJSON(.) %>% as.data.frame())) %>% 
-  unnest(json) %>%
-  rename(
-    experiment_about = Q0,
-    feel_while_completing = Q1,
-    subjective_task_difficulty = Q2,
-    technical_issues = Q3,
-    feedback = Q4
-  ) %>%
-  select(random_id,experiment_about,feel_while_completing,subjective_task_difficulty,technical_issues,feedback)
+#extract slider response
+experiment_rating <- exp_data %>%
+  filter(trial_type=="html-slider-response") %>%
+  rename(experiment_rating = response) %>%
+  select(random_id,participant_id,experiment_rating)
 
 #join into exp_data
 exp_data <- exp_data %>%
-  left_join(questionnaire_responses)
+  left_join(experiment_rating)
 
 #filter dataset
 exp_data <- exp_data %>%
-  filter(!is.na(task))
+  filter(trial_type=="image-keyboard-response")
 
 #filter participant ids
 filter_ids <- c("3332","nonononono","hsdhfasdhf")
@@ -116,6 +85,14 @@ processed_data <- exp_data %>%
   )) %>%
   #remove unneeded columns
   select(-c(success,plugin_version,timeout:failed_video)) %>%
+  # add congruent column
+  mutate(
+    congruency = case_when(
+      str_detect(task_type,"incongruent") ~ "incongruent",
+      str_detect(task_type,"congruent") ~ "congruent",
+      TRUE ~ NA_character_
+    )
+  ) %>%
   #add trial_number
   group_by(participant_id) %>%
   mutate(trial_number = row_number()) %>%
